@@ -249,20 +249,8 @@
 </main>
 
 <script>
-  // Banco unificado de preguntas (aquí iremos integrando cada examen)
-  const QUESTION_BANK = [
-    // Ejemplo de pregunta 2023
-    {
-      id: "2023_01", exam: "2023", tema: "Tema 5 · Prevención de Riesgos Laborales",
-      textAdap: "Según el art. 4 de la Ley 31/1995, de Prevención de Riesgos Laborales, se entenderá como «equipo de trabajo»:",
-      optsAdap: { A: "Actividades o medidas adoptadas para evitar o disminuir riesgos.", B: "Cualquier equipo destinado a proteger la seguridad o salud individual.", C: "Cualquier máquina, aparato, instrumento o instalación utilizada en el trabajo." },
-      correctAdap: "C",
-      textOrig: "Según el art. 4 de la Ley 31/1995, de Prevención de Riesgos Laborales, se entenderá como «equipo de trabajo»:",
-      optsOrig: { a: "El conjunto de actividades o medidas adoptadas o previstas en todas las fases de actividad de la empresa con el fin de evitar o disminuir los riesgos derivados del trabajo.", b: "Cualquier equipo destinado a ser llevado o sujetado por el trabajador para que le proteja de uno o varios riesgos que puedan amenazar su seguridad o su salud en el trabajo.", c: "Cualquier máquina, aparato, instrumento o instalación utilizada en el trabajo.", d: "Ninguna de las anteriores es correcta." },
-      correctOrig: "c",
-      norma: "Ley 31/1995, art. 4.6º."
-    }
-  ];
+  // Banco unificado de preguntas globales
+  const QUESTION_BANK = [];
 
   let appState = loadState();
   let currentQuestions = [];
@@ -450,5 +438,10 @@
   function stopTimer() { if (timerInterval) clearInterval(timerInterval); }
   updateDashboardUI();
 </script>
+
+<!-- LLAMADAS A LOS EXÁMENES MODULARES EN LA CARPETA EXAMENES -->
+<script src="examenes/examen_2023.js"></script>
+<script src="examenes/examen_2022pi.js"></script>
+
 </body>
 </html>
