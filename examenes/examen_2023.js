@@ -1,4 +1,3 @@
-// EXAMEN OFICIAL 2023 - AUXILIAR ADMINISTRATIVO SACYL (BLOQUE COMPLETO: Preguntas 1 a 100)
 const EXAM_2023_COMPLETO = [
   {
     id: "2023_01", exam: "2023", tema: "Tema 5 · Prevención de Riesgos Laborales",
@@ -172,7 +171,7 @@ const EXAM_2023_COMPLETO = [
   },
   {
     id: "2023_18", exam: "2023", tema: "Tema 7 · Estatuto Marco",
-    textAdap: "Para participar en procesos selectivos fijos en servicios de salud, se exige no haber sido separado mediante expediente disciplinario:",
+    textAdap: "Para participar in procesos selectivos fijos en servicios de salud, se exige no haber sido separado mediante expediente disciplinario:",
     optsAdap: { A: "En los dos años anteriores.", B: "En los cinco años anteriores.", C: "En ningún plazo específico por inhabilitación firme (requisito general de no estar separado)." },
     correctAdap: "C",
     textOrig: "Para poder participar en los procesos de selección de personal estatutario fijo de los servicios de salud será necesario no haber sido separado del servicio, mediante expediente disciplinario, de cualquier servicio de salud o Administración pública:",
@@ -985,7 +984,7 @@ const EXAM_2023_COMPLETO = [
     textAdap: "En el documento de Word de la FIGURA 4, al establecer 'Marcar como final', ¿qué efecto tendrá?:",
     optsAdap: { A: "Informa a los lectores que el documento es definitivo y lo convierte en sólo lectura.", B: "Requiere contraseña obligatoria para abrir.", C: "Protege únicamente el encabezado." },
     correctAdap: "A",
-    textOrig: "En el documento de Word 2013 de la FIGURA 4, en 'Proteger documento”, establecemos la opción “Marcar como final". ¿Qué efecto tendrá sobre el documento?:",
+    textOrig: "En el documento de Word 2013 de la FIGURA 4, en 'Proteger documento”, establecemos la opción “Marcar como final". Что efecto tendrá sobre el documento?:",
     optsOrig: { a: "Se requiere una contraseña para abrir este documento.", b: "Informa a los lectores que el documento es definitivo y lo convierte en un documento de sólo lectura.", c: "Controla qué tipos de cambios puedan realizar las personas...", d: "Garantiza la integridad..." },
     correctOrig: "b",
     norma: "Word 2013, Marcar como final."
@@ -1001,10 +1000,3 @@ const EXAM_2023_COMPLETO = [
     norma: "Word 2013, opciones de Autocorrección."
   }
 ];
-
-// Integración automática y limpia en el banco global de la aplicación
-if (typeof QUESTION_BANK !== 'undefined') {
-  const existingWithout2023 = QUESTION_BANK.filter(q => q.exam !== "2023");
-  QUESTION_BANK.length = 0;
-  QUESTION_BANK.push(...existingWithout2023, ...EXAM_2023_COMPLETO);
-}
