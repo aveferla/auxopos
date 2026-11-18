@@ -719,8 +719,297 @@ const EXAM_2023_DATA = [
     optsOrig: { a: "De Calidad e Infraestructuras Sanitarias.", b: "De Salud Pública.", c: "De Planificación Sanitaria, Investigación e Innovación.", d: "De Personal y Desarrollo Profesional." },
     correctOrig: "b",
     norma: "Decreto de estructura orgánica de la Consejería de Sanidad."
+  },
+
+// SUPUESTO PRÁCTICO COMPLETO: EXAMEN OFICIAL 2023 - AUXILIAR ADMINISTRATIVO SACYL (Preguntas 73 a 100)
+const EXAM_2023_PRACTICO_DATA = [
+  {
+    id: "2023_73", exam: "2023", tema: "Supuesto Práctico · Windows 10",
+    textAdap: "En el Explorador de archivos Windows 10, para cambiar el nombre de un archivo de la FIGURA 3 hay que colocarse sobre el fichero y pulsar la tecla:",
+    optsAdap: { A: "F2", B: "F3", C: "F5" },
+    correctAdap: "A",
+    textOrig: "En el Explorador de archivos Windows 10, para cambiar el nombre de un archivo de la FIGURA 3 hay que colocarse sobre el fichero y pulsar la tecla:",
+    optsOrig: { a: "F3", b: "F2", c: "Alt + F4", d: "F5" },
+    correctOrig: "b",
+    norma: "Atajos de teclado en Windows 10 (F2 para renombrar)."
+  },
+  {
+    id: "2023_74", exam: "2023", tema: "Supuesto Práctico · Word 2013",
+    textAdap: "Se quiere añadir una Marca de Agua en el documento Word de la FIGURA 4. ¿En qué menú de Word 2013 se encuentra esta opción?:",
+    optsAdap: { A: "Diseño.", B: "Insertar.", C: "Vista." },
+    correctAdap: "A",
+    textOrig: "Se quiere añadir una Marca de Agua en el documento Word de la FIGURA 4 ¿En qué menú de Word 2013 se encuentra la opción Marca de Agua?:",
+    optsOrig: { a: "Insertar.", b: "Diseño.", c: "Vista.", d: "Inicio." },
+    correctOrig: "b",
+    norma: "Word 2013, pestaña Diseño."
+  },
+  {
+    id: "2023_75", exam: "2023", tema: "Supuesto Práctico · Word 2013",
+    textAdap: "En el documento de Word de la FIGURA 4 hay una tabla. ¿En qué pestaña se encuentra la opción para insertar una tabla en Word 2013?:",
+    optsAdap: { A: "Insertar.", B: "Inicio.", C: "Diseño de página." },
+    correctAdap: "A",
+    textOrig: "En el documento de Word de la FIGURA 4 hay una tabla. ¿En qué pestaña se encuentra la opción para agregar una tabla en Word 2013?:",
+    optsOrig: { a: "Diseño de página.", b: "Inicio.", c: "Insertar.", d: "Vista." },
+    correctOrig: "c",
+    norma: "Word 2013, pestaña Insertar."
+  },
+  {
+    id: "2023_76", exam: "2023", tema: "Supuesto Práctico · Excel 2013",
+    textAdap: "Para que los datos de la columna K (AGENCIA) de la FIGURA 1 se muestren como en la FIGURA 2, en Excel 2013 se aplica la fórmula:",
+    optsAdap: { A: "=CONCATENAR(IZQUIERDA(K2;4);DERECHA(K2;7))", B: "=EXTRAE(K2;1;7)&EXTRAE(K2;9;4)", C: "=CONCATENAR(DERECHA(K2;4);IZQUIERDA(K2;7))" },
+    correctAdap: "C",
+    textOrig: "Para que los datos de la columna K (AGENCIA) de la FIGURA 1 se muestren como aparecen en la FIGURA 2, en Excel 2013 se aplica la fórmula:",
+    optsOrig: { a: "=CONCATENAR(DERECHA(K2;4);IZQUIERDA(K2;7))", b: "=EXTRAE(K2;1;7)&EXTRAE(K2;9;4)", c: "=CONCATENAR(IZQUIERDA(K2;4);DERECHA(K2;7))", d: "=EXTRAE(K2;9;4)&DERECHA(K2;7)" },
+    correctOrig: "a",
+    norma: "Excel 2013, funciones de texto."
+  },
+  {
+    id: "2023_77", exam: "2023", tema: "Supuesto Práctico · Windows 10",
+    textAdap: "Se necesita seleccionar varios archivos no consecutivos del directorio de la FIGURA 3. ¿Cómo hacerlo?:",
+    optsAdap: { A: "Manteniendo pulsada la tecla “Ctrl” mientras hago clic en los archivos.", B: "Manteniendo pulsada la tecla “Shift”.", C: "Con doble clic." },
+    correctAdap: "A",
+    textOrig: "Se necesita seleccionar varios archivos del directorio que se muestra en la FIGURA 3, pero no aparecen listados de forma consecutiva. ¿Cómo puedo hacerlo?:",
+    optsOrig: { a: "Manteniendo pulsada la tecla “Ctrl” mientas hago clic en los archivos que me interesan.", b: "Pulsando con el botón derecho.", c: "Manteniendo pulsada la tecla “Insert”.", d: "Realizando “doble-clic”." },
+    correctOrig: "a",
+    norma: "Windows 10, selección discontinua con Ctrl."
+  },
+  {
+    id: "2023_78", exam: "2023", tema: "Supuesto Práctico · Excel 2013",
+    textAdap: "¿Qué función utilizarías para calcular la media del número de viajes de la columna H de la FIGURA 1 en Excel 2013?:",
+    optsAdap: { A: "=PROMEDIO(H2:H9)", B: "=MEDIA(H2:H9)", C: "=SUMA(H2:H9)" },
+    correctAdap: "A",
+    textOrig: "¿Qué función utilizarías para el cálculo de la media del número de viajes de la columna H de la FIGURA 1 en Excel 2013?:",
+    optsOrig: { a: "=SUMA(H2:D9)", b: "=PROMEDIO(H2:H9)", c: "=MEDIA.ACOTADA(H2:H9)", d: "=MEDIA(H2:H9)" },
+    correctOrig: "b",
+    norma: "Excel 2013, función PROMEDIO."
+  },
+  {
+    id: "2023_79", exam: "2023", tema: "Supuesto Práctico · Windows 10",
+    textAdap: "Se quiere eliminar el archivo “Telefonos” de la FIGURA 3 de forma permanente sin pasar por la papelera:",
+    optsAdap: { A: "Mayúsculas + SUPR", B: "Ctrl + SUPR", C: "Windows + SUPR" },
+    correctAdap: "A",
+    textOrig: "Se quiere eliminar el archivo “Telefonos” de la FIGURA 3, de forma permanente sin que pase por la papelera de reciclaje, ¿Qué combinación de teclas debemos pulsar en Windows 10?:",
+    optsOrig: { a: "Mayúsculas + SUPR, confirmando su eliminación.", b: "Ctrl + SUPR", c: "Bloq Mayúsculas + SUPR", d: "Tecla de logotipo de Windows + SUPR" },
+    correctOrig: "a",
+    norma: "Windows 10, borrado permanente con Shift+Supr."
+  },
+  {
+    id: "2023_80", exam: "2023", tema: "Supuesto Práctico · Excel 2013",
+    textAdap: "¿Qué formato personalizado debería definirse en la celda I2 de la FIGURA 1 para mostrar “2022/05/10 12:00 AM”?:",
+    optsAdap: { A: "aaaa/dd/mm h:mm AM/PM", B: "aa/dd/mm h:m PM", C: "aaaa/dd/mm hAM/PM:mm" },
+    correctAdap: "A",
+    textOrig: "¿Qué formato personalizado debería definirse en la celda I2 (FECHA) de la FIGURA 1 para que la fecha introducida en la misma se formatee a “2022/05/10 12:00 AM”?:",
+    optsOrig: { a: "aa/dd/mm h:m PM", b: "aaaa/dd/mm h:mm PM", c: "aaaa/dd/mm hAM/PM:mm", d: "aaaa/dd/mm h:mm AM/PM" },
+    correctOrig: "d",
+    norma: "Excel 2013, formatos personalizados."
+  },
+  {
+    id: "2023_81", exam: "2023", tema: "Supuesto Práctico · Word 2013",
+    textAdap: "Se quiere activar el encabezado y pie de página del documento Word de la FIGURA 4 de forma rápida:",
+    optsAdap: { A: "Doble clic del botón izquierdo en la parte superior de la página.", B: "Herramientas/Diseño/Encabezado.", C: "Diseño/Temas/Encabezado." },
+    correctAdap: "A",
+    textOrig: "Se quiere activar el encabezado y pie de página del documento Word 2013 de la FIGURA 4. Elija opción:",
+    optsOrig: { a: "Herramientas/Diseño/Elementos rápidos/Encabezado.", b: "Doble clic del botón izquierdo del ratón en la parte superior de la primera página del documento.", c: "Diseño de página/Encabezado y Pie de página/Insertar/Aplicar.", d: "Diseño/Temas/Encabezado." },
+    correctOrig: "b",
+    norma: "Word 2013, doble clic en márgenes."
+  },
+  {
+    id: "2023_82", exam: "2023", tema: "Supuesto Práctico · Outlook 2013",
+    textAdap: "En Outlook 2013, la herramienta que nos permite fijar y convocar reuniones es:",
+    optsAdap: { A: "Calendario", B: "Tareas", C: "Reuniones" },
+    correctAdap: "A",
+    textOrig: "Se quiere convocar una reunión con otro departamento. En Outlook 2013, la herramienta que nos permite fijar las reuniones es:",
+    optsOrig: { a: "Calendario", b: "Tareas", c: "Diario", d: "Reuniones" },
+    correctOrig: "a",
+    norma: "Outlook 2013, Calendario."
+  },
+  {
+    id: "2023_83", exam: "2023", tema: "Supuesto Práctico · Word 2013",
+    textAdap: "¿Cuál es el atajo de teclado de Word 2013 para abrir el panel de Navegación para búsquedas (FIGURA 4)?:",
+    optsAdap: { A: "Ctrl+B", B: "Ctrl+N", C: "Ctrl+R" },
+    correctAdap: "A",
+    textOrig: "¿Cuál es el atajo de teclado de Word 2013 que te permitirá abrir el panel de Navegación para hacer búsquedas dentro del contenido del archivo Word de la FIGURA 4?",
+    optsOrig: { a: "Ctrl+N", b: "Ctrl+B", c: "Ctrl+R", d: "Ctrl+V" },
+    correctOrig: "b",
+    norma: "Word 2013, atajo Ctrl+B."
+  },
+  {
+    id: "2023_84", exam: "2023", tema: "Supuesto Práctico · Excel 2013",
+    textAdap: "En Excel 2013, ¿qué utilidad tiene el comando “Inmovilizar paneles”?:",
+    optsAdap: { A: "Mantener un área de una hoja visible mientras se desplaza por el resto de la hoja.", B: "Proteger la hoja para que no se edite.", C: "Ocultar filas." },
+    correctAdap: "A",
+    textOrig: "En Excel 2013, ¿qué utilidad tiene el comando “Inmovilizar paneles”?",
+    optsOrig: { a: "Proteger un área de la hoja para que no pueda ser editada.", b: "Mantener oculta un área de la hoja.", c: "Definir un área de la hoja que se repetirá idéntica.", d: "Mantener un área de una hoja visible mientras se desplaza a otra área de la hoja." },
+    correctOrig: "d",
+    norma: "Excel 2013, inmovilizar paneles."
+  },
+  {
+    id: "2023_85", exam: "2023", tema: "Supuesto Práctico · Windows 10",
+    textAdap: "Pulsar la combinación “Alt+F4” en la ventana abierta de la FIGURA 3 hace que:",
+    optsAdap: { A: "Se cierre esa ventana.", B: "Se minimice.", C: "Se maximice." },
+    correctAdap: "A",
+    textOrig: "Pulsar la combinación “Alt+F4” en la ventana abierta de la FIGURA 3 hace que:",
+    optsOrig: { a: "Se minimice.", b: "Se pase a la siguiente ventana abierta.", c: "Se maximice.", d: "Se cierre esa ventana." },
+    correctOrig: "d",
+    norma: "Windows 10, Alt+F4."
+  },
+  {
+    id: "2023_86", exam: "2023", tema: "Supuesto Práctico · Word 2013",
+    textAdap: "¿Cuáles son los atajos de teclado en Word 2013 para deshacer y rehacer cambios?:",
+    optsAdap: { A: "Ctrl+Z (Deshacer) y Ctrl+Y (Rehacer)", B: "Ctrl+Y (Deshacer) y Ctrl+Z (Rehacer)", C: "Ctrl+Z y Ctrl+R" },
+    correctAdap: "A",
+    textOrig: "¿Cuáles son los atajos de teclado en Word 2013 para deshacer y rehacer cambios que te permitirán ser más eficiente en la elaboración del archivo de la FIGURA 4?:",
+    optsOrig: { a: "Ctrl+Y (Deshacer) y Ctrl+Z (Rehacer)", b: "Ctrl+Z (Deshacer) y Ctrl+Y (Rehacer)", c: "Ctrl+Z (Deshacer) y Ctrl+R (Rehacer)", d: "Ctrl+D (Deshacer) y Ctrl+R (Rehacer)" },
+    correctOrig: "b",
+    norma: "Word 2013, Ctrl+Z y Ctrl+Y."
+  },
+  {
+    id: "2023_87", exam: "2023", tema: "Supuesto Práctico · Word 2013",
+    textAdap: "En el archivo Word de la FIGURA 4, ¿qué significa el subrayado ondulado en rojo:",
+    optsAdap: { A: "Posible error ortográfico.", B: "Posible error gramatical.", C: "Hipervínculo." },
+    correctAdap: "A",
+    textOrig: "En el archivo Word 2013 de la FIGURA 4, ¿qué significa el subrayado ondulado en rojo que puede aparecer mientras se escribe?:",
+    optsOrig: { a: "Posible error gramatical.", b: "Palabra no encontrada en el diccionario activo.", c: "Ese subrayado no existe en Word 2013.", d: "Posible error ortográfico." },
+    correctOrig: "d",
+    norma: "Word 2013, revisión ortográfica."
+  },
+  {
+    id: "2023_88", exam: "2023", tema: "Supuesto Práctico · Outlook 2013",
+    textAdap: "En Outlook 2013, para enviar un correo con copia oculta, debemos escribir el destinatario en la casilla:",
+    optsAdap: { A: "“CCO”", B: "“CC”", C: "“Para”" },
+    correctAdap: "A",
+    textOrig: "En Outlook 2013 se quiere enviar un correo electrónico “con copia oculta” a otro destinatario, debemos escribir el destinatario en la casilla:",
+    optsOrig: { a: "“Para”", b: "“CC”", c: "“CCO”", d: "“De”" },
+    correctOrig: "c",
+    norma: "Outlook 2013, CCO."
+  },
+  {
+    id: "2023_89", exam: "2023", tema: "Supuesto Práctico · Excel 2013",
+    textAdap: "Se quiere insertar una hoja nueva en el libro de Excel de la FIGURA 1:",
+    optsAdap: { A: "Se insertará a la izquierda de la hoja activa en ese momento.", B: "No se puede.", C: "Solo al final del libro." },
+    correctAdap: "A",
+    textOrig: "Se quiere insertar una hoja nueva en el libro de Excel de la FIGURA 1 que ya existe:",
+    optsOrig: { a: "No podemos hacerlo.", b: "Sólo se puede hacer entrando en la opción “Hoja de Cálculo”.", c: "Se insertará a la izquierda de la hoja activa en ese momento.", d: "Tendremos que indicar si queremos antes o después." },
+    correctOrig: "c",
+    norma: "Excel 2013, inserción de hojas."
+  },
+  {
+    id: "2023_90", exam: "2023", tema: "Supuesto Práctico · Excel 2013",
+    textAdap: "En la hoja Excel de la FIGURA 1, si tenemos en una celda la operación =K2+G2, ¿qué error mostrará?:",
+    optsAdap: { A: "# ¡VALOR!", B: "#N/A", C: "# ¡NUM!" },
+    correctAdap: "A",
+    textOrig: "En la hoja Excel de la FIGURA 1, tenemos en una celda la operación =K2+G2, ¿qué nos mostrará esa celda a modo de error?:",
+    optsOrig: { a: "#N/A.", b: "# iNUM!", c: "# ¡VALOR!", d: "ERROR¡¡¡" },
+    correctOrig: "c",
+    norma: "Excel 2013, error #¡VALOR!."
+  },
+  {
+    id: "2023_91", exam: "2023", tema: "Supuesto Práctico · Word 2013",
+    textAdap: "En el archivo Word de la FIGURA 4, ¿qué combinación de teclas permite cambiar a mayúsculas o minúsculas:",
+    optsAdap: { A: "Mayús+F3", B: "Ctrl+M", C: "Ctrl+Y" },
+    correctAdap: "A",
+    textOrig: "En el archivo Word 2013 de la FIGURA 4 señale cuál de las siguientes combinaciones de teclas permite cambiar una palabra seleccionada a mayúsculas o a minúsculas:",
+    optsOrig: { a: "Mayús+F3.", b: "Ctrl+M.", c: "Ctrl+Y.", d: "Ctrl+W." },
+    correctOrig: "a",
+    norma: "Word 2013, Mayús+F3."
+  },
+  {
+    id: "2023_92", exam: "2023", tema: "Supuesto Práctico · Access 2013",
+    textAdap: "Se han importado los datos de la FIGURA 1 a Access 2013. La información de cada 'Fila' de una tabla se llama:",
+    optsAdap: { A: "Registro", B: "Campo", C: "Clave principal" },
+    correctAdap: "A",
+    textOrig: "Se han importado los datos de la FIGURA 1 a Access 2013. La información que se recoge en cada uno de los elementos de una “Fila” de una tabla en una base de datos de Access 2013 se llama:",
+    optsOrig: { a: "Clave principal o primaria.", b: "Registro.", c: "Campo.", d: "Base de datos." },
+    correctOrig: "b",
+    norma: "Access 2013, registro."
+  },
+  {
+    id: "2023_93", exam: "2023", tema: "Supuesto Práctico · Word 2013",
+    textAdap: "En Word 2013, la opción 'La escritura reemplaza el texto seleccionado' significa que:",
+    optsAdap: { A: "Elimina el texto seleccionado cuando se comienza a escribir.", B: "Reemplaza carácter a carácter sin borrar.", C: "Inserta texto sin eliminar." },
+    correctAdap: "A",
+    textOrig: "En Word 2013, ¿Cuál es la acción resultante al seleccionar la opción 'La escritura reemplaza el texto seleccionado’:",
+    optsOrig: { a: "Reemplaza el texto existente mientras escribe, carácter a carácter.", b: "Elimina el texto seleccionado cuando se comienza a escribir...", c: "Elimina el texto seleccionado... si se desactiva inserta delante.", d: "Ninguna es correcta." },
+    correctOrig: "b",
+    norma: "Word 2013, opciones de edición."
+  },
+  {
+    id: "2023_94", exam: "2023", tema: "Supuesto Práctico · Windows 10",
+    textAdap: "Nos ausentamos del puesto de trabajo. ¿Qué combinación de teclas bloquea el ordenador en Windows 10?:",
+    optsAdap: { A: "Tecla Windows + L", B: "Tecla Windows + E", C: "F11" },
+    correctAdap: "A",
+    textOrig: "Nos ausentamos de nuestro puesto de trabajo. ¿Qué combinación de teclas consigue bloquear el ordenador en Windows 10?:",
+    optsOrig: { a: "Tecla del logotipo de Windows + L", b: "Tecla del logotipo de Windows + E", c: "F11", d: "Tecla del logotipo de Windows + barra espaciadora" },
+    correctOrig: "a",
+    norma: "Windows 10, bloqueo con Win+L."
+  },
+  {
+    id: "2023_95", exam: "2023", tema: "Supuesto Práctico · Word 2013",
+    textAdap: "Se quiere insertar un número de página en el pie del documento Word de la FIGURA 4. ¿Desde qué opción se realiza?:",
+    optsAdap: { A: "Insertar / Encabezado y Pie de página / Número de página.", B: "Diseño de página / Configurar página.", C: "Inicio / Párrafo." },
+    correctAdap: "A",
+    textOrig: "Se quiere insertar un número de página en el pie de página del documento Word 2013 de la FIGURA 4 ¿desde qué opción se realizaría?:",
+    optsOrig: { a: "Diseño de página/Encabezado y Pie de página/Número de página.", b: "Insertar/Encabezado y Pie de página/Número de página.", c: "Diseño de página/Configurar página/Número de página.", d: "Ninguna es correcta." },
+    correctOrig: "b",
+    norma: "Word 2013, insertar número de página."
+  },
+  {
+    id: "2023_96", exam: "2023", tema: "Supuesto Práctico · Certificado Digital",
+    textAdap: "Para acceder a una sede electrónica acreditando la identidad de forma segura desde el navegador, se utiliza:",
+    optsAdap: { A: "Certificado digital.", B: "Clave Privada.", C: "Identidad Digital genérica." },
+    correctAdap: "A",
+    textOrig: "Se tiene que acceder a la sede electrónica de un organismo, acreditando su identidad. ¿Cuál de estos elementos, accesible desde el navegador, tiene como propósito verificar la identidad del usuario?:",
+    optsOrig: { a: "Identidad Digital.", b: "Certificado digital.", c: "Clave Privada.", d: "Blockchain." },
+    correctOrig: "b",
+    norma: "Certificado digital."
+  },
+  {
+    id: "2023_97", exam: "2023", tema: "Supuesto Práctico · Outlook 2013",
+    textAdap: "En Outlook 2013, ¿es posible almacenar correos con la palabra 'viajes' en una carpeta específica?:",
+    optsAdap: { A: "Sí, utilizando el comando Reglas en la ficha Mover.", B: "No, en Outlook no se puede.", C: "Solo mediante software de terceros." },
+    correctAdap: "A",
+    textOrig: "En Outlook 2013, deseamos que los correos que contengan en el asunto la palabra 'viajes' se almacenen en una carpeta específica ¿es posible?:",
+    optsOrig: { a: "Sí, utilizando el comando Reglas en la ficha Mover, permite mover un elemento con determinadas palabras en la línea de asunto a otra carpeta.", b: "No, en Outlook no se puede hacer.", c: "No, utilizando el comando Reglas... solo permite remitentes.", d: "Sí, pero necesariamente herramientas de terceros." },
+    correctOrig: "a",
+    norma: "Outlook 2013, reglas de correo."
+  },
+  {
+    id: "2023_98", exam: "2023", tema: "Supuesto Práctico · Excel 2013",
+    textAdap: "En la hoja de Excel de la FIGURA 1 indique qué resultado devolverá la fórmula: =BUSCARV(“OÑA”;C2:F9;4):",
+    optsAdap: { A: "Busca 'OÑA' en la primera columna del rango y devuelve el valor de la cuarta columna de la primera fila donde lo encuentre.", B: "Busca en todo el rango sin orden.", C: "Da error de referencia." },
+    correctAdap: "A",
+    textOrig: "En la hoja de Excel de la FIGURA 1 indique qué resultado devolverá la siguiente fórmula de Excel 2013: =BUSCARV(“OÑA”;C2:F9;4):",
+    optsOrig: { a: "Busca el valor OÑA en la primera columna de la izquierda del rango de celdas C2:F9, y lo reemplaza por el valor 4.", b: "Busca el valor OÑA en cualquiera celda...", c: "Busca el valor OÑA en la primera columna de la izquierda del rango de celdas C2:F9, y devuelve el valor de la cuarta columna (la F) de la primera fila donde lo encuentre.", d: "Busca el valor OÑA en cualquier celda..." },
+    correctOrig: "c",
+    norma: "Excel 2013, función BUSCARV."
+  },
+  {
+    id: "2023_99", exam: "2023", tema: "Supuesto Práctico · Word 2013",
+    textAdap: "En el documento de Word de la FIGURA 4, al establecer 'Marcar como final', ¿qué efecto tendrá?:",
+    optsAdap: { A: "Informa a los lectores que el documento es definitivo y lo convierte en sólo lectura.", B: "Requiere contraseña obligatoria para abrir.", C: "Protege únicamente el encabezado." },
+    correctAdap: "A",
+    textOrig: "En el documento de Word 2013 de la FIGURA 4, en 'Proteger documento”, establecemos la opción “Marcar como final". ¿Qué efecto tendrá sobre el documento?:",
+    optsOrig: { a: "Se requiere una contraseña para abrir este documento.", b: "Informa a los lectores que el documento es definitivo y lo convierte en un documento de sólo lectura.", c: "Controla qué tipos de cambios puedan realizar las personas...", d: "Garantiza la integridad..." },
+    correctOrig: "b",
+    norma: "Word 2013, Marcar como final."
+  },
+  {
+    id: "2023_100", exam: "2023", tema: "Supuesto Práctico · Word 2013",
+    textAdap: "Al escribir un texto en Word 2013, la primera letra de una oración aparece en mayúsculas automáticamente por:",
+    optsAdap: { A: "Estar habilitada la opción correspondiente en 'Autocorrección'.", B: "Ser un elemento de 'Autotexto'.", C: "Definición fija no modificable." },
+    correctAdap: "A",
+    textOrig: "Al escribir un texto en Word 2013, la primera letra de una oración aparece en mayúsculas automáticamente. ¿Por qué?:",
+    optsOrig: { a: "Porque está habilitada la opción correspondiente en 'Autocorrección'.", b: "Porque es un elemento de 'Autotexto'.", c: "Porque está habilitada la opción correspondiente en 'Autoformato'.", d: "Es una opción no configurable en Word..." },
+    correctOrig: "a",
+    norma: "Word 2013, opciones de Autocorrección."
   }
 ];
+
+// Registro en el banco global de la app
+if (typeof QUESTION_BANK !== 'undefined') {
+  const cleanBank = QUESTION_BANK.filter(q => q.exam !== "2023");
+  QUESTION_BANK.length = 0;
+  QUESTION_BANK.push(...cleanBank, ...EXAM_2023_PRACTICO_DATA);
 
 // Fusionamos este bloque final con el banco global manteniendo las preguntas anteriores de 2023
 if (typeof QUESTION_BANK !== 'undefined') {
