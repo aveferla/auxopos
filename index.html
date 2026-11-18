@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>enfopos · Auxiliar Administrativo SACYL (2026) - Versión Modular Definitiva</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --primary: #0f4c81;
+      --primary-light: #e6f0fa;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --success-bg: #dcfce7;
+      --success-border: #22c55e;
+      --success-text: #14532d;
+      --error-bg: #fee2e2;
+      --error-border: #ef4444;
+      --error-text: #7f1d1d;
+      --orig-bg: #fff7ed;
+      --orig-border: #fdba74;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); padding-bottom: 50px; }
+    header { background: linear-gradient(135deg, #0f4c81 0%, #1d6fa5 100%); color: white; padding: 18px 16px; position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: 980px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .brand h1 { font-size: 1.35rem; font-weight: 800; }
+    .badge-sacyl { background: rgba(255,255,255,0.2); padding: 3px 10px; border-radius: 999px; font-size: 0.78rem; }
+    .nav-btns { display: flex; gap: 8px; }
+    .btn-nav { background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.3); padding: 7px 14px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+    .btn-nav:hover, .btn-nav.active { background: white; color: var(--primary); }
+    main { max-width: 980px; margin: 24px auto; padding: 0 16px; }
+    .view { display: none; }
+    .view.active { display: block; }
+    .rules-banner { background: #fffbeb; border: 1px solid #fde68a; color: #92400e; padding: 14px 18px; border-radius: 10px; font-size: 0.88rem; margin-bottom: 22px; }
+    
+    .section-title { font-size: 1.15rem; color: #0f172a; margin: 20px 0 12px 0; font-weight: 700; border-bottom: 2px solid var(--border); padding-bottom: 6px; }
+    
+    .grid-modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .mode-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between; }
+    .mode-card.card-orig { background: var(--orig-bg); border: 1px solid var(--orig-border); }
+    .mode-tag { display: inline-block; font-size: 0.74rem; font-weight: 700; text-transform: uppercase; padding: 3px 8px; border-radius: 6px; margin-bottom: 10px; width: fit-content; }
+    .tag-conv { background: #e0f2fe; color: #0369a1; }
+    .tag-fail { background: #fee2e2; color: #991b1b; }
+    .tag-orig { background: #ffedd5; color: #c2410c; }
+    .mode-card h3 { font-size: 1.08rem; margin-bottom: 8px; color: #0f172a; }
+    .mode-card.card-orig h3 { color: #7c2d12; }
+    .mode-card p { font-size: 0.88rem; color: var(--muted); margin-bottom: 16px; }
+    .mode-card.card-orig p { color: #9a3412; }
+    
+    .btn-group-dual { display: flex; gap: 8px; }
+    .btn-primary { background: var(--primary); color: white; border: none; padding: 10px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; width: 100%; font-size: 0.9rem; text-align: center; }
+    .btn-primary:hover { background: #0a365c; }
+    .btn-danger { background: #dc2626; }
+    .btn-orig { background: #c2410c; color: white; }
+    .btn-orig:hover { background: #9a3412; }
+    
+    .quiz-topbar { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; margin-bottom: 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .timer { font-family: monospace; font-size: 1.15rem; font-weight: 700; color: var(--primary); background: #e6f0fa; padding: 5px 12px; border-radius: 6px; }
+    .question-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 18px; }
+    .question-card.orig-mode-card { background: var(--orig-bg); border: 1px solid var(--orig-border); }
+    .q-meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; font-size: 0.78rem; color: var(--muted); margin-bottom: 10px; }
+    .q-tema { background: #f1f5f9; color: #334155; font-weight: 600; padding: 2px 8px; border-radius: 5px; }
+    .q-updated { background: #fef3c7; color: #92400e; font-weight: 600; padding: 2px 8px; border-radius: 5px; }
+    .q-orig-warning { background: #ffedd5; color: #c2410c; font-weight: 700; padding: 2px 8px; border-radius: 5px; border: 1px dashed #fdba74; }
+    .q-text { font-size: 1.02rem; font-weight: 600; margin-bottom: 14px; color: #0f172a; }
+    .options-list { display: flex; flex-direction: column; gap: 9px; }
+    .option-item { display: flex; align-items: flex-start; gap: 10px; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; cursor: pointer; background: white; font-size: 0.95rem; }
+    .orig-mode-card .option-item { background: #fffaf5; border-color: #fed7aa; }
+    .option-item:hover { background: #f8fafc; }
+    .option-item.correct-ans { background: var(--success-bg) !important; border-color: var(--success-border) !important; color: var(--success-text); font-weight: 600; }
+    .option-item.wrong-ans { background: var(--error-bg) !important; border-color: var(--error-border) !important; color: var(--error-text); }
+    .norma-box { margin-top: 14px; padding: 12px 15px; background: #f0f9ff; border-left: 4px solid #0284c7; border-radius: 6px; font-size: 0.88rem; color: #0c4a6e; display: none; }
+    .norma-box.visible { display: block; }
+    .orig-mode-card .norma-box { background: #fff7ed; border-left-color: #c2410c; color: #7c2d12; }
+    
+    .score-panel { background: var(--card); border: 2px solid var(--primary); border-radius: 12px; padding: 22px; margin-bottom: 22px; display: none; }
+    .score-panel.visible { display: block; }
+    .score-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; margin-top: 14px; }
+    .stat-box { background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 12px; text-align: center; }
+    .stat-val { font-size: 1.4rem; font-weight: 800; color: var(--primary); }
+    .stat-lbl { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; font-weight: 600; }
+    .stats-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+    th { background: #f8fafc; color: #334155; font-weight: 700; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <h1>enfopos</h1>
+      <span class="badge-sacyl">SACYL · Aux. Administrativo (Apartados por Examen)</span>
+    </div>
+    <div class="nav-btns">
+      <button class="btn-nav active" id="nav-home" onclick="switchView('home')">Convocatorias Oficiales</button>
+      <button class="btn-nav" id="nav-stats" onclick="switchView('stats')">Estadísticas por Tema</button>
+    </div>
+  </div>
+</header>
+<main>
+  <section id="view-home" class="view active">
+    <div class="rules-banner">
+      <strong>Estructura por Apartados Oficiales:</strong> Cada examen cuenta con su propio apartado independiente. Dentro de cada convocatoria puedes elegir entre realizar el examen en <strong>modo adaptado (3 opciones con fundamento jurídico)</strong> o en <strong>modo original (fondo naranja, con las opciones originales del tribunal y aviso de cambios normativos)</strong>.
+    </div>
+
+    <!-- REPASO INTELIGENTE -->
+    <div style="margin-bottom: 20px;">
+      <div class="mode-card" style="border-left: 5px solid #dc2626;">
+        <div>
+          <span class="mode-tag tag-fail">Repaso Inteligente</span>
+          <h3>Examen de Preguntas Falladas en todos los Exámenes</h3>
+          <p id="failed-desc">Repasa exclusivamente las preguntas que has fallado en cualquier convocatoria hasta dominarlas. Pendientes: <strong>0</strong>.</p>
+        </div>
+        <button class="btn-primary btn-danger" id="btn-start-failed" onclick="startExam('failed', 'adapted')" disabled>Practicar Preguntas Falladas (0)</button>
+      </div>
+    </div>
+
+    <div class="section-title">Convocatorias Oficiales Disponibles</div>
+    <div class="grid-modes">
+      <!-- 2023 -->
+      <div class="mode-card">
+        <div>
+          <span class="mode-tag tag-conv">Convocatoria 2023</span>
+          <h3>Examen Oficial 2023 (03/12/2023)</h3>
+          <p>Orden SAN/1812/2022. Elige formato adaptado a 3 opciones o formato original en naranja.</p>
+        </div>
+        <div class="btn-group-dual">
+          <button class="btn-primary" onclick="startExam('2023', 'adapted')">Adaptado (A/B/C)</button>
+          <button class="btn-primary btn-orig" onclick="startExam('2023', 'original')">Original 🟠</button>
+        </div>
+      </div>
+
+      <!-- 2022 PI -->
+      <div class="mode-card">
+        <div>
+          <span class="mode-tag tag-conv">Convocatoria 2022 · P. Interna</span>
+          <h3>Examen Oficial 2022 PI (19/02/2022)</h3>
+          <p>Orden SAN/486/2021. Elige formato adaptado a 3 opciones o formato original en naranja.</p>
+        </div>
+        <div class="btn-group-dual">
+          <button class="btn-primary" onclick="startExam('2022PI', 'adapted')">Adaptado (A/B/C)</button>
+          <button class="btn-primary btn-orig" onclick="startExam('2022PI', 'original')">Original 🟠</button>
+        </div>
+      </div>
+
+      <!-- 2019 -->
+      <div class="mode-card">
+        <div>
+          <span class="mode-tag tag-conv">Convocatoria 2019</span>
+          <h3>Examen Oficial 2019 (07/04/2019)</h3>
+          <p>Orden SAN/1168/2018. Elige formato adaptado a 3 opciones o formato original en naranja.</p>
+        </div>
+        <div class="btn-group-dual">
+          <button class="btn-primary" onclick="startExam('2019', 'adapted')">Adaptado (A/B/C)</button>
+          <button class="btn-primary btn-orig" onclick="startExam('2019', 'original')">Original 🟠</button>
+        </div>
+      </div>
+
+      <!-- 2017 Libre -->
+      <div class="mode-card">
+        <div>
+          <span class="mode-tag tag-conv">Convocatoria 2017 · Libre</span>
+          <h3>Examen Oficial 2017 Libre (26/03/2017)</h3>
+          <p>Orden SAN/563/2016. Elige formato adaptado a 3 opciones o formato original en naranja.</p>
+        </div>
+        <div class="btn-group-dual">
+          <button class="btn-primary" onclick="startExam('2017L', 'adapted')">Adaptado (A/B/C)</button>
+          <button class="btn-primary btn-orig" onclick="startExam('2017L', 'original')">Original 🟠</button>
+        </div>
+      </div>
+
+      <!-- 2017 PI -->
+      <div class="mode-card">
+        <div>
+          <span class="mode-tag tag-conv">Convocatoria 2017 · P. Interna</span>
+          <h3>Examen Oficial 2017 PI (11/02/2017)</h3>
+          <p>Orden SAN/549/2016. Elige formato adaptado a 3 opciones o formato original en naranja.</p>
+        </div>
+        <div class="btn-group-dual">
+          <button class="btn-primary" onclick="startExam('2017PI', 'adapted')">Adaptado (A/B/C)</button>
+          <button class="btn-primary btn-orig" onclick="startExam('2017PI', 'original')">Original 🟠</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISTA EXAMEN -->
+  <section id="view-quiz" class="view">
+    <div class="quiz-topbar">
+      <div>
+        <strong id="quiz-title" style="font-size:1.05rem; color:#0f172a;">Simulacro</strong>
+        <div id="quiz-subtitle" style="font-size:0.82rem; color:var(--muted);"></div>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <span class="timer" id="timer-display">00:00</span>
+        <button class="btn-nav" style="background:#e2e8f0; color:#1e293b; border:none;" onclick="switchView('home')">Salir</button>
+      </div>
+    </div>
+
+    <div class="score-panel" id="score-panel">
+      <h3 style="color:var(--primary); margin-bottom:4px;">Resultado del Ejercicio</h3>
+      <p style="font-size:0.86rem; color:var(--muted);" id="score-desc">Revisa abajo cada pregunta con su fundamento.</p>
+      <div class="score-grid">
+        <div class="stat-box"><div class="stat-val" id="res-aciertos" style="color:#16a34a;">0</div><div class="stat-lbl">Aciertos</div></div>
+        <div class="stat-box"><div class="stat-val" id="res-fallos" style="color:#dc2626;">0</div><div class="stat-lbl">Fallos</div></div>
+        <div class="stat-box"><div class="stat-val" id="res-blanco" style="color:#64748b;">0</div><div class="stat-lbl">En blanco</div></div>
+        <div class="stat-box"><div class="stat-val" id="res-netas">0.00</div><div class="stat-lbl">Preg. Netas</div></div>
+        <div class="stat-box"><div class="stat-val" id="res-puntos">0.00</div><div class="stat-lbl">Nota Final</div></div>
+      </div>
+    </div>
+
+    <div id="questions-container"></div>
+
+    <div style="margin-top:20px; display:flex; gap:12px;">
+      <button class="btn-primary" id="btn-submit-exam" onclick="gradeExam()">Finalizar y Corregir Examen</button>
+      <button class="btn-primary" id="btn-back-home" style="display:none; background:#475569;" onclick="switchView('home')">Volver al Menú Principal</button>
+    </div>
+  </section>
+
+  <!-- VISTA ESTADÍSTICAS -->
+  <section id="view-stats" class="view">
+    <div class="stats-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+        <div>
+          <h2 style="font-size:1.2rem; color:#0f172a;">Estadísticas de Fallos por Tema</h2>
+          <p style="font-size:0.88rem; color:var(--muted);">Ordenado por porcentaje de error.</p>
+        </div>
+        <button class="btn-nav" style="background:#fee2e2; color:#991b1b; border:1px solid #fca5a5;" onclick="resetHistory()">Borrar Historial</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Tema del Programa</th>
+            <th>Respondidas</th>
+            <th>Aciertos</th>
+            <th>Fallos</th>
+            <th>% Fallo</th>
+            <th>Nivel de Riesgo</th>
+          </tr>
+        </thead>
+        <tbody id="stats-tbody"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script>
+  // Banco unificado de preguntas (aquí iremos integrando cada examen)
+  const QUESTION_BANK = [
+    // Ejemplo de pregunta 2023
+    {
+      id: "2023_01", exam: "2023", tema: "Tema 5 · Prevención de Riesgos Laborales",
+      textAdap: "Según el art. 4 de la Ley 31/1995, de Prevención de Riesgos Laborales, se entenderá como «equipo de trabajo»:",
+      optsAdap: { A: "Actividades o medidas adoptadas para evitar o disminuir riesgos.", B: "Cualquier equipo destinado a proteger la seguridad o salud individual.", C: "Cualquier máquina, aparato, instrumento o instalación utilizada en el trabajo." },
+      correctAdap: "C",
+      textOrig: "Según el art. 4 de la Ley 31/1995, de Prevención de Riesgos Laborales, se entenderá como «equipo de trabajo»:",
+      optsOrig: { a: "El conjunto de actividades o medidas adoptadas o previstas en todas las fases de actividad de la empresa con el fin de evitar o disminuir los riesgos derivados del trabajo.", b: "Cualquier equipo destinado a ser llevado o sujetado por el trabajador para que le proteja de uno o varios riesgos que puedan amenazar su seguridad o su salud en el trabajo.", c: "Cualquier máquina, aparato, instrumento o instalación utilizada en el trabajo.", d: "Ninguna de las anteriores es correcta." },
+      correctOrig: "c",
+      norma: "Ley 31/1995, art. 4.6º."
+    }
+  ];
+
+  let appState = loadState();
+  let currentQuestions = [];
+  let currentModeType = "adapted";
+  let timerInterval = null;
+  let secondsElapsed = 0;
+  let isGraded = false;
+
+  function loadState() {
+    try {
+      const raw = localStorage.getItem("enfopos_modular_state_v2");
+      if (raw) return JSON.parse(raw);
+    } catch (e) {}
+    return { failedIds: [], temaStats: {} };
+  }
+
+  function saveState() {
+    localStorage.setItem("enfopos_modular_state_v2", JSON.stringify(appState));
+    updateDashboardUI();
+  }
+
+  function updateDashboardUI() {
+    const count = appState.failedIds.length;
+    const btnFailed = document.getElementById("btn-start-failed");
+    const descFailed = document.getElementById("failed-desc");
+    btnFailed.textContent = `Practicar Preguntas Falladas (${count})`;
+    btnFailed.disabled = count === 0;
+    descFailed.innerHTML = `Repasa exclusivamente las preguntas falladas en cualquier convocatoria. Pendientes: <strong>${count}</strong>.`;
+  }
+
+  function switchView(viewName) {
+    document.querySelectorAll(".view").forEach(v => v.classList.remove("active"));
+    document.querySelectorAll(".btn-nav").forEach(b => b.classList.remove("active"));
+    document.getElementById(`view-${viewName}`).classList.add("active");
+    if (viewName === "home") {
+      document.getElementById("nav-home").classList.add("active");
+      stopTimer();
+      updateDashboardUI();
+    } else if (viewName === "stats") {
+      document.getElementById("nav-stats").classList.add("active");
+      stopTimer();
+      renderStatsTable();
+    }
+  }
+
+  function shuffle(arr) {
+    const copy = [...arr];
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+  }
+
+  function startExam(examKey, mode) {
+    currentModeType = mode; // "adapted" o "original"
+    isGraded = false;
+    document.getElementById("score-panel").classList.remove("visible");
+    document.getElementById("btn-submit-exam").style.display = "block";
+    document.getElementById("btn-back-home").style.display = "none";
+
+    if (examKey === "failed") {
+      currentQuestions = shuffle(QUESTION_BANK.filter(q => appState.failedIds.includes(q.id)));
+      currentModeType = "adapted";
+      document.getElementById("quiz-title").textContent = "Repaso Inteligente · Preguntas Falladas";
+      document.getElementById("quiz-subtitle").textContent = `${currentQuestions.length} preguntas pendientes`;
+    } else {
+      currentQuestions = QUESTION_BANK.filter(q => q.exam === examKey);
+      const modeLabel = mode === "original" ? "⚠️ Formato Original (Fondo Naranja)" : "Formato Adaptado (3 Opciones)";
+      document.getElementById("quiz-title").textContent = `Examen Oficial ${examKey} (${modeLabel})`;
+      document.getElementById("quiz-subtitle").textContent = `${currentQuestions.length} preguntas en este apartado`;
+    }
+
+    if (currentQuestions.length === 0) {
+      alert(`Pronto añadiremos el bloque completo de preguntas para el examen ${examKey}. ¡Estamos en pleno desarrollo modular!`);
+      return;
+    }
+
+    renderQuestions();
+    switchView("quiz");
+    startTimer();
+  }
+
+  function renderQuestions() {
+    const container = document.getElementById("questions-container");
+    container.innerHTML = "";
+    currentQuestions.forEach((q, idx) => {
+      const card = document.createElement("div");
+      card.className = currentModeType === "original" ? "question-card orig-mode-card" : "question-card";
+      card.id = `card_${q.id}`;
+      const metaBadge = currentModeType === "original" 
+        ? `<span class="q-orig-warning">⚠️ PREGUNTA ORIGINAL SIN ADAPTAR (La ley ha podido cambiar)</span>` 
+        : `<span class="q-updated">Adaptada a normativa 2026</span>`;
+      const qText = currentModeType === "original" ? q.textOrig : q.textAdap;
+      const opts = currentModeType === "original" ? q.optsOrig : q.optsAdap;
+      card.innerHTML = `
+        <div class="q-meta"><span class="q-tema">${q.tema}</span><div>${metaBadge}<span style="margin-left:6px;">Conv. ${q.exam}</span></div></div>
+        <div class="q-text">${idx + 1}. ${qText}</div>
+        <div class="options-list">
+          ${Object.keys(opts).map(letter => `
+            <label class="option-item" id="lbl_${q.id}_${letter}">
+              <input type="radio" name="ans_${q.id}" value="${letter}" />
+              <span><strong>${letter.toUpperCase()})</strong> ${opts[letter]}</span>
+            </label>
+          `).join("")}
+        </div>
+        <div class="norma-box" id="norma_${q.id}"><strong>Fundamento jurídico / Norma vigente:</strong> ${q.norma}</div>
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  function gradeExam() {
+    if (isGraded) return;
+    isGraded = true;
+    stopTimer();
+    let aciertos = 0, fallos = 0, blanco = 0;
+    currentQuestions.forEach(q => {
+      const selected = document.querySelector(`input[name="ans_${q.id}"]:checked`);
+      const userVal = selected ? selected.value : null;
+      const correctVal = currentModeType === "original" ? q.correctOrig : q.correctAdap;
+      if (!appState.temaStats[q.tema]) appState.temaStats[q.tema] = { answered: 0, correct: 0, wrong: 0 };
+      document.querySelectorAll(`input[name="ans_${q.id}"]`).forEach(inp => inp.disabled = true);
+      const correctLbl = document.getElementById(`lbl_${q.id}_${correctVal}`);
+      if (correctLbl) correctLbl.classList.add("correct-ans");
+      document.getElementById(`norma_${q.id}`).classList.add("visible");
+      if (!userVal) {
+        blanco++;
+      } else if (userVal === correctVal) {
+        aciertos++;
+        appState.temaStats[q.tema].answered++;
+        appState.temaStats[q.tema].correct++;
+        appState.failedIds = appState.failedIds.filter(id => id !== q.id);
+      } else {
+        fallos++;
+        appState.temaStats[q.tema].answered++;
+        appState.temaStats[q.tema].wrong++;
+        const wrongLbl = document.getElementById(`lbl_${q.id}_${userVal}`);
+        if (wrongLbl) wrongLbl.classList.add("wrong-ans");
+        if (!appState.failedIds.includes(q.id)) appState.failedIds.push(q.id);
+      }
+    });
+    const total = currentQuestions.length;
+    const penalty = currentModeType === "original" ? 3 : 9;
+    const netas = Math.max(0, aciertos - (fallos / penalty));
+    const nota150 = total > 0 ? ((netas / total) * 150) : 0;
+    document.getElementById("res-aciertos").textContent = aciertos;
+    document.getElementById("res-fallos").textContent = fallos;
+    document.getElementById("res-blanco").textContent = blanco;
+    document.getElementById("res-netas").textContent = netas.toFixed(2);
+    document.getElementById("res-puntos").textContent = nota150.toFixed(2);
+    document.getElementById("score-panel").classList.add("visible");
+    document.getElementById("btn-submit-exam").style.display = "none";
+    document.getElementById("btn-back-home").style.display = "block";
+    saveState();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function renderStatsTable() {
+    const tbody = document.getElementById("stats-tbody");
+    tbody.innerHTML = "";
+    const allTemas = new Set([...QUESTION_BANK.map(q => q.tema), ...Object.keys(appState.temaStats)]);
+    Array.from(allTemas).forEach(tema => {
+      const st = appState.temaStats[tema] || { answered: 0, correct: 0, wrong: 0 };
+      const failRate = st.answered > 0 ? Math.round((st.wrong / st.answered) * 100) : 0;
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td><strong>${tema}</strong></td><td>${st.answered}</td><td style="color:#16a34a">${st.correct}</td><td style="color:#dc2626">${st.wrong}</td><td>${failRate}%</td><td>${st.answered > 0 ? (failRate >= 50 ? "🔴 Alto" : "🟢 Dominado") : "Sin datos"}</td>`;
+      tbody.appendChild(tr);
+    });
+  }
+
+  function resetHistory() {
+    if (confirm("¿Borrar historial?")) { appState = { failedIds: [], temaStats: {} }; saveState(); renderStatsTable(); }
+  }
+
+  function startTimer() {
+    stopTimer(); secondsElapsed = 0;
+    timerInterval = setInterval(() => {
+      secondsElapsed++;
+      const mins = String(Math.floor(secondsElapsed / 60)).padStart(2, "0");
+      const secs = String(secondsElapsed % 60).padStart(2, "0");
+      document.getElementById("timer-display").textContent = `${mins}:${secs}`;
+    }, 1000);
+  }
+  function stopTimer() { if (timerInterval) clearInterval(timerInterval); }
+  updateDashboardUI();
+</script>
+</body>
+</html>
