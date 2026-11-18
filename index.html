@@ -346,9 +346,19 @@
         : `<span class="q-updated">Adaptada a normativa 2026</span>`;
       const qText = currentModeType === "original" ? q.textOrig : q.textAdap;
       const opts = currentModeType === "original" ? q.optsOrig : q.optsAdap;
+
+      // Detector automático de imágenes para el supuesto práctico (FIGURA 1, 2, 3 o 4)
+      let figuraHtml = "";
+      for (let i = 1; i <= 4; i++) {
+        if (qText.includes(`FIGURA ${i}`)) {
+          figuraHtml += `<div style="margin: 14px 0; text-align: center;"><img src="img/figura_${i}.jpg" alt="Figura ${i}" style="max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);" /></div>`;
+        }
+      }
+
       card.innerHTML = `
         <div class="q-meta"><span class="q-tema">${q.tema}</span><div>${metaBadge}<span style="margin-left:6px;">Conv. ${q.exam}</span></div></div>
         <div class="q-text">${idx + 1}. ${qText}</div>
+        ${figuraHtml}
         <div class="options-list">
           ${Object.keys(opts).map(letter => `
             <label class="option-item" id="lbl_${q.id}_${letter}">
