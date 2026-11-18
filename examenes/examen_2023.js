@@ -1,5 +1,5 @@
-// EXAMEN OFICIAL 2023 - AUXILIAR ADMINISTRATIVO SACYL (BLOQUE COMPLETO 1: Preguntas 1 a 60)
-const EXAM_2023_DATA = [
+// EXAMEN OFICIAL 2023 - AUXILIAR ADMINISTRATIVO SACYL (BLOQUE COMPLETO: Preguntas 1 a 100)
+const EXAM_2023_COMPLETO = [
   {
     id: "2023_01", exam: "2023", tema: "Tema 5 · Prevención de Riesgos Laborales",
     textAdap: "Según el art. 4 de la Ley 31/1995, se entenderá como «equipo de trabajo»:",
@@ -343,7 +343,7 @@ const EXAM_2023_DATA = [
   {
     id: "2023_35", exam: "2023", tema: "Tema 1 · Organización Hospitalaria",
     textAdap: "Le corresponde al Director Médico de Hospital, según el RD 521/1987:",
-    optsAdap: { A: "Proponer, dirigir y coordinar las actividades asistenciales, docentes e de investigación.", b: "La gestión de suministros generales.", c: "El mantenimiento de instalaciones." },
+    optsAdap: { A: "Proponer, dirigir y coordinar las actividades asistenciales, docentes e de investigación.", B: "La gestión de suministros generales.", C: "El mantenimiento de instalaciones." },
     correctAdap: "A",
     textOrig: "¿Cuál de las siguientes funciones le corresponde al Director Médico de Hospital, según el art. 10 del Real Decreto 521/1987?:",
     optsOrig: { a: "Proponer, dirigir, coordinar y evaluar las actividades y calidad de la asistencia, docencia e investigación.", b: "Elaborar informes periódicos sobre la actividad del hospital...", c: "La adopción de medidas para hacer efectiva la continuidad...", d: "Asumir las funciones de carácter no asistencial..." },
@@ -720,9 +720,6 @@ const EXAM_2023_DATA = [
     correctOrig: "b",
     norma: "Decreto de estructura orgánica de la Consejería de Sanidad."
   },
-
-// SUPUESTO PRÁCTICO COMPLETO: EXAMEN OFICIAL 2023 - AUXILIAR ADMINISTRATIVO SACYL (Preguntas 73 a 100)
-const EXAM_2023_PRACTICO_DATA = [
   {
     id: "2023_73", exam: "2023", tema: "Supuesto Práctico · Windows 10",
     textAdap: "En el Explorador de archivos Windows 10, para cambiar el nombre de un archivo de la FIGURA 3 hay que colocarse sobre el fichero y pulsar la tecla:",
@@ -858,7 +855,7 @@ const EXAM_2023_PRACTICO_DATA = [
     textAdap: "¿Cuáles son los atajos de teclado en Word 2013 para deshacer y rehacer cambios?:",
     optsAdap: { A: "Ctrl+Z (Deshacer) y Ctrl+Y (Rehacer)", B: "Ctrl+Y (Deshacer) y Ctrl+Z (Rehacer)", C: "Ctrl+Z y Ctrl+R" },
     correctAdap: "A",
-    textOrig: "¿Cuáles son los atajos de teclado en Word 2013 para deshacer y rehacer cambios que te permitirán ser más eficiente en la elaboración del archivo de la FIGURA 4?:",
+    textOrig: "¿Cuáles son los atajos de teclado en Word 2013 para deshacer y rehacer cambios que te permitirán ser más eficiente en la elaboración del archivo de la FIGURA 4?",
     optsOrig: { a: "Ctrl+Y (Deshacer) y Ctrl+Z (Rehacer)", b: "Ctrl+Z (Deshacer) y Ctrl+Y (Rehacer)", c: "Ctrl+Z (Deshacer) y Ctrl+R (Rehacer)", d: "Ctrl+D (Deshacer) y Ctrl+R (Rehacer)" },
     correctOrig: "b",
     norma: "Word 2013, Ctrl+Z y Ctrl+Y."
@@ -905,7 +902,7 @@ const EXAM_2023_PRACTICO_DATA = [
   },
   {
     id: "2023_91", exam: "2023", tema: "Supuesto Práctico · Word 2013",
-    textAdap: "En el archivo Word de la FIGURA 4, ¿qué combinación de teclas permite cambiar a mayúsculas o minúsculas:",
+    textAdap: "En el documento de Word de la FIGURA 4, ¿qué combinación de teclas permite cambiar a mayúsculas o minúsculas:",
     optsAdap: { A: "Mayús+F3", B: "Ctrl+M", C: "Ctrl+Y" },
     correctAdap: "A",
     textOrig: "En el archivo Word 2013 de la FIGURA 4 señale cuál de las siguientes combinaciones de teclas permite cambiar una palabra seleccionada a mayúsculas o a minúsculas:",
@@ -1005,20 +1002,9 @@ const EXAM_2023_PRACTICO_DATA = [
   }
 ];
 
-// Registro en el banco global de la app
+// Integración automática y limpia en el banco global de la aplicación
 if (typeof QUESTION_BANK !== 'undefined') {
-  const cleanBank = QUESTION_BANK.filter(q => q.exam !== "2023");
-  QUESTION_BANK.length = 0;
-  QUESTION_BANK.push(...cleanBank, ...EXAM_2023_PRACTICO_DATA);
-
-// Fusionamos este bloque final con el banco global manteniendo las preguntas anteriores de 2023
-if (typeof QUESTION_BANK !== 'undefined') {
-  // Aseguramos que no se dupliquen si ya estaban cargadas las anteriores
   const existingWithout2023 = QUESTION_BANK.filter(q => q.exam !== "2023");
-  const current2023 = QUESTION_BANK.filter(q => q.exam === "2023");
-  
-  // Combinamos de forma limpia añadiendo las nuevas o reemplazando el set completo de 2023
   QUESTION_BANK.length = 0;
-  // Si prefieres asegurar que estén todas las de 2023 de este bloque definitivo:
-  QUESTION_BANK.push(...existingWithout2023, ...EXAM_2023_FINAL_DATA);
+  QUESTION_BANK.push(...existingWithout2023, ...EXAM_2023_COMPLETO);
 }
