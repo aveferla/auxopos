@@ -363,7 +363,7 @@
           ${Object.keys(opts).map(letter => `
             <label class="option-item" id="lbl_${q.id}_${letter}">
               <input type="radio" name="ans_${q.id}" value="${letter}" />
-              <span><strong>${letter.toUpperCase()})</strong> ${opts[letter]}</span>
+              <span><strong>${letter.toUpperCase()})</strong>${opts[letter]}</span>
             </label>
           `).join("")}
         </div>
@@ -451,6 +451,7 @@
 
 <!-- LLAMADAS A LOS EXÁMENES MODULARES EN LA CARPETA EXAMENES -->
 <script src="examenes/examen_2023.js"></script>
+<script src="examenes/examen_2023_practico.js"></script>
 <script src="examenes/examen_2022pi.js"></script>
 
 </body>
