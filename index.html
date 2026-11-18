@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -249,7 +249,7 @@
 </main>
 
 <script>
-  // Banco unificado de preguntas globales
+  // Banco unificado global de preguntas
   const QUESTION_BANK = [];
 
   let appState = loadState();
@@ -306,7 +306,7 @@
   }
 
   function startExam(examKey, mode) {
-    currentModeType = mode; // "adapted" o "original"
+    currentModeType = mode;
     isGraded = false;
     document.getElementById("score-panel").classList.remove("visible");
     document.getElementById("btn-submit-exam").style.display = "block";
@@ -363,7 +363,7 @@
           ${Object.keys(opts).map(letter => `
             <label class="option-item" id="lbl_${q.id}_${letter}">
               <input type="radio" name="ans_${q.id}" value="${letter}" />
-              <span><strong>${letter.toUpperCase()})</strong>${opts[letter]}</span>
+              <span><strong>${letter.toUpperCase()})</strong> ${opts[letter]}</span>
             </label>
           `).join("")}
         </div>
@@ -449,10 +449,20 @@
   updateDashboardUI();
 </script>
 
-<!-- LLAMADAS A LOS EXÁMENES MODULARES EN LA CARPETA EXAMENES -->
+<!-- CARGA DE ARCHIVOS EXTERNOS DE EXÁMENES E INTEGRACIÓN SEGURA -->
 <script src="examenes/examen_2023.js"></script>
-<script src="examenes/examen_2023_practico.js"></script>
 <script src="examenes/examen_2022pi.js"></script>
+
+<script>
+  // Añadimos formalmente los exámenes cargados al banco global de forma centralizada
+  if (typeof EXAM_2023_COMPLETO !== 'undefined') {
+    QUESTION_BANK.push(...EXAM_2023_COMPLETO);
+  }
+  if (typeof EXAM_2022PI_DATA !== 'undefined') {
+    QUESTION_BANK.push(...EXAM_2022PI_DATA);
+  }
+  updateDashboardUI();
+</script>
 
 </body>
 </html>
