@@ -599,12 +599,137 @@ const EXAM_2023_DATA = [
     optsOrig: { a: "Resolverlo y notificarlo en el plazo de tres meses.", b: "Resolverlo y notificarlo en el plazo de un mes.", c: "Remitirlo en el plazo de diez días al órgano competente, junto con su informe y copia del expediente.", d: "Remitirlo en el plazo de un mes..." },
     correctOrig: "c",
     norma: "Ley 39/2015, art. 118."
+  },
+  {
+    id: "2023_61", exam: "2023", tema: "Tema 15 · Procedimiento Administrativo",
+    textAdap: "Los interesados en un procedimiento administrativo podrán comparecer y presentar alegaciones en el trámite de audiencia en un plazo:",
+    optsAdap: { A: "No inferior a diez días ni superior a quince.", B: "No inferior a diez días ni superior a veinte.", C: "No inferior a quince días." },
+    correctAdap: "B",
+    textOrig: "Los interesados en un procedimiento administrativo podrán comparecer y presentar alegaciones en el trámite de audiencia en un plazo:",
+    optsOrig: { a: "No inferior a diez días ni superior a quince.", b: "No inferior a diez días ni superior a veinte.", c: "No inferior a ocho días ni superior a quince.", d: "No inferior a ocho días ni superior a veinte." },
+    correctOrig: "b",
+    norma: "Ley 39/2015, art. 82."
+  },
+  {
+    id: "2023_62", exam: "2023", tema: "Tema 15 · Nulidad y Anulabilidad",
+    textAdap: "Según la Ley 39/2015, son actos anulables:",
+    optsAdap: { A: "Cualquier infracción del ordenamiento jurídico, incluso la desviación de poder.", B: "Los actos dictados prescindiendo total y absolutamente del procedimiento.", C: "Los que tengan un contenido imposible." },
+    correctAdap: "A",
+    textOrig: "Según la Ley 39/2015, del Procedimiento Administrativo Común de las Administraciones Públicas, son actos anulables:",
+    optsOrig: { a: "Los actos expresos o presuntos contrarios al ordenamiento jurídico por los que se adquieren facultades o derechos...", b: "Los actos de la Administración que incurran en desviación de poder.", c: "Los que tengan un contenido imposible.", d: "Los dictados prescindiendo total y absolutamente del procedimiento..." },
+    correctOrig: "b",
+    norma: "Ley 39/2015, art. 48."
+  },
+  {
+    id: "2023_63", exam: "2023", tema: "Tema 26 · Ofimática (Windows)",
+    textAdap: "¿Con qué sistema de almacenamiento en la nube está integrado por defecto el Explorador de archivos de Windows 10?",
+    optsAdap: { A: "OneDrive.", B: "Dropbox.", C: "Google Drive." },
+    correctAdap: "A",
+    textOrig: "¿Con qué sistema de almacenamiento de archivos en la nube está integrado por defecto el Explorador de archivos de Windows 10?:",
+    optsOrig: { a: "OneDrive.", b: "Dropbox.", c: "Google Drive.", d: "Amazon S3." },
+    correctOrig: "a",
+    norma: "Manual de ofimática básica Windows 10."
+  },
+  {
+    id: "2023_64", exam: "2023", tema: "Tema 28 · Internet y Redes",
+    textAdap: "Cada ordenador conectado a Internet tiene una dirección para identificarse representada por una serie de números llamada:",
+    optsAdap: { A: "IP", B: "DNS", C: "DOM" },
+    correctAdap: "A",
+    textOrig: "Cada ordenador conectado a Internet tiene una dirección para identificarse representada por una serie de números. ¿Cuál es su nombre?:",
+    optsOrig: { a: "IP", b: "DNS", c: "COM", d: "DOM" },
+    correctOrig: "a",
+    norma: "Conceptos básicos de redes e Internet."
+  },
+  {
+    id: "2023_65", exam: "2023", tema: "Tema 28 · Protocolos Web",
+    textAdap: "¿Qué diferencia principal existe entre los protocolos HTTP y HTTPS?",
+    optsAdap: { A: "HTTPS añade una capa de seguridad al integrar la encriptación de los datos.", B: "Son implementaciones idénticas de distintas empresas.", C: "HTTP está diseñado exclusivamente para móviles." },
+    correctAdap: "A",
+    textOrig: "HTTP y HTTPS son protocolos que permiten la transferencia de información entre un servidor web y un navegador. ¿Qué los diferencia?:",
+    optsOrig: { a: "Son diferentes implementaciones realizadas por distintas empresas...", b: "HTTPS sólo funciona en los navegadores antiguos...", c: "HTTPS añade una capa de seguridad al integrar la encriptación de los datos en la transferencia de información.", d: "HTTP está diseñado para dispositivos de escritorio..." },
+    correctOrig: "c",
+    norma: "Seguridad en protocolos web."
+  },
+  {
+    id: "2023_66", exam: "2023", tema: "Tema 15 · Administración Electrónica (ENI)",
+    textAdap: "De acuerdo con la Ley 40/2015, el «Esquema Nacional de Interoperabilidad» comprende:",
+    optsAdap: { A: "El conjunto de criterios y recomendaciones de seguridad, conservación y normalización de formatos y aplicaciones para la toma de decisiones tecnológicas.", B: "Únicamente la política de seguridad física.", C: "Normas exclusivas para el sector privado." },
+    correctAdap: "A",
+    textOrig: "De acuerdo con lo establecido en la Ley 40/2015, de Régimen Jurídico del Sector Público el “Esquema Nacional de Interoperabilidad”:",
+    optsOrig: { a: "Tiene por objeto establecer la política de seguridad...", b: "Comprende el conjunto de criterios y recomendaciones en materia de seguridad, conservación y normalización de la información, de los formatos y de las aplicaciones que deberán ser tenidos en cuenta por las Administraciones Públicas para la toma de decisiones tecnológicas que garanticen la interoperabilidad.", c: "No es aplicable a los sistemas de salud...", d: "Está constituido por los principios básicos..." },
+    correctOrig: "b",
+    norma: "Ley 40/2015 (LRJSP) y RD ENI."
+  },
+  {
+    id: "2023_67", exam: "2023", tema: "Tema 7 · Régimen Disciplinario Personal Estatutario",
+    textAdap: "Según la Ley 2/2007 del Estatuto Jurídico del Personal Estatutario de Sacyl, se considera falta grave:",
+    optsAdap: { A: "El incumplimiento de la programación funcional que comporte perjuicio para los usuarios por causa imputable al empleado.", B: "El abandono del servicio (falta muy grave).", C: "Falta de asistencia continuada no justificada superior a cinco días." },
+    correctAdap: "A",
+    textOrig: "Según la Ley 2/2007, de 7 de marzo, del Estatuto Jurídico del Personal Estatutario del Servicio de Salud de Castilla y León, se considera falta grave:",
+    optsOrig: { a: "El incumplimiento de la programación funcional del centro o institución sanitaria que comporte perjuicio para los usuarios por causa imputable al empleado.", b: "El abandono del servicio.", c: "La falta de asistencia durante más de cinco días continuados...", d: "Todas las respuestas son correctas." },
+    correctOrig: "a",
+    norma: "Ley 2/2007 (CyL), régimen disciplinario."
+  },
+  {
+    id: "2023_68", exam: "2023", tema: "Tema 19 · Seguridad Social",
+    textAdap: "Según el art. 19.2 del RDL 8/2015 (LGSS), las bases de cotización tendrán como tope mínimo:",
+    optsAdap: { A: "Las cuantías del salario mínimo interprofesional vigente en cada momento, incrementadas en un sexto.", B: "El SMI exacto sin incrementos.", C: "Las fijadas por la Ley de Presupuestos Generales del Estado." },
+    correctAdap: "A",
+    textOrig: "Según el art. 19.2 del texto refundido de la Ley General de la Seguridad Social, aprobado por el RDL 8/2015, las bases de cotización, en cada uno de sus regímenes, tendrán como tope mínimo:",
+    optsOrig: { a: "Las cuantías del salario mínimo interprofesional vigente en cada momento, incrementadas en un quinto...", b: "Las cuantías del salario mínimo interprofesional vigente en cada momento, incrementadas en un sexto, salvo disposición expresa en contrario.", c: "Las cuantías fijadas por el Reglamento...", d: "Las cuantías fijadas para cada año por la correspondiente Ley de Presupuestos..." },
+    correctOrig: "b",
+    norma: "RDL 8/2015 (LGSS), art. 19.2."
+  },
+  {
+    id: "2023_69", exam: "2023", tema: "Tema 3 · Estatuto de Autonomía de Castilla y León",
+    textAdap: "El Estatuto de Autonomía de Castilla y León fue aprobado por:",
+    optsAdap: { A: "Ley Orgánica 4/1983, de 25 de febrero.", B: "Ley Orgánica 14/1983.", C: "Ley Orgánica 4/1984." },
+    correctAdap: "A",
+    textOrig: "El Estatuto de Autonomía de Castilla y León fue aprobado por:",
+    optsOrig: { a: "Ley Orgánica 4/1984, de 25 de febrero.", b: "Ley Orgánica 4/1983, de 25 de febrero.", c: "Ley Orgánica 14/1984, de 30 de noviembre.", d: "Ley Orgánica 14/1983, de 30 de noviembre." },
+    correctOrig: "b",
+    norma: "Estatuto de Autonomía de Castilla y León."
+  },
+  {
+    id: "2023_70", exam: "2023", tema: "Tema 22 · Ley General de Sanidad",
+    textAdap: "Según el art. 10 de la Ley 14/1986 (General de Sanidad), es un derecho de todos con respecto a las administraciones sanitarias:",
+    optsAdap: { A: "A la información sobre los servicios sanitarios accesibles y requisitos de uso, confidencialidad, etc.", B: "A recibir asistencia privada gratuita.", C: "A elegir médico especialista internacional libremente." },
+    correctAdap: "A",
+    textOrig: "Según establece el art. 10 de la Ley 14/1986, General de Sanidad, será un derecho de todos con respecto a las administraciones públicas sanitarias:",
+    optsOrig: { a: "A la información sobre los servicios sanitarios a que puede acceder y sobre los requisitos necesarios para su uso.", b: "A obtener los medicamentos y productos sanitarios...", c: "A la confidencialidad de toda la información relacionada con su proceso...", d: "Todas son correctas." },
+    correctOrig: "d",
+    norma: "Ley 14/1986, art. 10."
+  },
+  {
+    id: "2023_71", exam: "2023", tema: "Tema 7 · Estatuto Marco",
+    textAdap: "De acuerdo con el Estatuto Marco, la provisión de plazas del personal estatutario se regirá por los principios de:",
+    optsAdap: { A: "Igualdad, mérito, capacidad y publicidad en la selección, además de planificación y coordinación.", B: "Libre designación exclusiva.", C: "Antigüedad rigurosa sin méritos." },
+    correctAdap: "A",
+    textOrig: "De acuerdo con el Estatuto Marco del personal estatutario de los servicios de salud, la provisión de plazas del personal estatutario se regirá por los siguientes principios básicos:",
+    optsOrig: { a: "Igualdad, mérito, capacidad y publicidad en la selección, promoción y movilidad...", b: "Planificación eficiente de las necesidades...", c: "Coordinación, cooperación y mutua información...", d: "Todas son correctas." },
+    correctOrig: "d",
+    norma: "Ley 55/2003 (Estatuto Marco)."
+  },
+  {
+    id: "2023_72", exam: "2023", tema: "Tema 1 · Estructura Consejería de Sanidad",
+    textAdap: "El Servicio de Promoción de la Salud y de Salud Laboral de la Consejería de Sanidad de Castilla y León se encuentra adscrito a la Dirección General de:",
+    optsAdap: { A: "Salud Pública.", B: "Calidad e Infraestructuras Sanitarias.", C: "Personal y Desarrollo Profesional." },
+    correctAdap: "A",
+    textOrig: "El Servicio de Promoción de la Salud y de Salud Laboral, dentro de la Consejería de Sanidad de la Junta de Castilla y León, se encuentra adscrito a la Dirección General:",
+    optsOrig: { a: "De Calidad e Infraestructuras Sanitarias.", b: "De Salud Pública.", c: "De Planificación Sanitaria, Investigación e Innovación.", d: "De Personal y Desarrollo Profesional." },
+    correctOrig: "b",
+    norma: "Decreto de estructura orgánica de la Consejería de Sanidad."
   }
 ];
 
-// Registro automático en el banco global de la aplicación
+// Fusionamos este bloque final con el banco global manteniendo las preguntas anteriores de 2023
 if (typeof QUESTION_BANK !== 'undefined') {
-  const filtered = QUESTION_BANK.filter(q => q.exam !== "2023");
+  // Aseguramos que no se dupliquen si ya estaban cargadas las anteriores
+  const existingWithout2023 = QUESTION_BANK.filter(q => q.exam !== "2023");
+  const current2023 = QUESTION_BANK.filter(q => q.exam === "2023");
+  
+  // Combinamos de forma limpia añadiendo las nuevas o reemplazando el set completo de 2023
   QUESTION_BANK.length = 0;
-  QUESTION_BANK.push(...filtered, ...EXAM_2023_DATA);
+  // Si prefieres asegurar que estén todas las de 2023 de este bloque definitivo:
+  QUESTION_BANK.push(...existingWithout2023, ...EXAM_2023_FINAL_DATA);
 }
