@@ -106,7 +106,7 @@
 <main>
   <section id="view-home" class="view active">
     <div class="rules-banner">
-      <strong>Modalidades de estudio:</strong> Puedes realizar el examen en <strong>modo adaptado (3 opciones con fundamento jurídico)</strong> o en <strong>modo original (fondo naranja, con las 4 opciones originales del tribunal y aviso de cambios normativos)</strong>.
+      <strong>Modalidades de estudio:</strong> Puedes realizar cada examen en <strong>modo adaptado (3 opciones con fundamento jurídico)</strong> o en <strong>modo original (fondo naranja, con las 4 opciones originales del tribunal y aviso de cambios normativos)</strong>.
     </div>
 
     <!-- REPASO INTELIGENTE -->
@@ -121,7 +121,7 @@
       </div>
     </div>
 
-    <div class="section-title">Convocatoria Disponible</div>
+    <div class="section-title">Convocatorias Disponibles</div>
     <div class="grid-modes" id="exams-grid">
       <!-- 2023 -->
       <div class="mode-card">
@@ -133,6 +133,19 @@
         <div class="btn-group-dual">
           <button class="btn-primary" onclick="startExam('2023', 'adapted')">Adaptado (A/B/C)</button>
           <button class="btn-primary btn-orig" onclick="startExam('2023', 'original')">Original 🟠</button>
+        </div>
+      </div>
+
+      <!-- 2019 -->
+      <div class="mode-card">
+        <div>
+          <span class="mode-tag tag-conv">Convocatoria 2019</span>
+          <h3>Examen Oficial 2019 (07/04/2019)</h3>
+          <p id="count-2019">Orden SAN/1168/2018. Elige formato adaptado a 3 opciones o formato original en naranja.</p>
+        </div>
+        <div class="btn-group-dual">
+          <button class="btn-primary" onclick="startExam('2019', 'adapted')">Adaptado (A/B/C)</button>
+          <button class="btn-primary btn-orig" onclick="startExam('2019', 'original')">Original 🟠</button>
         </div>
       </div>
     </div>
@@ -258,11 +271,18 @@
       descFailed.innerHTML = `Repasa exclusivamente las preguntas que has fallado hasta dominarlas. Pendientes: <strong>${failedCount}</strong>.`;
     }
 
-    const count2023 = document.getElementById("count-2023");
-    if (count2023) {
-      const n = getExamQuestions("2023").length;
-      count2023.innerHTML = `Orden SAN/1812/2022. Elige formato adaptado a 3 opciones o formato original en naranja.<br><small style="color:#0f4c81; font-weight:600;">Preguntas cargadas: ${n}</small>`;
-    }
+    const examInfo = {
+      "2023": "Orden SAN/1812/2022. Elige formato adaptado a 3 opciones o formato original en naranja.",
+      "2019": "Orden SAN/1168/2018. Elige formato adaptado a 3 opciones o formato original en naranja."
+    };
+
+    Object.keys(examInfo).forEach(key => {
+      const el = document.getElementById(`count-${key}`);
+      if (el) {
+        const n = getExamQuestions(key).length;
+        el.innerHTML = `${examInfo[key]}<br><small style="color:#0f4c81; font-weight:600;">Preguntas cargadas: ${n}</small>`;
+      }
+    });
   }
 
   function switchView(viewName) {
@@ -337,10 +357,10 @@
         ? `<span class="q-orig-warning">⚠️ PREGUNTA ORIGINAL SIN ADAPTAR (La ley ha podido cambiar)</span>`
         : `<span class="q-updated">Adaptada a normativa 2026</span>`;
 
-      // Busca FIGURA 1, 2, 3 o 4 en el texto y carga img/figura_X.jpg
+      // Busca FIGURA 1..9 en el enunciado o en el texto de referencia y carga img/figura_X.jpg
       let figuraHtml = "";
       const textoBusqueda = `${q.textAdap || ""} ${q.textOrig || ""}`.toUpperCase();
-      for (let i = 1; i <= 4; i++) {
+      for (let i = 1; i <= 9; i++) {
         if (textoBusqueda.includes(`FIGURA ${i}`)) {
           figuraHtml += `
             <div class="figura-box">
@@ -495,8 +515,9 @@
   updateDashboardUI();
 </script>
 
-<!-- ÚNICO EXAMEN CARGADO POR AHORA -->
+<!-- EXÁMENES CARGADOS -->
 <script src="examenes/examen_2023.js"></script>
+<script src="examenes/examen_2019.js"></script>
 
 </body>
 </html>
