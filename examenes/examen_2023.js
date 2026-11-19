@@ -984,7 +984,7 @@ const EXAM_2023_COMPLETO = [
     textAdap: "En el documento de Word de la FIGURA 4, al establecer 'Marcar como final', ¿qué efecto tendrá?:",
     optsAdap: { A: "Informa a los lectores que el documento es definitivo y lo convierte en sólo lectura.", B: "Requiere contraseña obligatoria para abrir.", C: "Protege únicamente el encabezado." },
     correctAdap: "A",
-    textOrig: "En el documento de Word 2013 de la FIGURA 4, en 'Proteger documento”, establecemos la opción “Marcar como final". Что efecto tendrá sobre el documento?:",
+    textOrig: "En el documento de Word 2013 de la FIGURA 4, en 'Proteger documento”, establecemos la opción “Marcar como final". ¿Qué efecto tendrá sobre el documento?:",
     optsOrig: { a: "Se requiere una contraseña para abrir este documento.", b: "Informa a los lectores que el documento es definitivo y lo convierte en un documento de sólo lectura.", c: "Controla qué tipos de cambios puedan realizar las personas...", d: "Garantiza la integridad..." },
     correctOrig: "b",
     norma: "Word 2013, Marcar como final."
