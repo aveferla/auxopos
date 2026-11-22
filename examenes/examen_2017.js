@@ -961,14 +961,14 @@ window.registerExamQuestions("2017", [
     norma: "Arquitectura de ordenadores / memoria ROM (Read-Only Memory): es una memoria de solo lectura y no volátil, lo que significa que conserva su contenido (como el firmware/BIOS/UEFI de arranque) aun cuando el equipo se apaga o se desconecta de la corriente."
   },
   {
-    id: "2017_97", exam: "2017", tema: "Reserva · Prevención de Riesgos Laborales (Sacyl)",
+   id: "2017_97", exam: "2017", tema: "Reserva · Prevención de Riesgos Laborales (Sacyl)",
     textAdap: "En el caso de que no exista puesto de trabajo de la misma categoría profesional compatible con el estado de salud del trabajador. Señale la afirmación correcta respecto al traslado a un puesto de inferior categoría:",
     optsAdap: { A: "La Dirección General de Profesionales solicitará el consentimiento del trabajador para proceder a un traslado a un puesto de trabajo compatible de inferior categoría, concediéndole un plazo de diez días naturales para que se pronuncie sobre el mismo.", B: "La Dirección General de Profesionales solicitará el consentimiento del trabajador para proceder a un traslado a un puesto de trabajo compatible de inferior categoría, concediéndole un plazo de diez días hábiles para que se pronuncie sobre el mismo.", C: "La Dirección Gerencia del centro solicitará el consentimiento del trabajador para proceder a un traslado a un puesto de trabajo compatible de inferior categoría, concediéndole un plazo de diez días hábiles para que se pronuncie sobre el mismo." },
-    correctAdap: "C",
+    correctAdap: "B",
     textOrig: "En el caso de que no exista puesto de trabajo de la misma categoría profesional compatible con el estado de salud del trabajador. Señale la afirmación correcta respecto al traslado a un puesto de inferior categoría:",
     optsOrig: { a: "La Dirección General de Profesionales solicitará el consentimiento del trabajador para proceder a un traslado a un puesto de trabajo compatible de inferior categoría, concediéndole un plazo de diez días naturales para que se pronuncie sobre el mismo.", b: "La Dirección General de Profesionales solicitará el consentimiento del trabajador para proceder a un traslado a un puesto de trabajo compatible de inferior categoría, concediéndole un plazo de diez días hábiles para que se pronuncie sobre el mismo.", c: "La Dirección Gerencia del centro solicitará el consentimiento del trabajador para proceder a un traslado a un puesto de trabajo compatible de inferior categoría, concediéndole un plazo de diez días hábiles para que se pronuncie sobre el mismo.", d: "La Dirección Gerencia del centro solicitará el consentimiento del trabajador para proceder a un traslado a un puesto de trabajo compatible de inferior categoría, concediéndole un plazo de diez días naturales para que se pronuncie sobre el mismo." },
     correctOrig: "b",
-    norma: "Orden SAN/1037/2014 y clave oficial del examen: en la plantilla oficial de corrección de este examen la respuesta marcada es la b."
+    norma: "Orden SAN/1037/2014 y clave oficial del examen: cuando no exista puesto de trabajo de la misma categoría profesional compatible con el estado de salud del trabajador, la Dirección General de Profesionales solicitará su consentimiento para el traslado a un puesto compatible de inferior categoría concediéndole un plazo de diez días hábiles para pronunciarse."
   },
   {
     id: "2017_98", exam: "2017", tema: "Reserva Supuesto 1 · Excel",
