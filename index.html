@@ -73,9 +73,22 @@
     .q-updated { background: #fef3c7; color: #92400e; font-weight: 600; padding: 2px 8px; border-radius: 5px; }
     .q-anulada { background: #fee2e2; color: #dc2626; font-weight: 800; padding: 2px 8px; border-radius: 5px; border: 1px solid #ef4444; }
     .q-orig-warning { background: #ffedd5; color: #c2410c; font-weight: 700; padding: 2px 8px; border-radius: 5px; border: 1px dashed #fdba74; }
-    .q-text { font-size: 1.02rem; font-weight: 600; margin-bottom: 14px; color: #0f172a; }
-    .figura-box { margin: 14px 0; text-align: center; }
-    .figura-box img { max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+    .q-text { font-size: 1.02rem; font-weight: 600; margin-bottom: 14px; color: #0f172a; white-space: pre-line; }
+
+    /* BOTÓN OCULTO DE FIGURA / MODAL */
+    .figura-trigger-wrap { margin-bottom: 12px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .btn-figura { background: var(--primary-light); color: var(--primary); border: 1px solid #93c5fd; padding: 7px 13px; border-radius: 8px; font-weight: 700; font-size: 0.85rem; cursor: pointer; }
+    .btn-figura:hover { background: #dbeafe; }
+    .orig-mode-card .btn-figura { background: #ffedd5; color: #9a3412; border-color: #fdba74; }
+    .orig-mode-card .btn-figura:hover { background: #fed7aa; }
+
+    .fig-modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.88); z-index: 999; padding: 16px; overflow: auto; }
+    .fig-modal-backdrop.open { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; }
+    .fig-modal-bar { width: 100%; max-width: 1100px; background: #ffffff; color: #0f172a; border-radius: 10px 10px 0 0; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; position: sticky; top: 0; z-index: 2; }
+    .fig-modal-body { width: 100%; max-width: 1100px; background: #1e293b; border-radius: 0 0 10px 10px; padding: 16px; display: flex; justify-content: center; align-items: flex-start; overflow: auto; }
+    .fig-modal-body img { max-width: 100%; height: auto; border-radius: 6px; transition: max-width 0.2s ease, transform 0.2s ease; cursor: zoom-in; }
+    .fig-modal-body img.zoomed { max-width: none; width: 145%; cursor: zoom-out; }
+
     .options-list { display: flex; flex-direction: column; gap: 9px; }
     .option-item { display: flex; align-items: flex-start; gap: 10px; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; cursor: pointer; background: white; font-size: 0.95rem; transition: background 0.15s, border-color 0.15s; }
     .option-item.locked { cursor: default; }
@@ -122,7 +135,7 @@
     .anulada-txt { color: #dc2626; font-weight: 800; }
 
     @media print {
-      header, .nav-btns, .print-toolbar, .rules-banner, .pagination-bar, .quiz-topbar { display: none !important; }
+      header, .nav-btns, .print-toolbar, .rules-banner, .pagination-bar, .quiz-topbar, .fig-modal-backdrop { display: none !important; }
       body { background: white !important; padding: 0 !important; }
       main { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
       .view { display: none !important; }
@@ -245,6 +258,26 @@
           </div>
         </div>
       </div>
+
+      <!-- 2017_SAN563 -->
+      <div class="mode-card">
+        <div>
+          <span class="mode-tag tag-conv">Convocatoria 2017 · Supuesto</span>
+          <h3>Examen Oficial SAN/563/2016 (26/03/2017)</h3>
+          <p id="count-2017_SAN563">Orden SAN/563/2016 (incluye supuesto práctico y Figura 27). Elige formato adaptado o original.</p>
+        </div>
+        <div>
+          <div class="btn-group-dual">
+            <button class="btn-primary" onclick="startExam('2017_SAN563', 'adapted')">Adaptado (A/B/C)</button>
+            <button class="btn-primary btn-orig" onclick="startExam('2017_SAN563', 'original')">Original 🟠</button>
+          </div>
+          <div class="card-print-actions">
+            <button class="btn-print" onclick="openPrintView('2017_SAN563', 'original', 'exam')">🖨️ Examen</button>
+            <button class="btn-print" onclick="openPrintView('2017_SAN563', 'original', 'key')">🖨️ Plantilla</button>
+            <button class="btn-print" onclick="openPrintView('2017_SAN563', 'original', 'both')">🖨️ Ambos</button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -336,6 +369,27 @@
   </section>
 </main>
 
+<!-- MODAL VISOR DE FIGURA (OCULTO HASTA PULSAR) -->
+<div class="fig-modal-backdrop" id="fig-modal" onclick="handleBackdropClick(event)">
+  <div class="fig-modal-bar">
+    <strong id="fig-modal-title" style="font-size:0.98rem; color:#0f172a;">Figura del supuesto práctico</strong>
+    <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+      <button class="btn-secondary" id="btn-zoom-fig" onclick="toggleZoomFig()">🔍 Ampliar / Ajustar</button>
+      <button class="btn-primary" style="width:auto;" onclick="closeFigureModal()">✕ Volver a la pregunta</button>
+    </div>
+  </div>
+  <div class="fig-modal-body">
+    <img id="fig-modal-img" src="" alt="Figura del supuesto práctico" onclick="toggleZoomFig()" />
+  </div>
+</div>
+
+<!-- SCRIPTS DE EXÁMENES (si alguno no existe en tu carpeta, se ignora sin romper la página) -->
+<script src="examenes/examen_2023.js" onerror="void(0)"></script>
+<script src="examenes/examen_2022_feb.js" onerror="void(0)"></script>
+<script src="examenes/examen_2019.js" onerror="void(0)"></script>
+<script src="examenes/examen_2017.js" onerror="void(0)"></script>
+<script src="examenes/2017_SAN563.js" onerror="void(0)"></script>
+
 <script>
   const PAGE_SIZE = 10;
 
@@ -368,6 +422,7 @@
   let timerInterval = null;
   let secondsElapsed = 0;
   let isGraded = false;
+  let returnFocusQuestionId = null;
 
   let printState = {
     questions: [],
@@ -411,7 +466,8 @@
       "2023": "Orden SAN/1812/2022. Elige formato adaptado a 3 opciones o formato original en naranja.",
       "2022_feb": "Convocatoria Sacyl (febrero 2022). Elige formato adaptado a 3 opciones o formato original en naranja.",
       "2019": "Orden SAN/1168/2018. Elige formato adaptado a 3 opciones o formato original en naranja.",
-      "2017": "Orden SAN/549/2016 (11/02/2017). Elige formato adaptado a 3 opciones o formato original en naranja."
+      "2017": "Orden SAN/549/2016 (11/02/2017). Elige formato adaptado a 3 opciones o formato original en naranja.",
+      "2017_SAN563": "Orden SAN/563/2016 (26/03/2017 · incluye supuesto práctico y Figura 27)."
     };
 
     Object.keys(examInfo).forEach(key => {
@@ -421,6 +477,30 @@
         el.innerHTML = `${examInfo[key]}<br><small style="color:#0f4c81; font-weight:600;">Preguntas cargadas: ${n}</small>`;
       }
     });
+  }
+
+  function startTimer() {
+    stopTimer();
+    secondsElapsed = 0;
+    updateTimerDisplay();
+    timerInterval = setInterval(() => {
+      secondsElapsed++;
+      updateTimerDisplay();
+    }, 1000);
+  }
+
+  function stopTimer() {
+    if (timerInterval) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+    }
+  }
+
+  function updateTimerDisplay() {
+    const mins = String(Math.floor(secondsElapsed / 60)).padStart(2, "0");
+    const secs = String(secondsElapsed % 60).padStart(2, "0");
+    const el = document.getElementById("timer-display");
+    if (el) el.textContent = `${mins}:${secs}`;
   }
 
   function switchView(viewName) {
@@ -472,7 +552,7 @@
     }
 
     if (!currentQuestions || currentQuestions.length === 0) {
-      alert(`No se han encontrado preguntas cargadas para "${examKey}". Revisa que el archivo examenes/examen_${examKey.toLowerCase()}.js esté guardado correctamente.`);
+      alert(`No se han encontrado preguntas cargadas para "${examKey}". Revisa que su archivo .js esté guardado en la carpeta examenes/ y tenga preguntas registradas.`);
       return;
     }
 
@@ -508,7 +588,7 @@
   }
 
   function getCorrectKeyForQuestion(q, modeOverride) {
-    if (q && q.anulada) return null;
+    if (!q || q.anulada) return null;
     const mode = modeOverride || currentModeType;
     const rawCorrect = mode === "original"
       ? (q.correctOrig || q.correctAdap || "")
@@ -520,6 +600,63 @@
       k => String(k).toLowerCase() === String(rawCorrect).toLowerCase()
     ) || rawCorrect;
   }
+
+  function getFigureSpecForQuestion(q) {
+    if (q && q.image) {
+      return { src: q.image, label: "Ver Figura 27" };
+    }
+    const textoBusqueda = `${q.textAdap || ""} ${q.textOrig || ""}`.toUpperCase();
+    const match = textoBusqueda.match(/\bFIG(?:URA)?\.?\s*(\d+)\b/);
+    if (match && match[1]) {
+      const num = match[1];
+      return { src: `img/figura_${num}.jpg`, label: `Ver Figura ${num}` };
+    }
+    return null;
+  }
+
+  function openFigureModal(src, label, questionId) {
+    returnFocusQuestionId = questionId || null;
+    const modal = document.getElementById("fig-modal");
+    const img = document.getElementById("fig-modal-img");
+    const title = document.getElementById("fig-modal-title");
+    img.classList.remove("zoomed");
+    img.src = src;
+    img.alt = label || "Figura";
+    title.textContent = label || "Figura del supuesto práctico";
+    modal.classList.add("open");
+  }
+
+  function closeFigureModal() {
+    const modal = document.getElementById("fig-modal");
+    const img = document.getElementById("fig-modal-img");
+    img.classList.remove("zoomed");
+    modal.classList.remove("open");
+    if (returnFocusQuestionId) {
+      const card = document.getElementById(`card_${returnFocusQuestionId}`);
+      if (card) card.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      returnFocusQuestionId = null;
+    }
+  }
+
+  function toggleZoomFig() {
+    const img = document.getElementById("fig-modal-img");
+    img.classList.toggle("zoomed");
+  }
+
+  function handleBackdropClick(event) {
+    if (event.target && event.target.id === "fig-modal") {
+      closeFigureModal();
+    }
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      const modal = document.getElementById("fig-modal");
+      if (modal && modal.classList.contains("open")) {
+        closeFigureModal();
+      }
+    }
+  });
 
   function renderPage(pageIndex) {
     currentPage = pageIndex;
@@ -552,20 +689,34 @@
         ? `<span class="q-orig-warning">⚠️ PREGUNTA ORIGINAL SIN ADAPTAR (La ley ha podido cambiar)</span>`
         : `<span class="q-updated">Adaptada a normativa 2026</span>`;
 
-      let figuraHtml = "";
-      const textoBusqueda = `${q.textAdap || ""} ${q.textOrig || ""}`.toUpperCase();
-      for (let i = 1; i <= 19; i++) {
-        if (textoBusqueda.includes(`FIGURA ${i}`) || textoBusqueda.includes(`FIG. ${i}`)) {
-          figuraHtml += `
-            <div class="figura-box">
-              <img src="img/figura_${i}.jpg" alt="Figura ${i}" onerror="this.parentElement.style.display='none';" />
-            </div>`;
-        }
-      }
+      const figSpec = getFigureSpecForQuestion(q);
+      const figuraBtnHtml = figSpec
+        ? `<div class="figura-trigger-wrap">
+             <button type="button" class="btn-figura" onclick="openFigureModal('${figSpec.src}', '${figSpec.label}', '${q.id}')">🖼️ ${figSpec.label}</button>
+           </div>`
+        : "";
 
       const optionEntries = Object.keys(opts);
       const savedAns = answeredMap[q.id];
       const correctKey = getCorrectKeyForQuestion(q);
+
+      let fbClass = "feedback-banner";
+      let fbText = "";
+      let normaClass = "norma-box";
+
+      if (savedAns) {
+        normaClass += " visible";
+        if (q.anulada) {
+          fbClass += " visible ok";
+          fbText = "Pregunta anulada / reserva en convocatoria.";
+        } else if (savedAns.isCorrect) {
+          fbClass += " visible ok";
+          fbText = `✅ ¡Correcto! Respuesta marcada: ${String(savedAns.selectedKey).toUpperCase()}.`;
+        } else {
+          fbClass += " visible err";
+          fbText = `❌ Incorrecto. Marcaste ${String(savedAns.selectedKey).toUpperCase()}; la correcta es ${String(correctKey).toUpperCase()}.`;
+        }
+      }
 
       card.innerHTML = `
         <div class="q-meta">
@@ -573,7 +724,7 @@
           <div>${anuladaBadge} ${metaBadge}<span style="margin-left:6px;">Conv. ${q.exam}</span></div>
         </div>
         <div class="q-text">${globalIdx + 1}. ${qText}</div>
-        ${figuraHtml}
+        ${figuraBtnHtml}
         <div class="options-list">
           ${optionEntries.map(letter => {
             let extraClass = savedAns ? "locked" : "";
@@ -597,21 +748,33 @@
             `;
           }).join("")}
         </div>
-        <div class="feedback-banner ${savedAns ? "visible " + (q.anulada || savedAns.isCorrect ? "ok" : "err") : ""}" id="fb_${q.id}">
-          ${savedAns
-            ? (q.anulada
-                ? `Pregunta ANULADA en convocatoria oficial (no computa error).`
-                : (savedAns.isCorrect
-                    ? `✓ ¡Correcto! Has marcado la opción ${String(savedAns.selectedKey).toUpperCase()}.`
-                    : `✗ Has fallado. Marcaste ${String(savedAns.selectedKey).toUpperCase()}, pero la correcta es la ${String(correctKey).toUpperCase()}.`))
-            : ""}
-        </div>
-        <div class="norma-box ${savedAns ? "visible" : ""}" id="norma_${q.id}">
-          <strong>Por qué / Fundamento jurídico:</strong> ${q.norma || "No especificado"}
-        </div>
+        <div class="${fbClass}" id="fb_${q.id}">${fbText}</div>
+        <div class="${normaClass}" id="norma_${q.id}"><strong>Fundamento / Referencia:</strong> ${q.norma || "Normativa vigente consultable."}</div>
       `;
+
       container.appendChild(card);
     });
+  }
+
+  function recordQuestionStat(q, isCorrect) {
+    if (!q || q.anulada) return;
+    const tema = q.tema || "Sin tema asignado";
+    appState.temaStats = appState.temaStats || {};
+    if (!appState.temaStats[tema]) {
+      appState.temaStats[tema] = { answered: 0, correct: 0, wrong: 0 };
+    }
+    appState.temaStats[tema].answered += 1;
+    if (isCorrect) {
+      appState.temaStats[tema].correct += 1;
+      appState.failedIds = (appState.failedIds || []).filter(id => id !== q.id);
+    } else {
+      appState.temaStats[tema].wrong += 1;
+      appState.failedIds = appState.failedIds || [];
+      if (!appState.failedIds.includes(q.id)) {
+        appState.failedIds.push(q.id);
+      }
+    }
+    saveState();
   }
 
   function handleInstantAnswer(questionId, selectedKey) {
@@ -619,40 +782,23 @@
     if (!q || answeredMap[questionId]) return;
 
     const correctKey = getCorrectKeyForQuestion(q);
-    const isCorrect = Boolean(q.anulada) || (String(selectedKey).toLowerCase() === String(correctKey).toLowerCase());
+    const isCorrect = !q.anulada && String(selectedKey).toLowerCase() === String(correctKey).toLowerCase();
 
     answeredMap[questionId] = {
       selectedKey,
-      correctKey,
-      isCorrect
+      isCorrect,
+      recorded: true
     };
 
-    if (!q.anulada) {
-      if (!appState.temaStats[q.tema]) {
-        appState.temaStats[q.tema] = { answered: 0, correct: 0, wrong: 0 };
-      }
-      appState.temaStats[q.tema].answered++;
+    recordQuestionStat(q, isCorrect);
 
-      if (isCorrect) {
-        appState.temaStats[q.tema].correct++;
-        appState.failedIds = appState.failedIds.filter(id => id !== q.id);
-      } else {
-        appState.temaStats[q.tema].wrong++;
-        if (!appState.failedIds.includes(q.id)) {
-          appState.failedIds.push(q.id);
-        }
-      }
-      saveState();
-    }
-
-    const opts = currentModeType === "original"
-      ? (q.optsOrig || q.optsAdap || {})
-      : (q.optsAdap || q.optsOrig || {});
+    const isOrig = currentModeType === "original";
+    const opts = isOrig ? (q.optsOrig || q.optsAdap || {}) : (q.optsAdap || q.optsOrig || {});
 
     Object.keys(opts).forEach(letter => {
-      const inp = document.querySelector(`input[name="ans_${q.id}"][value="${letter}"]`);
       const lbl = document.getElementById(`lbl_${q.id}_${letter}`);
-      if (inp) inp.disabled = true;
+      const input = lbl ? lbl.querySelector("input") : null;
+      if (input) input.disabled = true;
       if (lbl) {
         lbl.classList.add("locked");
         if (!q.anulada && String(letter).toLowerCase() === String(correctKey).toLowerCase()) {
@@ -663,33 +809,32 @@
       }
     });
 
-    const fbEl = document.getElementById(`fb_${q.id}`);
-    if (fbEl) {
-      fbEl.className = `feedback-banner visible ${isCorrect ? "ok" : "err"}`;
-      fbEl.textContent = q.anulada
-        ? `Pregunta ANULADA en convocatoria oficial (no computa error).`
-        : (isCorrect
-            ? `✓ ¡Correcto! Has marcado la opción ${String(selectedKey).toUpperCase()}.`
-            : `✗ Has fallado. Marcaste ${String(selectedKey).toUpperCase()}, pero la correcta es la ${String(correctKey).toUpperCase()}.`);
+    const fb = document.getElementById(`fb_${q.id}`);
+    if (fb) {
+      fb.className = isCorrect || q.anulada ? "feedback-banner visible ok" : "feedback-banner visible err";
+      fb.textContent = q.anulada
+        ? "Pregunta anulada / reserva en convocatoria."
+        : isCorrect
+          ? `✅ ¡Correcto! Respuesta marcada: ${String(selectedKey).toUpperCase()}.`
+          : `❌ Incorrecto. Marcaste ${String(selectedKey).toUpperCase()}; la correcta es ${String(correctKey).toUpperCase()}.`;
     }
 
     const normaEl = document.getElementById(`norma_${q.id}`);
-    if (normaEl) {
-      normaEl.classList.add("visible");
-    }
+    if (normaEl) normaEl.classList.add("visible");
   }
 
   function gradeExam() {
-    if (isGraded) return;
-    isGraded = true;
     stopTimer();
+    isGraded = true;
 
-    let aciertos = 0, fallos = 0, blanco = 0;
+    let aciertos = 0;
+    let fallos = 0;
+    let blanco = 0;
 
     currentQuestions.forEach(q => {
       if (q.anulada) return;
       const ans = answeredMap[q.id];
-      if (!ans) {
+      if (!ans || !ans.selectedKey) {
         blanco++;
       } else if (ans.isCorrect) {
         aciertos++;
@@ -698,37 +843,93 @@
       }
     });
 
-    const total = currentQuestions.filter(q => !q.anulada).length;
-    const penalty = currentModeType === "original" ? 3 : 9;
+    const isOrig = currentModeType === "original";
+    const penalty = isOrig ? 3 : 2;
     const netas = Math.max(0, aciertos - (fallos / penalty));
-    const nota150 = total > 0 ? ((netas / total) * 150) : 0;
+    const evaluables = Math.max(1, currentQuestions.filter(q => !q.anulada).length);
+    const puntos = (netas / evaluables) * 10;
 
-    document.getElementById("res-aciertos").textContent = aciertos;
-    document.getElementById("res-fallos").textContent = fallos;
-    document.getElementById("res-blanco").textContent = blanco;
+    document.getElementById("res-aciertos").textContent = String(aciertos);
+    document.getElementById("res-fallos").textContent = String(fallos);
+    document.getElementById("res-blanco").textContent = String(blanco);
     document.getElementById("res-netas").textContent = netas.toFixed(2);
-    document.getElementById("res-puntos").textContent = nota150.toFixed(2);
+    document.getElementById("res-puntos").textContent = puntos.toFixed(2);
+    document.getElementById("score-desc").textContent =
+      ` Penalización aplicada: 1 fallo resta 1/${penalty} acierto · Tiempo: ${document.getElementById("timer-display").textContent}.`;
+
     document.getElementById("score-panel").classList.add("visible");
     document.getElementById("btn-submit-exam").style.display = "none";
     document.getElementById("btn-back-home").style.display = "inline-block";
-
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  /* ================= IMPRESIÓN DE EXÁMENES Y PLANTILLAS ================= */
+  function buildPrintHtml(questions, mode, contentType, title) {
+    const isOrig = mode === "original";
+    let html = `
+      <div class="print-doc-header">
+        <h2>${title}</h2>
+        <div style="font-size:0.86rem; color:#475569; margin-top:4px;">
+          Formato: ${isOrig ? "Original" : "Adaptado (3 opciones)"} · Total preguntas: ${questions.length}
+        </div>
+      </div>
+    `;
+
+    if (contentType === "exam" || contentType === "both") {
+      questions.forEach((q, idx) => {
+        const qText = isOrig ? (q.textOrig || q.textAdap || "") : (q.textAdap || q.textOrig || "");
+        const opts = isOrig ? (q.optsOrig || q.optsAdap || {}) : (q.optsAdap || q.optsOrig || {});
+        const figSpec = getFigureSpecForQuestion(q);
+        html += `<div class="print-q">`;
+        html += `<div class="print-q-title">${idx + 1}. ${qText}</div>`;
+        if (figSpec) {
+          html += `<div style="margin:8px 0; text-align:center;"><img src="${figSpec.src}" alt="${figSpec.label}" style="max-width:100%; max-height:360px; border:1px solid #cbd5e1;" /></div>`;
+        }
+        Object.keys(opts).forEach(k => {
+          html += `<div class="print-opt"><strong>${String(k).toUpperCase()})</strong> ${opts[k]}</div>`;
+        });
+        html += `</div>`;
+      });
+    }
+
+    if (contentType === "key" || contentType === "both") {
+      if (contentType === "both") html += `<div class="page-break"></div>`;
+      html += `<h3 style="margin-top:10px; color:#0f4c81;">Plantilla de Respuestas y Fundamento</h3>`;
+      html += `<table class="print-key-table"><thead><tr><th>Nº</th><th>ID</th><th>Correcta</th><th>Tema / Norma</th></tr></thead><tbody>`;
+      questions.forEach((q, idx) => {
+        const ck = q.anulada
+          ? `<span class="anulada-txt">ANULADA</span>`
+          : `<strong>${String(getCorrectKeyForQuestion(q, mode) || "").toUpperCase()}</strong>`;
+        html += `<tr>
+          <td>${idx + 1}</td>
+          <td>${q.id}</td>
+          <td>${ck}</td>
+          <td><strong>${q.tema || ""}</strong> — ${q.norma || ""}</td>
+        </tr>`;
+      });
+      html += `</tbody></table>`;
+    }
+
+    return html;
+  }
+
   function openPrintView(examKey, mode, contentType) {
     const qs = getExamQuestions(examKey);
     if (!qs || qs.length === 0) {
-      alert(`No hay preguntas cargadas para la convocatoria ${examKey}.`);
+      alert(`No hay preguntas cargadas para "${examKey}" para generar la vista de impresión.`);
       return;
     }
     printState = {
       questions: qs,
-      mode: mode || "original",
+      mode,
       content: contentType || "both",
-      title: `Convocatoria Oficial ${examKey} (${mode === "original" ? "Texto Original" : "Formato Adaptado"})`
+      title: `Examen Oficial ${examKey}`
     };
-    renderPrintSheet();
+    document.getElementById("print-sheet").innerHTML = buildPrintHtml(
+      printState.questions,
+      printState.mode,
+      printState.content,
+      printState.title
+    );
     switchView("print");
   }
 
@@ -738,140 +939,66 @@
       questions: currentQuestions,
       mode: currentModeType,
       content: contentType || "both",
-      title: document.getElementById("quiz-title").textContent || "Examen"
+      title: document.getElementById("quiz-title").textContent || "Ejercicio"
     };
-    renderPrintSheet();
+    document.getElementById("print-sheet").innerHTML = buildPrintHtml(
+      printState.questions,
+      printState.mode,
+      printState.content,
+      printState.title
+    );
     switchView("print");
   }
 
   function switchPrintContent(contentType) {
     printState.content = contentType;
-    renderPrintSheet();
-  }
-
-  function renderPrintSheet() {
-    const sheet = document.getElementById("print-sheet");
-    const { questions, mode, content, title } = printState;
-    const isOrig = mode === "original";
-
-    let examHtml = "";
-    if (content === "exam" || content === "both") {
-      examHtml += `
-        <div class="print-doc-header">
-          <h2>Examen · ${title}</h2>
-          <div style="font-size:0.85rem; color:#475569; margin-top:4px;">Total de preguntas: ${questions.length}</div>
-        </div>
-        ${questions.map((q, idx) => {
-          const qText = isOrig ? (q.textOrig || q.textAdap || "") : (q.textAdap || q.textOrig || "");
-          const opts = isOrig ? (q.optsOrig || q.optsAdap || {}) : (q.optsAdap || q.optsOrig || {});
-          const anuladaTag = q.anulada ? ` <span class="anulada-txt">[ANULADA]</span>` : "";
-          return `
-            <div class="print-q">
-              <div class="print-q-title">${idx + 1}. ${qText}${anuladaTag}</div>
-              ${Object.keys(opts).map(k => `
-                <div class="print-opt"><strong>${String(k).toUpperCase()})</strong> ${opts[k]}</div>
-              `).join("")}
-            </div>
-          `;
-        }).join("")}
-      `;
-    }
-
-    let keyHtml = "";
-    if (content === "key" || content === "both") {
-      const pageBreakClass = content === "both" ? "page-break" : "";
-      keyHtml += `
-        <div class="${pageBreakClass}">
-          <div class="print-doc-header">
-            <h2>Plantilla de Respuestas · ${title}</h2>
-            <div style="font-size:0.85rem; color:#475569; margin-top:4px;">Las preguntas anuladas aparecen destacadas en rojo.</div>
-          </div>
-          <table class="print-key-table">
-            <thead>
-              <tr>
-                <th style="width:65px;">Nº</th>
-                <th style="width:110px;">Respuesta</th>
-                <th>Fundamento / Normativa</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${questions.map((q, idx) => {
-                const ansText = q.anulada
-                  ? `<span class="anulada-txt">ANULADA</span>`
-                  : `<strong>${String(getCorrectKeyForQuestion(q, mode) || "").toUpperCase()}</strong>`;
-                return `
-                  <tr>
-                    <td>${idx + 1}</td>
-                    <td>${ansText}</td>
-                    <td>${q.norma || ""}</td>
-                  </tr>
-                `;
-              }).join("")}
-            </tbody>
-          </table>
-        </div>
-      `;
-    }
-
-    sheet.innerHTML = examHtml + keyHtml;
+    document.getElementById("print-sheet").innerHTML = buildPrintHtml(
+      printState.questions,
+      printState.mode,
+      printState.content,
+      printState.title
+    );
   }
 
   function renderStatsTable() {
     const tbody = document.getElementById("stats-tbody");
-    tbody.innerHTML = "";
-    const allTemas = new Set([
-      ...window.QUESTION_BANK.map(q => q.tema).filter(Boolean),
-      ...Object.keys(appState.temaStats || {})
-    ]);
+    const stats = appState.temaStats || {};
+    const temas = Object.keys(stats);
+    if (temas.length === 0) {
+      tbody.innerHTML = `<tr><td colspan="6" style="text-align:center; color:var(--muted);">Aún no has respondido preguntas.</td></tr>`;
+      return;
+    }
 
-    Array.from(allTemas).forEach(tema => {
-      const st = appState.temaStats[tema] || { answered: 0, correct: 0, wrong: 0 };
-      const failRate = st.answered > 0 ? Math.round((st.wrong / st.answered) * 100) : 0;
-      const tr = document.createElement("tr");
-      tr.innerHTML = `
-        <td><strong>${tema}</strong></td>
-        <td>${st.answered}</td>
-        <td style="color:#16a34a">${st.correct}</td>
-        <td style="color:#dc2626">${st.wrong}</td>
-        <td>${failRate}%</td>
-        <td>${st.answered > 0 ? (failRate >= 50 ? "🔴 Alto" : "🟢 Dominado") : "Sin datos"}</td>
-      `;
-      tbody.appendChild(tr);
+    temas.sort((a, b) => {
+      const pctA = stats[a].answered ? stats[a].wrong / stats[a].answered : 0;
+      const pctB = stats[b].answered ? stats[b].wrong / stats[b].answered : 0;
+      return pctB - pctA;
     });
+
+    tbody.innerHTML = temas.map(tema => {
+      const s = stats[tema];
+      const pct = s.answered ? Math.round((s.wrong / s.answered) * 100) : 0;
+      const risk = pct >= 50 ? "🔴 Alto" : pct >= 25 ? "🟠 Medio" : "🟢 Bajo";
+      return `<tr>
+        <td><strong>${tema}</strong></td>
+        <td>${s.answered}</td>
+        <td>${s.correct}</td>
+        <td>${s.wrong}</td>
+        <td>${pct}%</td>
+        <td>${risk}</td>
+      </tr>`;
+    }).join("");
   }
 
   function resetHistory() {
-    if (confirm("¿Borrar historial?")) {
-      appState = { failedIds: [], temaStats: {} };
-      saveState();
-      renderStatsTable();
-    }
-  }
-
-  function startTimer() {
-    stopTimer();
-    secondsElapsed = 0;
-    timerInterval = setInterval(() => {
-      secondsElapsed++;
-      const mins = String(Math.floor(secondsElapsed / 60)).padStart(2, "0");
-      const secs = String(secondsElapsed % 60).padStart(2, "0");
-      const display = document.getElementById("timer-display");
-      if (display) display.textContent = `${mins}:${secs}`;
-    }, 1000);
-  }
-
-  function stopTimer() {
-    if (timerInterval) clearInterval(timerInterval);
+    if (!confirm("¿Seguro que quieres borrar todo tu historial de aciertos, fallos y estadísticas?")) return;
+    appState = { failedIds: [], temaStats: {} };
+    saveState();
+    renderStatsTable();
   }
 
   updateDashboardUI();
 </script>
-
-<!-- EXÁMENES CARGADOS -->
-<script src="examenes/examen_2023.js"></script>
-<script src="examenes/examen_2022_feb.js"></script>
-<script src="examenes/examen_2019.js"></script>
-<script src="examenes/examen_2017.js"></script>
 </body>
 </html>
 
