@@ -29,7 +29,7 @@
     .header-inner { max-width: 980px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
     .brand h1 { font-size: 1.35rem; font-weight: 800; }
     .badge-sacyl { background: rgba(255,255,255,0.2); padding: 3px 10px; border-radius: 999px; font-size: 0.78rem; }
-    .nav-btns { display: flex; gap: 8px; }
+    .nav-btns { display: flex; gap: 8px; flex-wrap: wrap; }
     .btn-nav { background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.3); padding: 7px 14px; border-radius: 8px; cursor: pointer; font-weight: 600; }
     .btn-nav:hover, .btn-nav.active { background: white; color: var(--primary); }
     main { max-width: 980px; margin: 24px auto; padding: 0 16px; }
@@ -45,19 +45,22 @@
     .tag-conv { background: #e0f2fe; color: #0369a1; }
     .tag-fail { background: #fee2e2; color: #991b1b; }
     .mode-card h3 { font-size: 1.08rem; margin-bottom: 8px; color: #0f172a; }
-    .mode-card p { font-size: 0.88rem; color: var(--muted); margin-bottom: 16px; }
+    .mode-card p { font-size: 0.88rem; color: var(--muted); margin-bottom: 14px; }
 
-    .btn-group-dual { display: flex; gap: 8px; }
-    .btn-primary { background: var(--primary); color: white; border: none; padding: 10px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; width: 100%; font-size: 0.9rem; text-align: center; }
+    .btn-group-dual { display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn-primary { background: var(--primary); color: white; border: none; padding: 10px 14px; border-radius: 8px; font-weight: 600; cursor: pointer; flex: 1; font-size: 0.88rem; text-align: center; }
     .btn-primary:hover:not(:disabled) { background: #0a365c; }
     .btn-primary:disabled { opacity: 0.45; cursor: not-allowed; }
-    .btn-secondary { background: #e2e8f0; color: #1e293b; border: none; padding: 10px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 0.9rem; }
+    .btn-secondary { background: #e2e8f0; color: #1e293b; border: none; padding: 10px 14px; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 0.88rem; }
     .btn-secondary:hover:not(:disabled) { background: #cbd5e1; }
     .btn-secondary:disabled { opacity: 0.45; cursor: not-allowed; }
     .btn-danger { background: #dc2626; }
     .btn-danger:hover:not(:disabled) { background: #b91c1c; }
     .btn-orig { background: #c2410c; color: white; }
     .btn-orig:hover:not(:disabled) { background: #9a3412; }
+    .btn-print { background: #f8fafc; color: #0f172a; border: 1px solid #cbd5e1; padding: 8px 12px; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 0.84rem; }
+    .btn-print:hover { background: #e2e8f0; }
+    .card-print-actions { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); display: flex; gap: 6px; flex-wrap: wrap; }
 
     .quiz-topbar { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; margin-bottom: 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
     .timer { font-family: monospace; font-size: 1.15rem; font-weight: 700; color: var(--primary); background: #e6f0fa; padding: 5px 12px; border-radius: 6px; }
@@ -68,6 +71,7 @@
     .q-meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; font-size: 0.78rem; color: var(--muted); margin-bottom: 10px; }
     .q-tema { background: #f1f5f9; color: #334155; font-weight: 600; padding: 2px 8px; border-radius: 5px; }
     .q-updated { background: #fef3c7; color: #92400e; font-weight: 600; padding: 2px 8px; border-radius: 5px; }
+    .q-anulada { background: #fee2e2; color: #dc2626; font-weight: 800; padding: 2px 8px; border-radius: 5px; border: 1px solid #ef4444; }
     .q-orig-warning { background: #ffedd5; color: #c2410c; font-weight: 700; padding: 2px 8px; border-radius: 5px; border: 1px dashed #fdba74; }
     .q-text { font-size: 1.02rem; font-weight: 600; margin-bottom: 14px; color: #0f172a; }
     .figura-box { margin: 14px 0; text-align: center; }
@@ -103,6 +107,29 @@
     table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 0.9rem; }
     th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); }
     th { background: #f8fafc; color: #334155; font-weight: 700; }
+
+    /* VISTA IMPRESIÓN */
+    .print-toolbar { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .print-sheet { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 28px; color: #0f172a; }
+    .print-doc-header { border-bottom: 2px solid #0f4c81; padding-bottom: 12px; margin-bottom: 20px; }
+    .print-doc-header h2 { font-size: 1.3rem; color: #0f4c81; }
+    .print-q { margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px dashed #cbd5e1; page-break-inside: avoid; }
+    .print-q-title { font-weight: 700; margin-bottom: 6px; font-size: 0.98rem; }
+    .print-opt { margin-left: 14px; font-size: 0.92rem; margin-bottom: 3px; }
+    .print-key-table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 0.86rem; }
+    .print-key-table th, .print-key-table td { border: 1px solid #cbd5e1; padding: 7px 10px; text-align: left; }
+    .print-key-table th { background: #f1f5f9; }
+    .anulada-txt { color: #dc2626; font-weight: 800; }
+
+    @media print {
+      header, .nav-btns, .print-toolbar, .rules-banner, .pagination-bar, .quiz-topbar { display: none !important; }
+      body { background: white !important; padding: 0 !important; }
+      main { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
+      .view { display: none !important; }
+      #view-print.active { display: block !important; }
+      .print-sheet { border: none !important; padding: 0 !important; box-shadow: none !important; }
+      .page-break { page-break-before: always; }
+    }
   </style>
 </head>
 <body>
@@ -122,7 +149,7 @@
 <main>
   <section id="view-home" class="view active">
     <div class="rules-banner">
-      <strong>Modalidades de estudio:</strong> Se muestran de <strong>10 en 10 preguntas por pantalla</strong> y cada pregunta se corrige al instante indicándote si has acertado o fallado y su fundamento jurídico.
+      <strong>Modalidades de estudio:</strong> Se muestran de <strong>10 en 10 preguntas por pantalla</strong> y cada pregunta se corrige al instante indicándote si has acertado o fallado y su fundamento jurídico. También puedes generar vistas listas para <strong>imprimir exámenes y plantillas de respuestas</strong>.
     </div>
 
     <!-- REPASO INTELIGENTE -->
@@ -146,9 +173,16 @@
           <h3>Examen Oficial 2023 (03/12/2023)</h3>
           <p id="count-2023">Orden SAN/1812/2022. Elige formato adaptado a 3 opciones o formato original en naranja.</p>
         </div>
-        <div class="btn-group-dual">
-          <button class="btn-primary" onclick="startExam('2023', 'adapted')">Adaptado (A/B/C)</button>
-          <button class="btn-primary btn-orig" onclick="startExam('2023', 'original')">Original 🟠</button>
+        <div>
+          <div class="btn-group-dual">
+            <button class="btn-primary" onclick="startExam('2023', 'adapted')">Adaptado (A/B/C)</button>
+            <button class="btn-primary btn-orig" onclick="startExam('2023', 'original')">Original 🟠</button>
+          </div>
+          <div class="card-print-actions">
+            <button class="btn-print" onclick="openPrintView('2023', 'original', 'exam')">🖨️ Examen</button>
+            <button class="btn-print" onclick="openPrintView('2023', 'original', 'key')">🖨️ Plantilla</button>
+            <button class="btn-print" onclick="openPrintView('2023', 'original', 'both')">🖨️ Ambos</button>
+          </div>
         </div>
       </div>
 
@@ -159,9 +193,16 @@
           <h3>Examen Oficial Febrero 2022</h3>
           <p id="count-2022_feb">Convocatoria Sacyl (febrero 2022). Elige formato adaptado a 3 opciones o formato original en naranja.</p>
         </div>
-        <div class="btn-group-dual">
-          <button class="btn-primary" onclick="startExam('2022_feb', 'adapted')">Adaptado (A/B/C)</button>
-          <button class="btn-primary btn-orig" onclick="startExam('2022_feb', 'original')">Original 🟠</button>
+        <div>
+          <div class="btn-group-dual">
+            <button class="btn-primary" onclick="startExam('2022_feb', 'adapted')">Adaptado (A/B/C)</button>
+            <button class="btn-primary btn-orig" onclick="startExam('2022_feb', 'original')">Original 🟠</button>
+          </div>
+          <div class="card-print-actions">
+            <button class="btn-print" onclick="openPrintView('2022_feb', 'original', 'exam')">🖨️ Examen</button>
+            <button class="btn-print" onclick="openPrintView('2022_feb', 'original', 'key')">🖨️ Plantilla</button>
+            <button class="btn-print" onclick="openPrintView('2022_feb', 'original', 'both')">🖨️ Ambos</button>
+          </div>
         </div>
       </div>
 
@@ -172,9 +213,36 @@
           <h3>Examen Oficial 2019 (07/04/2019)</h3>
           <p id="count-2019">Orden SAN/1168/2018. Elige formato adaptado a 3 opciones o formato original en naranja.</p>
         </div>
-        <div class="btn-group-dual">
-          <button class="btn-primary" onclick="startExam('2019', 'adapted')">Adaptado (A/B/C)</button>
-          <button class="btn-primary btn-orig" onclick="startExam('2019', 'original')">Original 🟠</button>
+        <div>
+          <div class="btn-group-dual">
+            <button class="btn-primary" onclick="startExam('2019', 'adapted')">Adaptado (A/B/C)</button>
+            <button class="btn-primary btn-orig" onclick="startExam('2019', 'original')">Original 🟠</button>
+          </div>
+          <div class="card-print-actions">
+            <button class="btn-print" onclick="openPrintView('2019', 'original', 'exam')">🖨️ Examen</button>
+            <button class="btn-print" onclick="openPrintView('2019', 'original', 'key')">🖨️ Plantilla</button>
+            <button class="btn-print" onclick="openPrintView('2019', 'original', 'both')">🖨️ Ambos</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2017 -->
+      <div class="mode-card">
+        <div>
+          <span class="mode-tag tag-conv">Convocatoria 2017</span>
+          <h3>Examen Oficial 2017 (11/02/2017)</h3>
+          <p id="count-2017">Orden SAN/549/2016. Elige formato adaptado a 3 opciones o formato original en naranja.</p>
+        </div>
+        <div>
+          <div class="btn-group-dual">
+            <button class="btn-primary" onclick="startExam('2017', 'adapted')">Adaptado (A/B/C)</button>
+            <button class="btn-primary btn-orig" onclick="startExam('2017', 'original')">Original 🟠</button>
+          </div>
+          <div class="card-print-actions">
+            <button class="btn-print" onclick="openPrintView('2017', 'original', 'exam')">🖨️ Examen</button>
+            <button class="btn-print" onclick="openPrintView('2017', 'original', 'key')">🖨️ Plantilla</button>
+            <button class="btn-print" onclick="openPrintView('2017', 'original', 'both')">🖨️ Ambos</button>
+          </div>
         </div>
       </div>
     </div>
@@ -187,7 +255,10 @@
         <strong id="quiz-title" style="font-size:1.05rem; color:#0f172a;">Simulacro</strong>
         <div id="quiz-subtitle" style="font-size:0.82rem; color:var(--muted);"></div>
       </div>
-      <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+      <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+        <button class="btn-print" onclick="printCurrentSession('exam')">🖨️ Imprimir Examen</button>
+        <button class="btn-print" onclick="printCurrentSession('key')">🖨️ Imprimir Plantilla</button>
+        <button class="btn-print" onclick="printCurrentSession('both')">🖨️ Examen + Plantilla</button>
         <span class="page-indicator" id="page-indicator-top">Bloque 1</span>
         <span class="timer" id="timer-display">00:00</span>
         <button class="btn-nav" style="background:#e2e8f0; color:#1e293b; border:none;" onclick="switchView('home')">Salir</button>
@@ -219,6 +290,23 @@
         <button class="btn-primary" style="width:auto; display:none; background:#475569;" id="btn-back-home" onclick="switchView('home')">Volver al Menú</button>
       </div>
     </div>
+  </section>
+
+  <!-- VISTA IMPRESIÓN -->
+  <section id="view-print" class="view">
+    <div class="print-toolbar">
+      <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+        <strong style="font-size:0.95rem; color:#0f172a;">Modo de impresión:</strong>
+        <button class="btn-print" id="btn-print-mode-exam" onclick="switchPrintContent('exam')">Solo Examen</button>
+        <button class="btn-print" id="btn-print-mode-key" onclick="switchPrintContent('key')">Solo Plantilla</button>
+        <button class="btn-print" id="btn-print-mode-both" onclick="switchPrintContent('both')">Examen + Plantilla</button>
+      </div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        <button class="btn-primary" style="width:auto;" onclick="window.print()">🖨️ Lanzar Impresión / PDF</button>
+        <button class="btn-secondary" onclick="switchView('home')">Volver</button>
+      </div>
+    </div>
+    <div class="print-sheet" id="print-sheet"></div>
   </section>
 
   <!-- VISTA ESTADÍSTICAS -->
@@ -281,6 +369,13 @@
   let secondsElapsed = 0;
   let isGraded = false;
 
+  let printState = {
+    questions: [],
+    mode: "original",
+    content: "both",
+    title: ""
+  };
+
   function loadState() {
     try {
       const raw = localStorage.getItem("enfopos_modular_state_v2");
@@ -315,7 +410,8 @@
     const examInfo = {
       "2023": "Orden SAN/1812/2022. Elige formato adaptado a 3 opciones o formato original en naranja.",
       "2022_feb": "Convocatoria Sacyl (febrero 2022). Elige formato adaptado a 3 opciones o formato original en naranja.",
-      "2019": "Orden SAN/1168/2018. Elige formato adaptado a 3 opciones o formato original en naranja."
+      "2019": "Orden SAN/1168/2018. Elige formato adaptado a 3 opciones o formato original en naranja.",
+      "2017": "Orden SAN/549/2016 (11/02/2017). Elige formato adaptado a 3 opciones o formato original en naranja."
     };
 
     Object.keys(examInfo).forEach(key => {
@@ -411,11 +507,13 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  function getCorrectKeyForQuestion(q) {
-    const rawCorrect = currentModeType === "original"
+  function getCorrectKeyForQuestion(q, modeOverride) {
+    if (q && q.anulada) return null;
+    const mode = modeOverride || currentModeType;
+    const rawCorrect = mode === "original"
       ? (q.correctOrig || q.correctAdap || "")
       : (q.correctAdap || q.correctOrig || "");
-    const opts = currentModeType === "original"
+    const opts = mode === "original"
       ? (q.optsOrig || q.optsAdap || {})
       : (q.optsAdap || q.optsOrig || {});
     return Object.keys(opts).find(
@@ -449,6 +547,7 @@
       card.className = isOrig ? "question-card orig-mode-card" : "question-card";
       card.id = `card_${q.id}`;
 
+      const anuladaBadge = q.anulada ? `<span class="q-anulada">ANULADA</span>` : "";
       const metaBadge = isOrig
         ? `<span class="q-orig-warning">⚠️ PREGUNTA ORIGINAL SIN ADAPTAR (La ley ha podido cambiar)</span>`
         : `<span class="q-updated">Adaptada a normativa 2026</span>`;
@@ -471,7 +570,7 @@
       card.innerHTML = `
         <div class="q-meta">
           <span class="q-tema">${q.tema || "General"}</span>
-          <div>${metaBadge}<span style="margin-left:6px;">Conv. ${q.exam}</span></div>
+          <div>${anuladaBadge} ${metaBadge}<span style="margin-left:6px;">Conv. ${q.exam}</span></div>
         </div>
         <div class="q-text">${globalIdx + 1}. ${qText}</div>
         ${figuraHtml}
@@ -484,9 +583,9 @@
               if (String(letter).toLowerCase() === String(savedAns.selectedKey).toLowerCase()) {
                 checkedAttr = "checked";
               }
-              if (String(letter).toLowerCase() === String(correctKey).toLowerCase()) {
+              if (!q.anulada && String(letter).toLowerCase() === String(correctKey).toLowerCase()) {
                 extraClass += " correct-ans";
-              } else if (!savedAns.isCorrect && String(letter).toLowerCase() === String(savedAns.selectedKey).toLowerCase()) {
+              } else if (!q.anulada && !savedAns.isCorrect && String(letter).toLowerCase() === String(savedAns.selectedKey).toLowerCase()) {
                 extraClass += " wrong-ans";
               }
             }
@@ -498,11 +597,13 @@
             `;
           }).join("")}
         </div>
-        <div class="feedback-banner ${savedAns ? "visible " + (savedAns.isCorrect ? "ok" : "err") : ""}" id="fb_${q.id}">
+        <div class="feedback-banner ${savedAns ? "visible " + (q.anulada || savedAns.isCorrect ? "ok" : "err") : ""}" id="fb_${q.id}">
           ${savedAns
-            ? (savedAns.isCorrect
-                ? `✓ ¡Correcto! Has marcado la opción ${String(savedAns.selectedKey).toUpperCase()}.`
-                : `✗ Has fallado. Marcaste ${String(savedAns.selectedKey).toUpperCase()}, pero la correcta es la ${String(correctKey).toUpperCase()}.`)
+            ? (q.anulada
+                ? `Pregunta ANULADA en convocatoria oficial (no computa error).`
+                : (savedAns.isCorrect
+                    ? `✓ ¡Correcto! Has marcado la opción ${String(savedAns.selectedKey).toUpperCase()}.`
+                    : `✗ Has fallado. Marcaste ${String(savedAns.selectedKey).toUpperCase()}, pero la correcta es la ${String(correctKey).toUpperCase()}.`))
             : ""}
         </div>
         <div class="norma-box ${savedAns ? "visible" : ""}" id="norma_${q.id}">
@@ -518,7 +619,7 @@
     if (!q || answeredMap[questionId]) return;
 
     const correctKey = getCorrectKeyForQuestion(q);
-    const isCorrect = String(selectedKey).toLowerCase() === String(correctKey).toLowerCase();
+    const isCorrect = Boolean(q.anulada) || (String(selectedKey).toLowerCase() === String(correctKey).toLowerCase());
 
     answeredMap[questionId] = {
       selectedKey,
@@ -526,23 +627,24 @@
       isCorrect
     };
 
-    if (!appState.temaStats[q.tema]) {
-      appState.temaStats[q.tema] = { answered: 0, correct: 0, wrong: 0 };
-    }
-    appState.temaStats[q.tema].answered++;
-
-    if (isCorrect) {
-      appState.temaStats[q.tema].correct++;
-      appState.failedIds = appState.failedIds.filter(id => id !== q.id);
-    } else {
-      appState.temaStats[q.tema].wrong++;
-      if (!appState.failedIds.includes(q.id)) {
-        appState.failedIds.push(q.id);
+    if (!q.anulada) {
+      if (!appState.temaStats[q.tema]) {
+        appState.temaStats[q.tema] = { answered: 0, correct: 0, wrong: 0 };
       }
-    }
-    saveState();
+      appState.temaStats[q.tema].answered++;
 
-    // Bloquear opciones y aplicar colores al instante
+      if (isCorrect) {
+        appState.temaStats[q.tema].correct++;
+        appState.failedIds = appState.failedIds.filter(id => id !== q.id);
+      } else {
+        appState.temaStats[q.tema].wrong++;
+        if (!appState.failedIds.includes(q.id)) {
+          appState.failedIds.push(q.id);
+        }
+      }
+      saveState();
+    }
+
     const opts = currentModeType === "original"
       ? (q.optsOrig || q.optsAdap || {})
       : (q.optsAdap || q.optsOrig || {});
@@ -553,9 +655,9 @@
       if (inp) inp.disabled = true;
       if (lbl) {
         lbl.classList.add("locked");
-        if (String(letter).toLowerCase() === String(correctKey).toLowerCase()) {
+        if (!q.anulada && String(letter).toLowerCase() === String(correctKey).toLowerCase()) {
           lbl.classList.add("correct-ans");
-        } else if (!isCorrect && String(letter).toLowerCase() === String(selectedKey).toLowerCase()) {
+        } else if (!q.anulada && !isCorrect && String(letter).toLowerCase() === String(selectedKey).toLowerCase()) {
           lbl.classList.add("wrong-ans");
         }
       }
@@ -564,9 +666,11 @@
     const fbEl = document.getElementById(`fb_${q.id}`);
     if (fbEl) {
       fbEl.className = `feedback-banner visible ${isCorrect ? "ok" : "err"}`;
-      fbEl.textContent = isCorrect
-        ? `✓ ¡Correcto! Has marcado la opción ${String(selectedKey).toUpperCase()}.`
-        : `✗ Has fallado. Marcaste ${String(selectedKey).toUpperCase()}, pero la correcta es la ${String(correctKey).toUpperCase()}.`;
+      fbEl.textContent = q.anulada
+        ? `Pregunta ANULADA en convocatoria oficial (no computa error).`
+        : (isCorrect
+            ? `✓ ¡Correcto! Has marcado la opción ${String(selectedKey).toUpperCase()}.`
+            : `✗ Has fallado. Marcaste ${String(selectedKey).toUpperCase()}, pero la correcta es la ${String(correctKey).toUpperCase()}.`);
     }
 
     const normaEl = document.getElementById(`norma_${q.id}`);
@@ -583,6 +687,7 @@
     let aciertos = 0, fallos = 0, blanco = 0;
 
     currentQuestions.forEach(q => {
+      if (q.anulada) return;
       const ans = answeredMap[q.id];
       if (!ans) {
         blanco++;
@@ -593,7 +698,7 @@
       }
     });
 
-    const total = currentQuestions.length;
+    const total = currentQuestions.filter(q => !q.anulada).length;
     const penalty = currentModeType === "original" ? 3 : 9;
     const netas = Math.max(0, aciertos - (fallos / penalty));
     const nota150 = total > 0 ? ((netas / total) * 150) : 0;
@@ -608,6 +713,107 @@
     document.getElementById("btn-back-home").style.display = "inline-block";
 
     window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  /* ================= IMPRESIÓN DE EXÁMENES Y PLANTILLAS ================= */
+  function openPrintView(examKey, mode, contentType) {
+    const qs = getExamQuestions(examKey);
+    if (!qs || qs.length === 0) {
+      alert(`No hay preguntas cargadas para la convocatoria ${examKey}.`);
+      return;
+    }
+    printState = {
+      questions: qs,
+      mode: mode || "original",
+      content: contentType || "both",
+      title: `Convocatoria Oficial ${examKey} (${mode === "original" ? "Texto Original" : "Formato Adaptado"})`
+    };
+    renderPrintSheet();
+    switchView("print");
+  }
+
+  function printCurrentSession(contentType) {
+    if (!currentQuestions || currentQuestions.length === 0) return;
+    printState = {
+      questions: currentQuestions,
+      mode: currentModeType,
+      content: contentType || "both",
+      title: document.getElementById("quiz-title").textContent || "Examen"
+    };
+    renderPrintSheet();
+    switchView("print");
+  }
+
+  function switchPrintContent(contentType) {
+    printState.content = contentType;
+    renderPrintSheet();
+  }
+
+  function renderPrintSheet() {
+    const sheet = document.getElementById("print-sheet");
+    const { questions, mode, content, title } = printState;
+    const isOrig = mode === "original";
+
+    let examHtml = "";
+    if (content === "exam" || content === "both") {
+      examHtml += `
+        <div class="print-doc-header">
+          <h2>Examen · ${title}</h2>
+          <div style="font-size:0.85rem; color:#475569; margin-top:4px;">Total de preguntas: ${questions.length}</div>
+        </div>
+        ${questions.map((q, idx) => {
+          const qText = isOrig ? (q.textOrig || q.textAdap || "") : (q.textAdap || q.textOrig || "");
+          const opts = isOrig ? (q.optsOrig || q.optsAdap || {}) : (q.optsAdap || q.optsOrig || {});
+          const anuladaTag = q.anulada ? ` <span class="anulada-txt">[ANULADA]</span>` : "";
+          return `
+            <div class="print-q">
+              <div class="print-q-title">${idx + 1}. ${qText}${anuladaTag}</div>
+              ${Object.keys(opts).map(k => `
+                <div class="print-opt"><strong>${String(k).toUpperCase()})</strong> ${opts[k]}</div>
+              `).join("")}
+            </div>
+          `;
+        }).join("")}
+      `;
+    }
+
+    let keyHtml = "";
+    if (content === "key" || content === "both") {
+      const pageBreakClass = content === "both" ? "page-break" : "";
+      keyHtml += `
+        <div class="${pageBreakClass}">
+          <div class="print-doc-header">
+            <h2>Plantilla de Respuestas · ${title}</h2>
+            <div style="font-size:0.85rem; color:#475569; margin-top:4px;">Las preguntas anuladas aparecen destacadas en rojo.</div>
+          </div>
+          <table class="print-key-table">
+            <thead>
+              <tr>
+                <th style="width:65px;">Nº</th>
+                <th style="width:110px;">Respuesta</th>
+                <th>Fundamento / Normativa</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${questions.map((q, idx) => {
+                const ansText = q.anulada
+                  ? `<span class="anulada-txt">ANULADA</span>`
+                  : `<strong>${String(getCorrectKeyForQuestion(q, mode) || "").toUpperCase()}</strong>`;
+                return `
+                  <tr>
+                    <td>${idx + 1}</td>
+                    <td>${ansText}</td>
+                    <td>${q.norma || ""}</td>
+                  </tr>
+                `;
+              }).join("")}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    sheet.innerHTML = examHtml + keyHtml;
   }
 
   function renderStatsTable() {
@@ -665,8 +871,6 @@
 <script src="examenes/examen_2023.js"></script>
 <script src="examenes/examen_2022_feb.js"></script>
 <script src="examenes/examen_2019.js"></script>
-</body>
-</html>
-
+<script src="examenes/examen_2017.js"></script>
 </body>
 </html>
