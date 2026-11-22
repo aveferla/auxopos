@@ -49,15 +49,20 @@
 
     .btn-group-dual { display: flex; gap: 8px; }
     .btn-primary { background: var(--primary); color: white; border: none; padding: 10px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; width: 100%; font-size: 0.9rem; text-align: center; }
-    .btn-primary:hover { background: #0a365c; }
-    .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+    .btn-primary:hover:not(:disabled) { background: #0a365c; }
+    .btn-primary:disabled { opacity: 0.45; cursor: not-allowed; }
+    .btn-secondary { background: #e2e8f0; color: #1e293b; border: none; padding: 10px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 0.9rem; }
+    .btn-secondary:hover:not(:disabled) { background: #cbd5e1; }
+    .btn-secondary:disabled { opacity: 0.45; cursor: not-allowed; }
     .btn-danger { background: #dc2626; }
     .btn-danger:hover:not(:disabled) { background: #b91c1c; }
     .btn-orig { background: #c2410c; color: white; }
-    .btn-orig:hover { background: #9a3412; }
+    .btn-orig:hover:not(:disabled) { background: #9a3412; }
 
     .quiz-topbar { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; margin-bottom: 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
     .timer { font-family: monospace; font-size: 1.15rem; font-weight: 700; color: var(--primary); background: #e6f0fa; padding: 5px 12px; border-radius: 6px; }
+    .page-indicator { font-size: 0.85rem; font-weight: 700; color: var(--primary); background: var(--primary-light); padding: 5px 12px; border-radius: 6px; }
+
     .question-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 18px; }
     .question-card.orig-mode-card { background: var(--orig-bg); border: 1px solid var(--orig-border); }
     .q-meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; font-size: 0.78rem; color: var(--muted); margin-bottom: 10px; }
@@ -68,14 +73,25 @@
     .figura-box { margin: 14px 0; text-align: center; }
     .figura-box img { max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
     .options-list { display: flex; flex-direction: column; gap: 9px; }
-    .option-item { display: flex; align-items: flex-start; gap: 10px; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; cursor: pointer; background: white; font-size: 0.95rem; }
+    .option-item { display: flex; align-items: flex-start; gap: 10px; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; cursor: pointer; background: white; font-size: 0.95rem; transition: background 0.15s, border-color 0.15s; }
+    .option-item.locked { cursor: default; }
     .orig-mode-card .option-item { background: #fffaf5; border-color: #fed7aa; }
-    .option-item:hover { background: #f8fafc; }
+    .option-item:not(.locked):hover { background: #f8fafc; }
     .option-item.correct-ans { background: var(--success-bg) !important; border-color: var(--success-border) !important; color: var(--success-text); font-weight: 600; }
     .option-item.wrong-ans { background: var(--error-bg) !important; border-color: var(--error-border) !important; color: var(--error-text); }
-    .norma-box { margin-top: 14px; padding: 12px 15px; background: #f0f9ff; border-left: 4px solid #0284c7; border-radius: 6px; font-size: 0.88rem; color: #0c4a6e; display: none; }
+
+    .feedback-banner { margin-top: 12px; padding: 10px 14px; border-radius: 8px; font-size: 0.9rem; font-weight: 700; display: none; }
+    .feedback-banner.visible { display: block; }
+    .feedback-banner.ok { background: var(--success-bg); color: var(--success-text); border: 1px solid var(--success-border); }
+    .feedback-banner.err { background: var(--error-bg); color: var(--error-text); border: 1px solid var(--error-border); }
+
+    .norma-box { margin-top: 10px; padding: 12px 15px; background: #f0f9ff; border-left: 4px solid #0284c7; border-radius: 6px; font-size: 0.88rem; color: #0c4a6e; display: none; }
     .norma-box.visible { display: block; }
     .orig-mode-card .norma-box { background: #fff7ed; border-left-color: #c2410c; color: #7c2d12; }
+
+    .pagination-bar { margin-top: 20px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .page-controls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .page-select { padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border); background: white; font-weight: 600; color: var(--text); }
 
     .score-panel { background: var(--card); border: 2px solid var(--primary); border-radius: 12px; padding: 22px; margin-bottom: 22px; display: none; }
     .score-panel.visible { display: block; }
@@ -106,7 +122,7 @@
 <main>
   <section id="view-home" class="view active">
     <div class="rules-banner">
-      <strong>Modalidades de estudio:</strong> Puedes realizar cada examen en <strong>modo adaptado (3 opciones con fundamento jurídico)</strong> o en <strong>modo original (fondo naranja, con las 4 opciones originales del tribunal y aviso de cambios normativos)</strong>.
+      <strong>Modalidades de estudio:</strong> Se muestran de <strong>10 en 10 preguntas por pantalla</strong> y cada pregunta se corrige al instante indicándote si has acertado o fallado y su fundamento jurídico.
     </div>
 
     <!-- REPASO INTELIGENTE -->
@@ -158,7 +174,8 @@
         <strong id="quiz-title" style="font-size:1.05rem; color:#0f172a;">Simulacro</strong>
         <div id="quiz-subtitle" style="font-size:0.82rem; color:var(--muted);"></div>
       </div>
-      <div style="display:flex; align-items:center; gap:10px;">
+      <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+        <span class="page-indicator" id="page-indicator-top">Bloque 1</span>
         <span class="timer" id="timer-display">00:00</span>
         <button class="btn-nav" style="background:#e2e8f0; color:#1e293b; border:none;" onclick="switchView('home')">Salir</button>
       </div>
@@ -166,7 +183,7 @@
 
     <div class="score-panel" id="score-panel">
       <h3 style="color:var(--primary); margin-bottom:4px;">Resultado del Ejercicio</h3>
-      <p style="font-size:0.86rem; color:var(--muted);" id="score-desc">Revisa abajo cada pregunta con su fundamento.</p>
+      <p style="font-size:0.86rem; color:var(--muted);" id="score-desc">Resumen de tu rendimiento en este ejercicio.</p>
       <div class="score-grid">
         <div class="stat-box"><div class="stat-val" id="res-aciertos" style="color:#16a34a;">0</div><div class="stat-lbl">Aciertos</div></div>
         <div class="stat-box"><div class="stat-val" id="res-fallos" style="color:#dc2626;">0</div><div class="stat-lbl">Fallos</div></div>
@@ -178,9 +195,16 @@
 
     <div id="questions-container"></div>
 
-    <div style="margin-top:20px; display:flex; gap:12px;">
-      <button class="btn-primary" id="btn-submit-exam" onclick="gradeExam()">Finalizar y Corregir Examen</button>
-      <button class="btn-primary" id="btn-back-home" style="display:none; background:#475569;" onclick="switchView('home')">Volver al Menú Principal</button>
+    <div class="pagination-bar">
+      <div class="page-controls">
+        <button class="btn-secondary" id="btn-prev-page" onclick="changePage(currentPage - 1)">← 10 anteriores</button>
+        <select class="page-select" id="page-select" onchange="changePage(Number(this.value))"></select>
+        <button class="btn-secondary" id="btn-next-page" onclick="changePage(currentPage + 1)">10 siguientes →</button>
+      </div>
+      <div style="display:flex; gap:10px;">
+        <button class="btn-primary" style="width:auto;" id="btn-submit-exam" onclick="gradeExam()">Finalizar y Ver Nota</button>
+        <button class="btn-primary" style="width:auto; display:none; background:#475569;" id="btn-back-home" onclick="switchView('home')">Volver al Menú</button>
+      </div>
     </div>
   </section>
 
@@ -212,6 +236,8 @@
 </main>
 
 <script>
+  const PAGE_SIZE = 10;
+
   window.QUESTION_BANK = window.QUESTION_BANK || [];
 
   window.registerExamQuestions = function(examKey, questionsArray) {
@@ -236,6 +262,8 @@
   let appState = loadState();
   let currentQuestions = [];
   let currentModeType = "adapted";
+  let currentPage = 0;
+  let answeredMap = {}; // { [questionId]: { selectedKey, isCorrect, recorded } }
   let timerInterval = null;
   let secondsElapsed = 0;
   let isGraded = false;
@@ -313,21 +341,24 @@
 
   function startExam(examKey, mode) {
     currentModeType = mode === "original" ? "original" : "adapted";
+    currentPage = 0;
+    answeredMap = {};
     isGraded = false;
+
     document.getElementById("score-panel").classList.remove("visible");
-    document.getElementById("btn-submit-exam").style.display = "block";
+    document.getElementById("btn-submit-exam").style.display = "inline-block";
     document.getElementById("btn-back-home").style.display = "none";
 
     if (examKey === "failed") {
       currentQuestions = shuffle(window.QUESTION_BANK.filter(q => appState.failedIds.includes(q.id)));
       currentModeType = "adapted";
       document.getElementById("quiz-title").textContent = "Repaso Inteligente · Preguntas Falladas";
-      document.getElementById("quiz-subtitle").textContent = `${currentQuestions.length} preguntas pendientes`;
+      document.getElementById("quiz-subtitle").textContent = `${currentQuestions.length} preguntas pendientes · Bloques de ${PAGE_SIZE}`;
     } else {
       currentQuestions = getExamQuestions(examKey);
       const modeLabel = currentModeType === "original" ? "⚠️ Formato Original (Fondo Naranja)" : "Formato Adaptado (3 Opciones)";
       document.getElementById("quiz-title").textContent = `Examen Oficial ${examKey} (${modeLabel})`;
-      document.getElementById("quiz-subtitle").textContent = `${currentQuestions.length} preguntas en este apartado`;
+      document.getElementById("quiz-subtitle").textContent = `${currentQuestions.length} preguntas · Bloques de ${PAGE_SIZE}`;
     }
 
     if (!currentQuestions || currentQuestions.length === 0) {
@@ -335,16 +366,67 @@
       return;
     }
 
-    renderQuestions();
+    buildPageSelector();
+    renderPage(0);
     switchView("quiz");
     startTimer();
   }
 
-  function renderQuestions() {
+  function getTotalPages() {
+    return Math.max(1, Math.ceil(currentQuestions.length / PAGE_SIZE));
+  }
+
+  function buildPageSelector() {
+    const select = document.getElementById("page-select");
+    const totalPages = getTotalPages();
+    select.innerHTML = "";
+    for (let p = 0; p < totalPages; p++) {
+      const startNum = p * PAGE_SIZE + 1;
+      const endNum = Math.min((p + 1) * PAGE_SIZE, currentQuestions.length);
+      const opt = document.createElement("option");
+      opt.value = p;
+      opt.textContent = `Preguntas ${startNum}–${endNum} (Pág. ${p + 1}/${totalPages})`;
+      select.appendChild(opt);
+    }
+  }
+
+  function changePage(targetPage) {
+    const totalPages = getTotalPages();
+    if (targetPage < 0 || targetPage >= totalPages) return;
+    renderPage(targetPage);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function getCorrectKeyForQuestion(q) {
+    const rawCorrect = currentModeType === "original"
+      ? (q.correctOrig || q.correctAdap || "")
+      : (q.correctAdap || q.correctOrig || "");
+    const opts = currentModeType === "original"
+      ? (q.optsOrig || q.optsAdap || {})
+      : (q.optsAdap || q.optsOrig || {});
+    return Object.keys(opts).find(
+      k => String(k).toLowerCase() === String(rawCorrect).toLowerCase()
+    ) || rawCorrect;
+  }
+
+  function renderPage(pageIndex) {
+    currentPage = pageIndex;
+    const totalPages = getTotalPages();
+    const startIdx = pageIndex * PAGE_SIZE;
+    const endIdx = Math.min(startIdx + PAGE_SIZE, currentQuestions.length);
+    const slice = currentQuestions.slice(startIdx, endIdx);
+
+    document.getElementById("page-indicator-top").textContent =
+      `Preguntas ${startIdx + 1}–${endIdx} de ${currentQuestions.length} · Pág. ${pageIndex + 1}/${totalPages}`;
+    document.getElementById("page-select").value = String(pageIndex);
+    document.getElementById("btn-prev-page").disabled = pageIndex === 0;
+    document.getElementById("btn-next-page").disabled = pageIndex >= totalPages - 1;
+
     const container = document.getElementById("questions-container");
     container.innerHTML = "";
 
-    currentQuestions.forEach((q, idx) => {
+    slice.forEach((q, offset) => {
+      const globalIdx = startIdx + offset;
       const isOrig = currentModeType === "original";
       const qText = isOrig ? (q.textOrig || q.textAdap || "") : (q.textAdap || q.textOrig || "");
       const opts = isOrig ? (q.optsOrig || q.optsAdap || {}) : (q.optsAdap || q.optsOrig || {});
@@ -357,7 +439,6 @@
         ? `<span class="q-orig-warning">⚠️ PREGUNTA ORIGINAL SIN ADAPTAR (La ley ha podido cambiar)</span>`
         : `<span class="q-updated">Adaptada a normativa 2026</span>`;
 
-      // Busca FIGURA 1..9 en el enunciado o en el texto de referencia y carga img/figura_X.jpg
       let figuraHtml = "";
       const textoBusqueda = `${q.textAdap || ""} ${q.textOrig || ""}`.toUpperCase();
       for (let i = 1; i <= 9; i++) {
@@ -370,25 +451,114 @@
       }
 
       const optionEntries = Object.keys(opts);
+      const savedAns = answeredMap[q.id];
+      const correctKey = getCorrectKeyForQuestion(q);
+
       card.innerHTML = `
         <div class="q-meta">
           <span class="q-tema">${q.tema || "General"}</span>
           <div>${metaBadge}<span style="margin-left:6px;">Conv. ${q.exam}</span></div>
         </div>
-        <div class="q-text">${idx + 1}. ${qText}</div>
+        <div class="q-text">${globalIdx + 1}. ${qText}</div>
         ${figuraHtml}
         <div class="options-list">
-          ${optionEntries.map(letter => `
-            <label class="option-item" id="lbl_${q.id}_${letter}">
-              <input type="radio" name="ans_${q.id}" value="${letter}" />
-              <span><strong>${String(letter).toUpperCase()})</strong> ${opts[letter]}</span>
-            </label>
-          `).join("")}
+          ${optionEntries.map(letter => {
+            let extraClass = savedAns ? "locked" : "";
+            let checkedAttr = "";
+            let disabledAttr = savedAns ? "disabled" : "";
+            if (savedAns) {
+              if (String(letter).toLowerCase() === String(savedAns.selectedKey).toLowerCase()) {
+                checkedAttr = "checked";
+              }
+              if (String(letter).toLowerCase() === String(correctKey).toLowerCase()) {
+                extraClass += " correct-ans";
+              } else if (!savedAns.isCorrect && String(letter).toLowerCase() === String(savedAns.selectedKey).toLowerCase()) {
+                extraClass += " wrong-ans";
+              }
+            }
+            return `
+              <label class="option-item ${extraClass}" id="lbl_${q.id}_${letter}">
+                <input type="radio" name="ans_${q.id}" value="${letter}" ${checkedAttr} ${disabledAttr} onchange="handleInstantAnswer('${q.id}', '${letter}')" />
+                <span><strong>${String(letter).toUpperCase()})</strong> ${opts[letter]}</span>
+              </label>
+            `;
+          }).join("")}
         </div>
-        <div class="norma-box" id="norma_${q.id}"><strong>Fundamento jurídico / Norma vigente:</strong> ${q.norma || "No especificado"}</div>
+        <div class="feedback-banner ${savedAns ? "visible " + (savedAns.isCorrect ? "ok" : "err") : ""}" id="fb_${q.id}">
+          ${savedAns
+            ? (savedAns.isCorrect
+                ? `✓ ¡Correcto! Has marcado la opción ${String(savedAns.selectedKey).toUpperCase()}.`
+                : `✗ Has fallado. Marcaste ${String(savedAns.selectedKey).toUpperCase()}, pero la correcta es la ${String(correctKey).toUpperCase()}.`)
+            : ""}
+        </div>
+        <div class="norma-box ${savedAns ? "visible" : ""}" id="norma_${q.id}">
+          <strong>Por qué / Fundamento jurídico:</strong> ${q.norma || "No especificado"}
+        </div>
       `;
       container.appendChild(card);
     });
+  }
+
+  function handleInstantAnswer(questionId, selectedKey) {
+    const q = currentQuestions.find(item => item.id === questionId);
+    if (!q || answeredMap[questionId]) return;
+
+    const correctKey = getCorrectKeyForQuestion(q);
+    const isCorrect = String(selectedKey).toLowerCase() === String(correctKey).toLowerCase();
+
+    answeredMap[questionId] = {
+      selectedKey,
+      correctKey,
+      isCorrect
+    };
+
+    if (!appState.temaStats[q.tema]) {
+      appState.temaStats[q.tema] = { answered: 0, correct: 0, wrong: 0 };
+    }
+    appState.temaStats[q.tema].answered++;
+
+    if (isCorrect) {
+      appState.temaStats[q.tema].correct++;
+      appState.failedIds = appState.failedIds.filter(id => id !== q.id);
+    } else {
+      appState.temaStats[q.tema].wrong++;
+      if (!appState.failedIds.includes(q.id)) {
+        appState.failedIds.push(q.id);
+      }
+    }
+    saveState();
+
+    // Bloquear opciones y aplicar colores al instante
+    const opts = currentModeType === "original"
+      ? (q.optsOrig || q.optsAdap || {})
+      : (q.optsAdap || q.optsOrig || {});
+
+    Object.keys(opts).forEach(letter => {
+      const inp = document.querySelector(`input[name="ans_${q.id}"][value="${letter}"]`);
+      const lbl = document.getElementById(`lbl_${q.id}_${letter}`);
+      if (inp) inp.disabled = true;
+      if (lbl) {
+        lbl.classList.add("locked");
+        if (String(letter).toLowerCase() === String(correctKey).toLowerCase()) {
+          lbl.classList.add("correct-ans");
+        } else if (!isCorrect && String(letter).toLowerCase() === String(selectedKey).toLowerCase()) {
+          lbl.classList.add("wrong-ans");
+        }
+      }
+    });
+
+    const fbEl = document.getElementById(`fb_${q.id}`);
+    if (fbEl) {
+      fbEl.className = `feedback-banner visible ${isCorrect ? "ok" : "err"}`;
+      fbEl.textContent = isCorrect
+        ? `✓ ¡Correcto! Has marcado la opción ${String(selectedKey).toUpperCase()}.`
+        : `✗ Has fallado. Marcaste ${String(selectedKey).toUpperCase()}, pero la correcta es la ${String(correctKey).toUpperCase()}.`;
+    }
+
+    const normaEl = document.getElementById(`norma_${q.id}`);
+    if (normaEl) {
+      normaEl.classList.add("visible");
+    }
   }
 
   function gradeExam() {
@@ -399,50 +569,13 @@
     let aciertos = 0, fallos = 0, blanco = 0;
 
     currentQuestions.forEach(q => {
-      const selected = document.querySelector(`input[name="ans_${q.id}"]:checked`);
-      const userVal = selected ? selected.value : null;
-      const rawCorrect = currentModeType === "original"
-        ? (q.correctOrig || q.correctAdap || "")
-        : (q.correctAdap || q.correctOrig || "");
-
-      const opts = currentModeType === "original"
-        ? (q.optsOrig || q.optsAdap || {})
-        : (q.optsAdap || q.optsOrig || {});
-
-      const matchedCorrectKey = Object.keys(opts).find(
-        k => String(k).toLowerCase() === String(rawCorrect).toLowerCase()
-      ) || rawCorrect;
-
-      if (!appState.temaStats[q.tema]) {
-        appState.temaStats[q.tema] = { answered: 0, correct: 0, wrong: 0 };
-      }
-
-      document.querySelectorAll(`input[name="ans_${q.id}"]`).forEach(inp => {
-        inp.disabled = true;
-      });
-
-      const correctLbl = document.getElementById(`lbl_${q.id}_${matchedCorrectKey}`);
-      if (correctLbl) correctLbl.classList.add("correct-ans");
-
-      const normaEl = document.getElementById(`norma_${q.id}`);
-      if (normaEl) normaEl.classList.add("visible");
-
-      if (!userVal) {
+      const ans = answeredMap[q.id];
+      if (!ans) {
         blanco++;
-      } else if (String(userVal).toLowerCase() === String(matchedCorrectKey).toLowerCase()) {
+      } else if (ans.isCorrect) {
         aciertos++;
-        appState.temaStats[q.tema].answered++;
-        appState.temaStats[q.tema].correct++;
-        appState.failedIds = appState.failedIds.filter(id => id !== q.id);
       } else {
         fallos++;
-        appState.temaStats[q.tema].answered++;
-        appState.temaStats[q.tema].wrong++;
-        const wrongLbl = document.getElementById(`lbl_${q.id}_${userVal}`);
-        if (wrongLbl) wrongLbl.classList.add("wrong-ans");
-        if (!appState.failedIds.includes(q.id)) {
-          appState.failedIds.push(q.id);
-        }
       }
     });
 
@@ -458,9 +591,8 @@
     document.getElementById("res-puntos").textContent = nota150.toFixed(2);
     document.getElementById("score-panel").classList.add("visible");
     document.getElementById("btn-submit-exam").style.display = "none";
-    document.getElementById("btn-back-home").style.display = "block";
+    document.getElementById("btn-back-home").style.display = "inline-block";
 
-    saveState();
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -518,9 +650,6 @@
 <!-- EXÁMENES CARGADOS -->
 <script src="examenes/examen_2023.js"></script>
 <script src="examenes/examen_2019.js"></script>
-
-</body>
-</html>
 
 </body>
 </html>
