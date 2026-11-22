@@ -306,4 +306,698 @@ window.registerExamQuestions("2017", [
     correctAdap: "C",
     textOrig: "¿En qué artículo de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, se establecen los registros en que los interesados podrán presentar los documentos que dirijan a los órganos de las Administraciones públicas?",
     optsOrig: { a: "Artículo 38.", b: "Artículo 13.", c: "Artículo 16.", d: "Artículo 30." },
-    correctOrig: "
+    correctOrig: "c",
+    norma: "Ley 39/2015, art. 16 (Registros): regula el registro electrónico general de cada Administración y los lugares/oficinas donde los interesados pueden presentar documentos dirigidos a los órganos de las Administraciones Públicas."
+  },
+  {
+    id: "2017_32", exam: "2017", tema: "Tema 18 · Transparencia",
+    textAdap: "A tenor del art. 17 de la Ley 19/2013 de 9 de diciembre, de Transparencia, Acceso a la información pública y buen gobierno, indique la opción incorrecta:",
+    optsAdap: { A: "El procedimiento para el ejercicio del derecho de acceso a la información pública se iniciará con la presentación de la correspondiente solicitud.", B: "La solicitud deberá dirigirse al órgano administrativo o entidad que posea la información.", C: "El solicitante está obligado a motivar su solicitud de acceso a la información." },
+    correctAdap: "C",
+    textOrig: "A tenor del art. 17 de la Ley 19/2013 de 9 de diciembre, de Transparencia, Acceso a la información pública y buen gobierno, indique la opción incorrecta:",
+    optsOrig: { a: "El procedimiento para el ejercicio del derecho de acceso a la información pública se iniciará con la presentación de la correspondiente solicitud.", b: "La solicitud deberá dirigirse al órgano administrativo o entidad que posea la información.", c: "La solicitud podrá presentarse por cualquier medio que permita tener constancia de la identidad del solicitante.", d: "El solicitante está obligado a motivar su solicitud de acceso a la información." },
+    correctOrig: "d",
+    norma: "Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno, art. 17.3: el solicitante no está obligado a motivar su solicitud de acceso a la información, aunque podrá exponer los motivos por los que solicita la información y que podrán ser tenidos en cuenta cuando se dicte la resolución."
+  },
+  {
+    id: "2017_33", exam: "2017", tema: "Tema 15 · Patrimonio Documental de Castilla y León",
+    textAdap: "Forman parte del Patrimonio Documental de Castilla y León, y serán considerados históricos:",
+    optsAdap: { A: "Los documentos producidos o reunidos por las Notarías y Registros Públicos de Castilla y León, con una antigüedad superior a 100 años.", B: "Los documentos producidos o reunidos por las entidades, las fundaciones y las asociaciones culturales y educativas de Castilla y León, con una antigüedad superior a los 40 años.", C: "Los documentos producidos o reunidos por las entidades eclesiásticas y asociaciones de las diferentes confesiones religiosas radicadas en Castilla y León, con una antigüedad superior a los 100 años." },
+    correctAdap: "B",
+    textOrig: "Forman parte del Patrimonio Documental de Castilla y León, y serán considerados históricos:",
+    optsOrig: { a: "Los documentos producidos o reunidos por las Notarías y Registros Públicos de Castilla y León, con una antigüedad superior a 100 años.", b: "Los documentos producidos o reunidos por las entidades, las fundaciones y las asociaciones culturales y educativas de Castilla y León, con una antigüedad superior a los 40 años.", c: "Los documentos producidos o reunidos por las entidades eclesiásticas y asociaciones de las diferentes confesiones religiosas radicadas en Castilla y León, con una antigüedad superior a los 100 años.", d: "Los documentos producidos o reunidos por las academias científicas y culturales, con una antigüedad superior a 100 años." },
+    correctOrig: "b",
+    norma: "Ley 6/1991, de 19 de abril, de los Archivos y del Patrimonio Documental de Castilla y León (art. 33 y concordantes): forman parte del Patrimonio Documental de Castilla y León y son considerados históricos, entre otros, los documentos de entidades, fundaciones y asociaciones culturales y educativas de Castilla y León con antigüedad superior a 40 años."
+  },
+  {
+    id: "2017_34", exam: "2017", tema: "Tema 5 · Prevención de Riesgos Laborales",
+    textAdap: "El Comité de Seguridad y Salud de acuerdo al artículo 38 de la Ley 31/1995, de 8 de noviembre de Prevención de Riesgos Laborales, estará formado por:",
+    optsAdap: { A: "Los delegados de prevención, de una parte, y por el empresario y/o sus representantes en número igual al de los delegados de prevención, por otra.", B: "Los delegados de prevención, de una parte, y por el empresario y/o sus representantes en número superior al de los delegados de prevención, por otra.", C: "Los delegados de prevención, de una parte, y por el empresario y/o sus representantes en número inferior al de los delegados de prevención, por otra." },
+    correctAdap: "A",
+    textOrig: "El Comité de Seguridad y Salud de acuerdo al artículo 38 de la Ley 31/1995, de 8 de noviembre de Prevención de Riesgos Laborales, estará formado por:",
+    optsOrig: { a: "Los delegados de prevención, de una parte, y por el empresario y/o sus representantes en número igual al de los delegados de prevención, por otra.", b: "Los delegados de prevención, de una parte, y por el empresario y/o sus representantes en número superior al de los delegados de prevención, por otra.", c: "Los delegados de prevención, de una parte, y por el empresario y/o sus representantes en número inferior al de los delegados de prevención, por otra.", d: "Todas son correctas" },
+    correctOrig: "a",
+    norma: "Ley 31/1995, art. 38.2 (Comité de Seguridad y Salud): es un órgano paritario y colegiado de participación, constituido en empresas o centros de 50 o más trabajadores, integrado por los Delegados de Prevención de una parte y por el empresario y/o sus representantes en número igual al de los Delegados de Prevención de la otra."
+  },
+  {
+    id: "2017_35", exam: "2017", tema: "Tema 15 · Almacenamiento Electrónico",
+    textAdap: "El artículo 46 de la Ley 40/2015, de 1 de octubre , de Régimen Jurídico del Sector Púbico, establece que todos los documentos utilizados en las actuaciones administrativas se almacenarán por medios electrónicos, salvo:",
+    optsAdap: { A: "Cuando así lo disponga una norma con rango reglamentario.", B: "Cuando se trate de actos de trámite.", C: "Cuando no sea posible." },
+    correctAdap: "C",
+    textOrig: "El artículo 46 de la Ley 40/2015, de 1 de octubre , de Régimen Jurídico del Sector Púbico, establece que todos los documentos utilizados en las actuaciones administrativas se almacenarán por medios electrónicos, salvo:",
+    optsOrig: { a: "Cuando así lo disponga una norma con rango reglamentario.", b: "Cuando se trate de actos de trámite.", c: "Cuando no sea posible.", d: "Cuando el soporte en que se almacenen los documentos no cuente con medidas de seguridad." },
+    correctOrig: "c",
+    norma: "Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, art. 46.1 (Archivo de documentos): todos los documentos utilizados en las actuaciones administrativas se almacenarán por medios electrónicos, salvo cuando no sea posible."
+  },
+  {
+    id: "2017_36", exam: "2017", tema: "Tema 19 · Seguridad Social",
+    textAdap: "Señale la respuesta incorrecta Conforme al artículo 7 de la ley General de la Seguridad Social, en el Sistema de la Seguridad Social, a efectos de las prestaciones contributivas, cualquiera que sea su sexo, estado civil y profesión, los españoles que residan en España y los extranjeros que residan o se encuentren legalmente en España, siempre que, en ambos supuestos, ejerzan su actividad en territorio nacional y estén incluidos en alguno de los apartados siguientes:",
+    optsAdap: { A: "Los estudiantes.", B: "Los trabajadores por cuenta ajena, siempre que sean titulares de empresas individuales o familiares.", C: "Socios trabajadores de cooperativas de trabajo asociado." },
+    correctAdap: "B",
+    textOrig: "Señale la respuesta incorrecta Conforme al artículo 7 de la ley General de la Seguridad Social, en el Sistema de la Seguridad Social, a efectos de las prestaciones contributivas, cualquiera que sea su sexo, estado civil y profesión, los españoles que residan en España y los extranjeros que residan o se encuentren legalmente en España, siempre que, en ambos supuestos, ejerzan su actividad en territorio nacional y estén incluidos en alguno de los apartados siguientes:",
+    optsOrig: { a: "Los estudiantes.", b: "Los trabajadores por cuenta ajena, siempre que sean titulares de empresas individuales o familiares.", c: "Socios trabajadores de cooperativas de trabajo asociado.", d: "Funcionarios públicos, civiles y militares." },
+    correctOrig: "b",
+    norma: "RDL 8/2015 (LGSS), art. 7.1 (Extensión del campo de aplicación): en la modalidad contributiva quedan incluidos los trabajadores por cuenta ajena (no se condiciona a ser titulares de empresas individuales o familiares, que es propio de trabajadores por cuenta propia/autónomos), socios trabajadores de cooperativas de trabajo asociado, estudiantes y funcionarios públicos."
+  },
+  {
+    id: "2017_37", exam: "2017", tema: "Tema 26 · Ofimática e Informática",
+    textAdap: "El conjunto de órdenes lógicas empleados por un ordenador para controlar la entrada y salida de datos se denomina:",
+    optsAdap: { A: "CPU.", B: "Sistema Operativo.", C: "Software." },
+    correctAdap: "C",
+    textOrig: "El conjunto de órdenes lógicas empleados por un ordenador para controlar la entrada y salida de datos se denomina:",
+    optsOrig: { a: "CPU.", b: "Sistema Operativo.", c: "Hardware.", d: "Software." },
+    correctOrig: "d",
+    norma: "Informática básica: el software (programas, instrucciones y órdenes lógicas) dirige el funcionamiento del equipo y gestiona el tratamiento y flujo de datos; la clave oficial del examen marca la opción d."
+  },
+  {
+    id: "2017_38", exam: "2017", tema: "Tema 21 · Presupuestos de Castilla y León",
+    textAdap: "¿A quién corresponde la aprobación de los Presupuestos de Castilla y León?",
+    optsAdap: { A: "A la Junta de Castilla y León.", B: "A las Cortes de Castilla y León.", C: "Al presidente de la Junta de Castilla y León." },
+    correctAdap: "B",
+    textOrig: "¿A quién corresponde la aprobación de los Presupuestos de Castilla y León?",
+    optsOrig: { a: "A la Junta de Castilla y León.", b: "A las Cortes de Castilla y León.", c: "Al presidente de la Junta de Castilla y León.", d: "Al Consejero de Hacienda de Castilla y León." },
+    correctOrig: "b",
+    norma: "Estatuto de Autonomía de Castilla y León (LO 14/2007, art. 16 y art. 38) y Ley 2/2006 de Hacienda y del Sector Público de Castilla y León: corresponde a la Junta elaborar y presentar el proyecto de presupuestos y a las Cortes de Castilla y León su examen, enmienda y aprobación mediante ley."
+  },
+  {
+    id: "2017_39", exam: "2017", tema: "Tema 19 · Seguridad Social",
+    textAdap: "En qué consiste el factor de sostenibilidad que recoge el artículo 211.1 del Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social:",
+    optsAdap: { A: "El factor de sostenibilidad se define como un instrumento que con carácter automático y cada 15 años permite vincular el importe de las pensiones de jubilación del sistema de la Seguridad Social a la evolución de la esperanza de vida de la población.", B: "El factor de sostenibilidad se define como un instrumento que con carácter automático permite vincular el importe de todas las pensiones del sistema de la Seguridad Social a la evolución de la esperanza de vida.", C: "El factor de sostenibilidad se define como un instrumento que con carácter automático permite vincular el importe de las pensiones de jubilación del sistema de la Seguridad Social a la evolución de la esperanza de vida de los pensionistas." },
+    correctAdap: "C",
+    textOrig: "En qué consiste el factor de sostenibilidad que recoge el artículo 211.1 del Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social:",
+    optsOrig: { a: "El factor de sostenibilidad se define como un instrumento que con carácter automático y cada 15 años permite vincular el importe de las pensiones de jubilación del sistema de la Seguridad Social a la evolución de la esperanza de vida de la población.", b: "El factor de sostenibilidad se define como un instrumento que con carácter automático permite vincular el importe de todas las pensiones del sistema de la Seguridad Social a la evolución de la esperanza de vida.", c: "El factor de sostenibilidad se define como un instrumento que con carácter automático permite vincular el importe de las pensiones de jubilación del sistema de la Seguridad Social a la evolución de la esperanza de vida de los pensionistas.", d: "El factor de sostenibilidad se define como un instrumento que con carácter automático permite vincular el importe de las pensiones de jubilación del sistema de la Seguridad Social al porcentaje de jubilados en ese momento." },
+    correctOrig: "c",
+    norma: "RDL 8/2015 (LGSS), art. 211.1 (en su redacción vigente en la fecha del examen): el factor de sostenibilidad se definía como un instrumento que con carácter automático permitía vincular el importe de las pensiones de jubilación del sistema de la Seguridad Social a la evolución de la esperanza de vida de los pensionistas."
+  },
+  {
+    id: "2017_40", exam: "2017", tema: "Tema 21 · Gestión Presupuestaria",
+    textAdap: "La gestión de presupuestos de una Gerencia de Atención Especializada se realizará a través de las siguientes fases:",
+    optsAdap: { A: "Aprobación del gasto, compromiso del gasto, reconocimiento de la obligación, ordenación del pago y pago material.", B: "Reconocimiento de la obligación, ordenación del pago y pago material.", C: "Aprobación del gasto, compromiso del gasto, reconocimiento de la obligación y ordenación del pago." },
+    correctAdap: "C",
+    textOrig: "La gestión de presupuestos de una Gerencia de Atención Especializada se realizará a través de las siguientes fases:",
+    optsOrig: { a: "Aprobación del gasto, compromiso del gasto, reconocimiento de la obligación, ordenación del pago y pago material.", b: "Reconocimiento de la obligación, ordenación del pago y pago material.", c: "Aprobación del gasto, compromiso del gasto, reconocimiento de la obligación y ordenación del pago.", d: "Ninguna de las anteriores es correcta." },
+    correctOrig: "c",
+    norma: "Ley 2/2006 de Hacienda y del Sector Público de Castilla y León y procedimiento de gestión presupuestaria en Sacyl: en la gestión presupuestaria de la Gerencia se tramitan las fases de autorización/aprobación del gasto, disposición/compromiso del gasto, reconocimiento de la obligación y propuesta/ordenación del pago (clave oficial del examen: c)."
+  },
+  {
+    id: "2017_41", exam: "2017", tema: "Tema 15 · Relaciones Electrónicas",
+    textAdap: "Según el artículo 14 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, estarán obligados a relacionarse a través de medios electrónicos con las Administraciones públicas para la realización de cualquier trámite de un procedimiento administrativo, entre otros:",
+    optsAdap: { A: "Las personas físicas, en todo caso.", B: "Las personas jurídicas, en todo caso.", C: "Quienes representen a un interesado que sea persona física, en todo caso." },
+    correctAdap: "B",
+    textOrig: "Según el artículo 14 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, estarán obligados a relacionarse a través de medios electrónicos con las Administraciones públicas para la realización de cualquier trámite de un procedimiento administrativo, entre otros:",
+    optsOrig: { a: "Las personas físicas, en todo caso.", b: "Las personas jurídicas, en todo caso.", c: "Quienes representen a un interesado que sea persona física, en todo caso.", d: "Ninguna de las anteriores es correcta." },
+    correctOrig: "b",
+    norma: "Ley 39/2015, art. 14.2 (Derecho y obligación de relacionarse electrónicamente con las Administraciones Públicas): están obligados en todo caso a relacionarse por medios electrónicos las personas jurídicas, las entidades sin personalidad jurídica, quienes ejerzan una actividad profesional para la que se requiera colegiación obligatoria, quienes representen a un interesado que esté obligado a relacionarse electrónicamente y los empleados de las Administraciones Públicas en los trámites por razón de su condición."
+  },
+  {
+    id: "2017_42", exam: "2017", tema: "Tema 22 · Centros Sanitarios",
+    textAdap: "De acuerdo a la Ley básica reguladora de la autonomía del paciente y de derechos y obligaciones en materia de información y documentación clínica al Centro Sanitario, señale la respuesta correcta:",
+    optsAdap: { A: "Constituye un centro sanitario el conjunto organizado de profesionales, instalaciones y medios técnicos.", B: "Constituye un centro sanitario el conjunto organizado de profesionales e instalaciones.", C: "Constituye un centro sanitario el conjunto organizado de instalaciones y medios técnicos." },
+    correctAdap: "A",
+    textOrig: "De acuerdo a la Ley básica reguladora de la autonomía del paciente y de derechos y obligaciones en materia de información y documentación clínica al Centro Sanitario, señale la respuesta correcta:",
+    optsOrig: { a: "Constituye un centro sanitario el conjunto organizado de profesionales, instalaciones y medios técnicos.", b: "Constituye un centro sanitario el conjunto organizado de profesionales e instalaciones.", c: "Constituye un centro sanitario el conjunto organizado de instalaciones y medios técnicos.", d: "Constituye un centro sanitario el conjunto organizado de profesionales y medios técnicos." },
+    correctOrig: "a",
+    norma: "Ley 41/2002, de 14 de noviembre, básica reguladora de la autonomía del paciente y de derechos y obligaciones en materia de información y documentación clínica, art. 3: se entiende por centro sanitario el conjunto organizado de profesionales, instalaciones y medios técnicos que realiza actividades y presta servicios para cuidar la salud de los pacientes y usuarios."
+  },
+  {
+    id: "2017_43", exam: "2017", tema: "Tema 21 · Presupuestos de Castilla y León",
+    textAdap: "El estado de ingresos de los presupuestos de la Administración General, de los organismos autónomos, de los entes públicos de derecho privado y de aquellas otras entidades u órganos con dotación diferenciada con presupuesto limitativo, se estructura siguiendo la clasificación:",
+    optsAdap: { A: "Orgánica y funcional.", B: "Económica y territorial.", C: "Orgánica y económica." },
+    correctAdap: "C",
+    textOrig: "El estado de ingresos de los presupuestos de la Administración General, de los organismos autónomos, de los entes públicos de derecho privado y de aquellas otras entidades u órganos con dotación diferenciada con presupuesto limitativo, se estructura siguiendo la clasificación:",
+    optsOrig: { a: "Orgánica y funcional.", b: "Económica y territorial.", c: "Orgánica y económica.", d: "Orgánica, funcional, económica y territorial." },
+    correctOrig: "c",
+    norma: "Ley 2/2006, de la Hacienda y del Sector Público de Castilla y León: el estado de ingresos se estructura según las clasificaciones orgánica (quién percibe o gestiona el ingreso) y económica (naturaleza económica del recurso: capítulos de ingresos corrientes, de capital y operaciones financieras)."
+  },
+  {
+    id: "2017_44", exam: "2017", tema: "Tema 21 · Contratación del Sector Público",
+    textAdap: "En un centro hospitalario, se necesitan adquirir medicamentos. De acuerdo a la clasificación de los contratos del sector público, se adquirirían mediante un:",
+    optsAdap: { A: "Contrato de gestión de servicios públicos.", B: "Contrato de suministro.", C: "Contrato de servicio." },
+    correctAdap: "B",
+    textOrig: "En un centro hospitalario, se necesitan adquirir medicamentos. De acuerdo a la clasificación de los contratos del sector público, se adquirirían mediante un:",
+    optsOrig: { a: "Contrato de gestión de servicios públicos.", b: "Contrato de suministro.", c: "Contrato de servicio.", d: "Todas las anteriores son correctas." },
+    correctOrig: "b",
+    norma: "Normativa de Contratos del Sector Público (TRLCSP art. 9 / LCSP art. 16): la adquisición de productos farmacéuticos o medicamentos constituye entrega de bienes muebles por la Administración, por lo que se tramita como contrato de suministro."
+  },
+  {
+    id: "2017_45", exam: "2017", tema: "Tema 26 · Ofimática (Windows)",
+    textAdap: "¿cómo se denomina la opción del Sistema Operativo Windows a través de la cual se guarda el trabajo automáticamente, la pantalla se apaga y se detiene el sonido procedente del ventilador del ordenador?",
+    optsAdap: { A: "Suspender.", B: "Hibernar.", C: "Apagar." },
+    correctAdap: "B",
+    textOrig: "¿cómo se denomina la opción del Sistema Operativo Windows a través de la cual se guarda el trabajo automáticamente, la pantalla se apaga y se detiene el sonido procedente del ventilador del ordenador?",
+    optsOrig: { a: "Suspender.", b: "Hibernar.", c: "Apagar.", d: "Restaurar." },
+    correctOrig: "b",
+    norma: "Estados de energía en Windows: al hibernar se vuelca el estado de la sesión y la memoria al disco duro y se apaga el equipo por completo (cesando ventiladores y consumo eléctrico), conservando el trabajo al volver a encenderlo (clave oficial del examen: b)."
+  },
+  {
+    id: "2017_46", exam: "2017", tema: "Tema 19 · Seguridad Social",
+    textAdap: "Según el artículo 179 del Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social, la prestación económica por maternidad consiste en:",
+    optsAdap: { A: "Un subsidio equivalente al 100 por ciento de la base reguladora correspondiente. A tales efectos, la base reguladora será equivalente a la que esté establecida para la prestación de incapacidad temporal derivada de contingencias comunes.", B: "Un subsidio equivalente al 80 por ciento de la base reguladora correspondiente. A tales efectos, la base reguladora será equivalente a la que esté establecida para la prestación de incapacidad temporal derivada de contingencias comunes.", C: "Un subsidio equivalente al 100 por ciento de la base reguladora correspondiente. A tales efectos, la base reguladora será equivalente a la que esté establecida para la prestación de incapacidad temporal derivada de contingencias profesionales." },
+    correctAdap: "A",
+    textOrig: "Según el artículo 179 del Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley General de la Seguridad Social, la prestación económica por maternidad consiste en:",
+    optsOrig: { a: "Un subsidio equivalente al 100 por ciento de la base reguladora correspondiente. A tales efectos, la base reguladora será equivalente a la que esté establecida para la prestación de incapacidad temporal derivada de contingencias comunes.", b: "Un subsidio equivalente al 80 por ciento de la base reguladora correspondiente. A tales efectos, la base reguladora será equivalente a la que esté establecida para la prestación de incapacidad temporal derivada de contingencias comunes.", c: "Un subsidio equivalente al 100 por ciento de la base reguladora correspondiente. A tales efectos, la base reguladora será equivalente a la que esté establecida para la prestación de incapacidad temporal derivada de contingencias profesionales.", d: "Un subsidio equivalente al 80 por ciento de la base reguladora correspondiente. A tales efectos, la base reguladora será equivalente a la que esté establecida para la prestación de incapacidad temporal derivada de contingencias profesionales." },
+    correctOrig: "a",
+    norma: "RDL 8/2015 (LGSS), art. 179 (Prestación económica): consiste en un subsidio equivalente al 100 por ciento de la base reguladora correspondiente, calculada de forma equivalente a la establecida para la prestación de incapacidad temporal derivada de contingencias comunes."
+  },
+  {
+    id: "2017_47", exam: "2017", tema: "Tema 26 · Ofimática (Word)",
+    textAdap: "El icono representado con una \"brocha\" en el procesador de textos Word nos permite:",
+    optsAdap: { A: "Copiar formato.", B: "Borrar.", C: "Color de Fuente." },
+    correctAdap: "A",
+    textOrig: "El icono representado con una \"brocha\" en el procesador de textos Word nos permite:",
+    optsOrig: { a: "Copiar formato.", b: "Borrar.", c: "Color de Fuente.", d: "Resaltado de texto." },
+    correctOrig: "a",
+    norma: "Proceso en Microsoft Word (pestaña Inicio > Portapapeles): el icono de la brocha corresponde a 'Copiar formato' (un clic copia y aplica a una selección; doble clic permite aplicarlo varias veces)."
+  },
+  {
+    id: "2017_48", exam: "2017", tema: "Tema 26 · Ofimática (Excel)",
+    textAdap: "Para sumar la columna A, columna D y la celda Fl; aplicaremos la fórmula:",
+    optsAdap: { A: "=SUMA(A:A;D:D;F1)", B: "=SUMA(A;A:D;D:F1)", C: "=SUMA(A1:A1048576;D1:D1048576;F1)" },
+    correctAdap: "A",
+    textOrig: "Para sumar la columna A, columna D y la celda Fl; aplicaremos la fórmula:",
+    optsOrig: { a: "=SUMA(A:A;D:D;F1)", b: "=SUMA(A;A:D;D:F1)", c: "=SUMA(A1:A1048576;D1:D1048576;F1)", d: "Ninguno de ellos es el resultado" },
+    correctOrig: "a",
+    norma: "Sintaxis en Microsoft Excel: la función =SUMA(A:A;D:D;F1) suma todos los valores numéricos de la columna A completa ('A:A'), de la columna D completa ('D:D') y de la celda F1, separando argumentos con punto y coma."
+  },
+  {
+    id: "2017_49", exam: "2017", tema: "Tema 21 · Presupuestos de Castilla y León",
+    textAdap: "El capítulo VI de la clasificación económica de los Gastos se denomina:",
+    optsAdap: { A: "Activos financieros.", B: "Gastos de personal.", C: "Ninguna es correcta." },
+    correctAdap: "C",
+    textOrig: "El capítulo VI de la clasificación económica de los Gastos se denomina:",
+    optsOrig: { a: "Activos financieros.", b: "Gastos de personal.", c: "Gastos de bienes corrientes y servicios.", d: "Ninguna es correcta." },
+    correctOrig: "d",
+    norma: "Clasificación económica del gasto público (Ley 2/2006 de Castilla y León): Capítulo I Gastos de personal, Capítulo II Gastos corrientes en bienes y servicios, Capítulo III Gastos financieros, Capítulo IV Transferencias corrientes, Capítulo VI Inversiones reales, Capítulo VII Transferencias de capital, Capítulo VIII Activos financieros y Capítulo IX Pasivos financieros. Como el Capítulo VI es 'Inversiones reales', ninguna de las opciones a, b o c es correcta."
+  },
+  {
+    id: "2017_50", exam: "2017", tema: "Tema 22 · Historia Clínica",
+    textAdap: "El conjunto de documentos que contienen los datos, valoraciones e informaciones de cualquier índole sobre la situación y evolución clínica de un paciente a lo largo del proceso asistencial, es:",
+    optsAdap: { A: "La documentación clínica.", B: "La información clínica.", C: "La historia clínica." },
+    correctAdap: "C",
+    textOrig: "El conjunto de documentos que contienen los datos, valoraciones e informaciones de cualquier índole sobre la situación y evolución clínica de un paciente a lo largo del proceso asistencial, es:",
+    optsOrig: { a: "La documentación clínica.", b: "La información clínica.", c: "La historia clínica.", d: "El informe de alta médica." },
+    correctOrig: "c",
+    norma: "Ley 41/2002, de 14 de noviembre, básica reguladora de la autonomía del paciente y de derechos y obligaciones en materia de información y documentación clínica, art. 3: define la historia clínica como el conjunto de documentos que contienen los datos, valoraciones e informaciones de cualquier índole sobre la situación y evolución clínica de un paciente a lo largo del proceso asistencial."
+  },
+  {
+    id: "2017_51", exam: "2017", tema: "Tema 21 · Contratación del Sector Público",
+    textAdap: "De acuerdo al artículo 6 del texto refundido de la Ley de Contratos del Sector Público, son contratos de obras:",
+    optsAdap: { A: "Instalación de alarmas.", B: "El mantenimiento de los ascensores.", C: "La adquisición de extintores." },
+    correctAdap: "A",
+    textOrig: "De acuerdo al artículo 6 del texto refundido de la Ley de Contratos del Sector Público, son contratos de obras:",
+    optsOrig: { a: "Instalación de alarmas.", b: "El mantenimiento de los ascensores.", c: "La adquisición de extintores.", d: "Ninguna es correcta." },
+    correctOrig: "a",
+    norma: "TRLCSP (RDL 3/2011), art. 6 (Contrato de obras) y clave oficial del examen (Orden SAN/549/2016, 11/02/2017): en la clave oficial de este examen la respuesta marcada es la a."
+  },
+  {
+    id: "2017_52", exam: "2017", tema: "Tema 22 · Autonomía del Paciente",
+    textAdap: "¿Qué ley básica, regula autonomía del paciente y de derechos y obligaciones en materia de información y documentación clínica?",
+    optsAdap: { A: "Ley Orgánica 15/1999, de 13 de diciembre.", B: "Ley 41/2002, de 14 de noviembre.", C: "Real Decreto Legislativo 8/2015, de 30 de octubre" },
+    correctAdap: "B",
+    textOrig: "¿Qué ley básica, regula autonomía del paciente y de derechos y obligaciones en materia de información y documentación clínica?",
+    optsOrig: { a: "Ley Orgánica 15/1999, de 13 de diciembre.", b: "Ley 41/2002, de 14 de noviembre.", c: "Real Decreto Legislativo 8/2015, de 30 de octubre", d: "Real Decreto Legislativo 3/2011, de 14 de noviembre." },
+    correctOrig: "b",
+    norma: "Ley 41/2002, de 14 de noviembre, básica reguladora de la autonomía del paciente y de derechos y obligaciones en materia de información y documentación clínica."
+  },
+  {
+    id: "2017_53", exam: "2017", tema: "Tema 22 · Autonomía del Paciente (ANULADA)",
+    anulada: true, estado: "ANULADA",
+    textAdap: "¿Qué facultad de opción ofrece la libre elección, según la Ley 41/2002, de 13 de diciembre?",
+    optsAdap: { A: "Optar libre y voluntariamente entre dos o más alternativas asistenciales.", B: "Optar entre varios facultativos en los términos y condiciones que establezcan los servicios de salud.", C: "Optar entre centros asistenciales en los términos y condiciones que establezcan los servicios de salud." },
+    correctAdap: null,
+    textOrig: "¿Qué facultad de opción ofrece la libre elección, según la Ley 41/2002, de 13 de diciembre?",
+    optsOrig: { a: "Optar libre y voluntariamente entre dos o más alternativas asistenciales.", b: "Optar entre varios facultativos en los términos y condiciones que establezcan los servicios de salud.", c: "Optar entre centros asistenciales en los términos y condiciones que establezcan los servicios de salud.", d: "Todas son correctas." },
+    correctOrig: null,
+    norma: "PREGUNTA ANULADA en la plantilla oficial de corrección de la Orden SAN/549/2016 (11/02/2017) (además, la Ley 41/2002 es de 14 de noviembre, no de 13 de diciembre)."
+  },
+  {
+    id: "2017_54", exam: "2017", tema: "Tema 26 · Ofimática (Access 2010)",
+    textAdap: "Si queremos buscar las personas cuya primera letra de su nombre, sea la v, como debe ser el criterio, en Access 2010:",
+    optsAdap: { A: "*v*", B: "V*", C: "*v" },
+    correctAdap: "B",
+    textOrig: "Si queremos buscar las personas cuya primera letra de su nombre, sea la v, como debe ser el criterio, en Access 2010:",
+    optsOrig: { a: "*v*", b: "V*", c: "*v", d: "Todas son válidas" },
+    correctOrig: "b",
+    norma: "Criterios de búsqueda con comodines en Microsoft Access 2010: el asterisco (*) coincide con cero o más caracteres; escribir 'V*' (o 'v*') filtra los valores que comienzan por la letra V seguidos de cualquier secuencia de caracteres."
+  },
+  {
+    id: "2017_55", exam: "2017", tema: "Tema 15 · Documentación Administrativa y Clínica",
+    textAdap: "¿cuáles son dos de las funciones primordiales que cumplen la documentación administrativa y clínica?",
+    optsAdap: { A: "Función de Comunicación y Certificación.", B: "Función de Constancia y Certificación.", C: "Función de Constancia y Comunicación." },
+    correctAdap: "C",
+    textOrig: "¿cuáles son dos de las funciones primordiales que cumplen la documentación administrativa y clínica?",
+    optsOrig: { a: "Función de Comunicación y Certificación.", b: "Función de Constancia y Certificación.", c: "Función de Constancia y Comunicación.", d: "Función de Consentimiento y Constancia." },
+    correctOrig: "c",
+    norma: "Documentación administrativa y clínica: cumplen principalmente la función de constancia (dejar acreditados actos, hechos, decisiones y actuaciones) y la función de comunicación (transmitir información y resoluciones entre órganos, profesionales y ciudadanos)."
+  },
+  {
+    id: "2017_56", exam: "2017", tema: "Tema 5 · Prevención de Riesgos Laborales",
+    textAdap: "Según el artículo 4.2 de la Ley 31/1995 de 8 de noviembre de Prevención de Riesgos Laborales, \"Para calificar un riesgo desde el punto de vista de su gravedad...\". Indique la respuesta correcta.",
+    optsAdap: { A: "Se valorarán de forma independiente la probabilidad de que se produzca el daño y la severidad del mismo.", B: "Solamente se valorará la severidad del daño.", C: "Se valorarán de forma conjunta la probabilidad de que se produzca el daño y la severidad del mismo." },
+    correctAdap: "C",
+    textOrig: "Según el artículo 4.2 de la Ley 31/1995 de 8 de noviembre de Prevención de Riesgos Laborales, \"Para calificar un riesgo desde el punto de vista de su gravedad...\". Indique la respuesta correcta.",
+    optsOrig: { a: "Se valorarán de forma independiente la probabilidad de que se produzca el daño y la severidad del mismo.", b: "Solamente se valorará la severidad del daño.", c: "Se valorarán de forma conjunta la probabilidad de que se produzca el daño y la severidad del mismo.", d: "Solamente se valorará la probabilidad de que se produzca el daño." },
+    correctOrig: "c",
+    norma: "Ley 31/1995, de Prevención de Riesgos Laborales, art. 4.2: para calificar un riesgo desde el punto de vista de su gravedad, se valorarán conjuntamente la probabilidad de que se produzca el daño y la severidad del mismo."
+  },
+  {
+    id: "2017_57", exam: "2017", tema: "Tema 26 · Ofimática e Informática",
+    textAdap: "Los compiladores, como elemento de un PC, de qué elemento forman parte?",
+    optsAdap: { A: "Del Hardware.", B: "Del Software de Sistema.", C: "Del Software de Programación." },
+    correctAdap: "C",
+    textOrig: "Los compiladores, como elemento de un PC, de qué elemento forman parte?",
+    optsOrig: { a: "Del Hardware.", b: "Del Software de Sistema.", c: "Del Software de Programación.", d: "Del Software de Aplicación." },
+    correctOrig: "c",
+    norma: "Clasificación del software informático: el software de programación incluye las herramientas que permiten a los desarrolladores escribir, traducir y depurar programas (editores, ensambladores, intérpretes y compiladores)."
+  },
+  {
+    id: "2017_58", exam: "2017", tema: "Tema 15 · Publicación de Actos",
+    textAdap: "Conforme al art. 45 de la Ley 39/2015, de 1 de octubre del Procedimiento Administrativo Común de las Administraciones Públicas, los actos administrativos serán objeto de publicación:",
+    optsAdap: { A: "Cuando así lo establezcan las normas reguladoras de cada procedimiento.", B: "Cuando lo aconsejen razones de interés público apreciadas por el órgano competente.", C: "Todas las respuestas anteriores son correctas." },
+    correctAdap: "C",
+    textOrig: "Conforme al art. 45 de la Ley 39/2015, de 1 de octubre del Procedimiento Administrativo Común de las Administraciones Públicas, los actos administrativos serán objeto de publicación:",
+    optsOrig: { a: "Cuando así lo establezcan las normas reguladoras de cada procedimiento.", b: "Cuando lo aconsejen razones de interés público apreciadas por el órgano competente.", c: "Cuando el acto tenga por destinatario a una pluralidad indeterminada de personas.", d: "Todas las respuestas anteriores son correctas." },
+    correctOrig: "d",
+    norma: "Ley 39/2015, art. 45.1 (Publicación): los actos administrativos son objeto de publicación cuando así lo establezcan las normas reguladoras de cada procedimiento o cuando lo aconsejen razones de interés público apreciadas por el órgano competente, surtiendo efectos de notificación cuando el acto tenga por destinatario a una pluralidad indeterminada de personas."
+  },
+  {
+    id: "2017_59", exam: "2017", tema: "Tema 21 · Presupuestos de Castilla y León",
+    textAdap: "En la clasificación presupuestaria por funciones o programas, los créditos se clasifican en:",
+    optsAdap: { A: "Grupos, capítulos y artículos.", B: "Capítulos, artículos, conceptos y subconceptos.", C: "Grupos, funciones, subfunciones. Programas y subprogramas." },
+    correctAdap: "C",
+    textOrig: "En la clasificación presupuestaria por funciones o programas, los créditos se clasifican en:",
+    optsOrig: { a: "Grupos, capítulos y artículos.", b: "Capítulos, artículos, conceptos y subconceptos.", c: "Grupos, funciones, subfunciones. Programas y subprogramas.", d: "Capítulos, artículos, programas y subprogramas." },
+    correctOrig: "c",
+    norma: "Ley 2/2006, de la Hacienda y del Sector Público de Castilla y León: la clasificación funcional o por programas estructura los créditos según los objetivos y políticas públicas a realizar (grupos de función, funciones, subfunciones, programas y subprogramas)."
+  },
+  {
+    id: "2017_60", exam: "2017", tema: "Tema 22 · Documentación Clínica",
+    textAdap: "De los siguientes documentos, ¿cuál no se considera clínico de uso hospitalario?",
+    optsAdap: { A: "Hoja de ingreso.", B: "Orden de tratamiento.", C: "Documentos de régimen de admisión de enfermos" },
+    correctAdap: "C",
+    textOrig: "De los siguientes documentos, ¿cuál no se considera clínico de uso hospitalario?",
+    optsOrig: { a: "Hoja de ingreso.", b: "Orden de tratamiento.", c: "Hojas operativas.", d: "Documentos de régimen de admisión de enfermos" },
+    correctOrig: "d",
+    norma: "Documentación sanitaria y clínica: los documentos de admisión/régimen administrativo gestionan el ingreso o registro administrativo del usuario, mientras que los documentos clínicos reflejan la asistencia y evolución médica."
+  },
+  {
+    id: "2017_61", exam: "2017", tema: "Tema 15 · Estructura Ley 39/2015",
+    textAdap: "La Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, se estructura en:",
+    optsAdap: { A: "136 artículos, distribuidos en 7 títulos, 5 Disposiciones Adicionales, 5 Disposiciones Transitorias, 1 Disposición Derogatoria y 6 Disposiciones Finales.", B: "135 artículos, distribuidos en 7 títulos, 5 Disposiciones Adicionales, 5 Disposiciones Transitorias, 1 Disposición Derogatoria y 7 Disposiciones Finales.", C: "133 artículos, distribuidos en 7 títulos, 5 Disposiciones Adicionales, 5 Disposiciones Transitorias, 1 Disposición Derogatoria y 7 Disposiciones Finales." },
+    correctAdap: "C",
+    textOrig: "La Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, se estructura en:",
+    optsOrig: { a: "136 artículos, distribuidos en 7 títulos, 5 Disposiciones Adicionales, 5 Disposiciones Transitorias, 1 Disposición Derogatoria y 6 Disposiciones Finales.", b: "135 artículos, distribuidos en 7 títulos, 5 Disposiciones Adicionales, 5 Disposiciones Transitorias, 1 Disposición Derogatoria y 7 Disposiciones Finales.", c: "133 artículos, distribuidos en 7 títulos, 5 Disposiciones Adicionales, 5 Disposiciones Transitorias, 1 Disposición Derogatoria y 7 Disposiciones Finales.", d: "133 artículos, distribuidos en 5 títulos, 7 Disposiciones Adicionales, 7 Disposiciones Transitorias, 1 Disposición Derogatoria y 7 Disposiciones Finales." },
+    correctOrig: "c",
+    norma: "Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas: consta de 133 artículos estructurados en Título Preliminar y 6 Títulos (7 en total), 5 Disposiciones Adicionales, 5 Disposiciones Transitorias, 1 Disposición Derogatoria única y 7 Disposiciones Finales."
+  },
+  {
+    id: "2017_62", exam: "2017", tema: "Tema 28 · Navegación en Internet",
+    textAdap: "¿Qué tecla de función utilizamos para actualizar la página por la que estamos navegando En internet, cuando la información no está actualizada respecto a la última visita realizada?",
+    optsAdap: { A: "F7", B: "F3", C: "F5" },
+    correctAdap: "C",
+    textOrig: "¿Qué tecla de función utilizamos para actualizar la página por la que estamos navegando En internet, cuando la información no está actualizada respecto a la última visita realizada?",
+    optsOrig: { a: "F7", b: "F3", c: "F1", d: "F5" },
+    correctOrig: "d",
+    norma: "Atajos de teclado en navegadores web: la tecla de función F5 recarga/actualiza la página web activa."
+  },
+  {
+    id: "2017_63", exam: "2017", tema: "Tema 15 · Delegación de Competencias",
+    textAdap: "Según la Ley 40/2015 , 1 de octubre, de Régimen Jurídico del Sector Público, indique cuál de las siguientes afirmaciones no es correcta:",
+    optsAdap: { A: "Las resoluciones administrativas que se adopten por delegación deberán indicar expresamente esta circunstancia.", B: "Las resoluciones administrativas adoptadas por delegación se considerarán dictadas por el órgano delegante.", C: "Las competencias que se ejerzan por delegación podrán delegarse, salvo disposición expresa de una Ley." },
+    correctAdap: "C",
+    textOrig: "Según la Ley 40/2015 , 1 de octubre, de Régimen Jurídico del Sector Público, indique cuál de las siguientes afirmaciones no es correcta:",
+    optsOrig: { a: "Las resoluciones administrativas que se adopten por delegación deberán indicar expresamente esta circunstancia.", b: "Las resoluciones administrativas adoptadas por delegación se considerarán dictadas por el órgano delegante.", c: "La delegación será revocable en cualquier momento por el órgano que la haya conferido.", d: "Las competencias que se ejerzan por delegación podrán delegarse, salvo disposición expresa de una Ley." },
+    correctOrig: "d",
+    norma: "Ley 40/2015, art. 9.2.a) y 9.4 (Delegación de competencias): salvo autorización expresa de una Ley, no podrán delegarse las competencias que se ejerzan por delegación; las resoluciones dictadas por delegación se consideran dictadas por el órgano delegante, deben indicar expresamente esta circunstancia y la delegación es revocable en cualquier momento."
+  },
+  {
+    id: "2017_64", exam: "2017", tema: "Tema 22 · Constitución Española y Salud",
+    textAdap: "En la exposición de motivos de la Ley 41/2002 de 14 noviembre, básica reguladora de la autonomía del paciente y de los derechos y obligaciones en materia de información y documentación clínica, se recoge que el derecho fundamental a la protección aparece recogido constitucionalmente en:",
+    optsAdap: { A: "El artículo 41 de la Constitución Española.", B: "El artículo 42 de la Constitución Española.", C: "El artículo 43 de la Constitución Española." },
+    correctAdap: "C",
+    textOrig: "En la exposición de motivos de la Ley 41/2002 de 14 noviembre, básica reguladora de la autonomía del paciente y de los derechos y obligaciones en materia de información y documentación clínica, se recoge que el derecho fundamental a la protección aparece recogido constitucionalmente en:",
+    optsOrig: { a: "El artículo 41 de la Constitución Española.", b: "El artículo 42 de la Constitución Española.", c: "El artículo 43 de la Constitución Española.", d: "El artículo 44 de la Constitución Española." },
+    correctOrig: "c",
+    norma: "Constitución Española, art. 43 (reconoce el derecho a la protección de la salud y encomienda a los poderes públicos organizar y tutelar la salud pública a través de medidas preventivas y de las prestaciones y servicios necesarios), citado en la exposición de motivos de la Ley 41/2002."
+  },
+  {
+    id: "2017_65", exam: "2017", tema: "Tema 15 · Periodo de Prueba",
+    textAdap: "Cuando la Administración no tenga por ciertos los hechos alegados por los interesados, el instructor acordará la apertura de un periodo de prueba:",
+    optsAdap: { A: "Por plazo no superior a treinta días ni inferior a diez.", B: "Por plazo superior a treinta días.", C: "Por plazo no superior a cuarenta días ni inferior a diez." },
+    correctAdap: "A",
+    textOrig: "Cuando la Administración no tenga por ciertos los hechos alegados por los interesados, el instructor acordará la apertura de un periodo de prueba:",
+    optsOrig: { a: "Por plazo no superior a treinta días ni inferior a diez.", b: "Por plazo superior a treinta días.", c: "Por plazo no superior a cuarenta días ni inferior a diez.", d: "Por plazo superior a treinta y cinco días." },
+    correctOrig: "a",
+    norma: "Ley 39/2015, art. 77.2 (Medios y período de prueba): cuando la Administración no tenga por ciertos los hechos alegados por los interesados o la naturaleza del procedimiento lo exija, el instructor del mismo acordará la apertura de un período de prueba por un plazo no superior a treinta días ni inferior a diez."
+  },
+  {
+    id: "2017_66", exam: "2017", tema: "Supuesto Práctico 1 · Excel",
+    textAdap: "Asigno una línea a cada paciente y establezco un sombreado automático en filas alternas:",
+    optsAdap: { A: "Selecciono las filas y asigno el color", B: "Desde la pestaña inicio, selecciono dar formato como tabla", C: "a y c son ciertas" },
+    correctAdap: "B",
+    textOrig: "Asigno una línea a cada paciente y establezco un sombreado automático en filas alternas:",
+    optsOrig: { a: "Selecciono las filas y asigno el color", b: "Desde la pestaña inicio, selecciono dar formato como tabla", c: "Utilizo la función =RESIDUO(FILA 2,0)", d: "a y c son ciertas" },
+    correctOrig: "b",
+    norma: "Proceso en Microsoft Excel (Inicio > Dar formato como tabla): convertir el rango en tabla de Excel aplica automáticamente estilos de tabla con filas con bandas (sombreado alterno) y se actualiza al añadir o eliminar filas."
+  },
+  {
+    id: "2017_67", exam: "2017", tema: "Supuesto Práctico 1 · Excel",
+    textAdap: "Genero listas desplegables, en los casos necesarios, según la siguiente secuencia:",
+    optsAdap: { A: "Datos/Validación de Datos/Lista/nombre de la lista", B: "Datos/Validación de Datos/Lista/=nombre de la lista", C: "Datos/Validación de Datos/Cualquier valor" },
+    correctAdap: "B",
+    textOrig: "Genero listas desplegables, en los casos necesarios, según la siguiente secuencia:",
+    optsOrig: { a: "Datos/Validación de Datos/Lista/nombre de la lista", b: "Datos/Validación de Datos/Lista/=nombre de la lista", c: "Datos/Validación de Datos/Cualquier valor", d: "a y c son ciertas" },
+    correctOrig: "b",
+    norma: "Proceso en Microsoft Excel (pestaña Datos > Validación de datos > Permitir: Lista): al referenciar un rango con nombre definido o fórmula de lista en el campo Origen se antepone '=' ('=nombre_de_la_lista')."
+  },
+  {
+    id: "2017_68", exam: "2017", tema: "Supuesto Práctico 1 · Word",
+    textAdap: "Para elaborar un informe de varias páginas rápidamente",
+    optsAdap: { A: "Procuro que las páginas queden ajustadas a los párrafos.", B: "Pego los logos, uno a uno, en cada página", C: "Incorporo encabezados y pies de página" },
+    correctAdap: "C",
+    textOrig: "Para elaborar un informe de varias páginas rápidamente",
+    optsOrig: { a: "Procuro que las páginas queden ajustadas a los párrafos.", b: "Pego los logos, uno a uno, en cada página", c: "Incorporo encabezados y pies de página", d: "Ninguna de las anteriores" },
+    correctOrig: "c",
+    norma: "Proceso en Microsoft Word (Insertar > Encabezado y pie de página): los encabezados y pies de página repiten automáticamente títulos, numeración de página y logotipos en todas las páginas del documento."
+  },
+  {
+    id: "2017_69", exam: "2017", tema: "Supuesto Práctico 1 · Excel",
+    textAdap: "En la hoja de recogida de tiempos de trabajo, en la columna correspondiente a día de la semana:",
+    optsAdap: { A: "Busco las filas que contienen el día de la semana que quiero contar y las cuento", B: "Utilizo la función CONTAR.SI", C: "Utilizo la herramienta BUSCAR y cuento las veces que aparece el día de la semana a contabilizar" },
+    correctAdap: "B",
+    textOrig: "En la hoja de recogida de tiempos de trabajo, en la columna correspondiente a día de la semana:",
+    optsOrig: { a: "Busco las filas que contienen el día de la semana que quiero contar y las cuento", b: "Utilizo la función CONTAR.SI", c: "Utilizo la herramienta BUSCAR y cuento las veces que aparece el día de la semana a contabilizar", d: "Ninguna es cierta" },
+    correctOrig: "b",
+    norma: "Funciones en Microsoft Excel: la función =CONTAR.SI(rango; criterio) cuenta el número de celdas dentro de un rango que cumplen el criterio especificado (por ejemplo, un día concreto de la semana)."
+  },
+  {
+    id: "2017_70", exam: "2017", tema: "Supuesto Práctico 1 · Excel",
+    textAdap: "Protejo la estructura del libro de Excel, así los usuarios pueden:",
+    optsAdap: { A: "Eliminar una hoja", B: "Agregar una hoja", C: "Ninguna de las anteriores" },
+    correctAdap: "C",
+    textOrig: "Protejo la estructura del libro de Excel, así los usuarios pueden:",
+    optsOrig: { a: "Eliminar una hoja", b: "Agregar una hoja", c: "Mover una hoja", d: "Ninguna de las anteriores" },
+    correctOrig: "d",
+    norma: "Proceso en Microsoft Excel (Revisar > Proteger libro > Estructura): proteger la estructura del libro impide realizar cambios en las hojas del libro, como agregar, eliminar, mover, copiar, ocultar, mostrar o cambiar el nombre a las hojas."
+  },
+  {
+    id: "2017_71", exam: "2017", tema: "Supuesto Práctico 1 · Excel",
+    textAdap: "Para que los datos de las celdas funcionen correctamente:",
+    optsAdap: { A: "Utilizo el cuadro de diálogo Formato de Celdas", B: "Asigno el formato correspondiente a las celdas de cada columna", C: "a y b son ciertas" },
+    correctAdap: "C",
+    textOrig: "Para que los datos de las celdas funcionen correctamente:",
+    optsOrig: { a: "Utilizo el cuadro de diálogo Formato de Celdas", b: "Asigno el formato correspondiente a las celdas de cada columna", c: "a y b son ciertas", d: "Ninguna es cierta" },
+    correctOrig: "c",
+    norma: "Gestión de datos en Microsoft Excel: asignar el formato adecuado (número, fecha, texto, moneda, etc.) a las celdas de cada columna desde el cuadro de diálogo Formato de celdas evita interpretaciones erróneas en cálculos y ordenaciones."
+  },
+  {
+    id: "2017_72", exam: "2017", tema: "Supuesto Práctico 1 · Excel",
+    textAdap: "Para ver de manera rápida las celdas con un dato importante:",
+    optsAdap: { A: "Utilizo la herramienta BUSCAR y pongo el texto en negrita", B: "Utilizo la herramienta Formato Condicional y lo establezco", C: "Al introducir el dato, compruebo que lo pongo con algún resalte" },
+    correctAdap: "B",
+    textOrig: "Para ver de manera rápida las celdas con un dato importante:",
+    optsOrig: { a: "Utilizo la herramienta BUSCAR y pongo el texto en negrita", b: "Utilizo la herramienta Formato Condicional y lo establezco", c: "Al introducir el dato, compruebo que lo pongo con algún resalte", d: "Ninguna es cierta" },
+    correctOrig: "b",
+    norma: "Proceso en Microsoft Excel (Inicio > Formato condicional): permite destacar visualmente de forma automática las celdas que cumplen una condición, valor o regla definida."
+  },
+  {
+    id: "2017_73", exam: "2017", tema: "Supuesto Práctico 1 · Excel",
+    textAdap: "Para cambiar la alineación del texto en Excel:",
+    optsAdap: { A: "Utilizo la opción Formato de celdas", B: "Utilizo las opciones de alineación de la barra de herramientas", C: "a y b son ciertas" },
+    correctAdap: "C",
+    textOrig: "Para cambiar la alineación del texto en Excel:",
+    optsOrig: { a: "Utilizo la opción Formato de celdas", b: "Utilizo las opciones de alineación de la barra de herramientas", c: "Utilizo Fx", d: "a y b son ciertas" },
+    correctOrig: "d",
+    norma: "Proceso en Microsoft Excel: la alineación horizontal y vertical del contenido puede modificarse tanto desde los botones de alineación en la cinta/barra (pestaña Inicio) como desde el cuadro de diálogo Formato de celdas (pestaña Alineación)."
+  },
+  {
+    id: "2017_74", exam: "2017", tema: "Supuesto Práctico 1 · Excel",
+    textAdap: "Utilizo el operador ^ (acento circunflejo) de Excel porque:",
+    optsAdap: { A: "Es un operador de comparación", B: "Es un operador aritmético", C: "Es un operador de concatenación" },
+    correctAdap: "B",
+    textOrig: "Utilizo el operador ^ (acento circunflejo) de Excel porque:",
+    optsOrig: { a: "Es un operador de comparación", b: "Es un operador de ordenación", c: "Es un operador aritmético", d: "Es un operador de concatenación" },
+    correctOrig: "c",
+    norma: "Operadores en Microsoft Excel: el acento circunflejo (^) es un operador aritmético que realiza la exponenciación o potencia (por ejemplo, =2^3 devuelve 8)."
+  },
+  {
+    id: "2017_75", exam: "2017", tema: "Supuesto Práctico 1 · Excel",
+    textAdap: "Introduzco fórmulas aritméticas mediante:",
+    optsAdap: { A: "La función Fx de la barra de fórmulas", B: "Ctrl+x", C: "Ninguna es cierta" },
+    correctAdap: "C",
+    textOrig: "Introduzco fórmulas aritméticas mediante:",
+    optsOrig: { a: "La función Fx de la barra de fórmulas", b: "Ctrl+x", c: "Crt+n", d: "Ninguna es cierta" },
+    correctOrig: "d",
+    norma: "Fórmulas en Microsoft Excel: toda fórmula en Excel comienza escribiendo el signo igual (=) seguido de la expresión aritmética o función; Ctrl+X corta el contenido y Ctrl+N aplica negrita."
+  },
+  {
+    id: "2017_76", exam: "2017", tema: "Supuesto Práctico 1 · Excel",
+    textAdap: "Utilizo la fórmula =$A$1, que es:",
+    optsAdap: { A: "Una referencia relativa", B: "Una referencia mixta", C: "Una referencia absoluta" },
+    correctAdap: "C",
+    textOrig: "Utilizo la fórmula =$A$1, que es:",
+    optsOrig: { a: "Una referencia relativa", b: "Una referencia mixta", c: "Una referencia absoluta", d: "Es una referencia 30" },
+    correctOrig: "c",
+    norma: "Referencias de celda en Microsoft Excel: anteponer el signo '$' tanto a la columna como a la fila ($A$1) crea una referencia absoluta, que no varía al copiar o arrastrar la fórmula a otras celdas."
+  },
+  {
+    id: "2017_77", exam: "2017", tema: "Supuesto Práctico 1 · Word",
+    textAdap: "Asigno cursiva automáticamente con:",
+    optsAdap: { A: "Control+a", B: "Control+s", C: "Control+k" },
+    correctAdap: "C",
+    textOrig: "Asigno cursiva automáticamente con:",
+    optsOrig: { a: "Control+a", b: "Control+s", c: "Control+k", d: "Control+n" },
+    correctOrig: "c",
+    norma: "Métodos abreviados de teclado en Microsoft Word en español: Ctrl+K aplica o quita el formato de cursiva al texto seleccionado (Ctrl+N aplica negrita)."
+  },
+  {
+    id: "2017_78", exam: "2017", tema: "Supuesto Práctico 1 · Word",
+    textAdap: "Establezco listas con respuesta opcional en Word para las respuestas SI, NO y N/C mediante:",
+    optsAdap: { A: "Utilizo la ficha Programador", B: "Inserto una tabla con las respuestas", C: "a y b son ciertas" },
+    correctAdap: "C",
+    textOrig: "Establezco listas con respuesta opcional en Word para las respuestas SI, NO y N/C mediante:",
+    optsOrig: { a: "Utilizo la ficha Programador", b: "Inserto una tabla con las respuestas", c: "Ninguna es cierta", d: "a y b son ciertas" },
+    correctOrig: "d",
+    norma: "Diseño de formularios y cuestionarios en Microsoft Word: se pueden insertar controles de contenido (lista desplegable/casillas) desde la ficha Programador o estructurar las opciones SI / NO / N/C mediante tablas."
+  },
+  {
+    id: "2017_79", exam: "2017", tema: "Supuesto Práctico 1 · Word",
+    textAdap: "Para dar nombre a una casilla checkbox de verificación en Word",
+    optsAdap: { A: "Debo estar en la opción Programador", B: "Debo salir del campo enmarcado de la casilla checkbox de verificación", C: "Debo estar dentro del campo enmarcado de la casilla checkbox de verificación" },
+    correctAdap: "A",
+    textOrig: "Para dar nombre a una casilla checkbox de verificación en Word",
+    optsOrig: { a: "Debo estar en la opción Programador", b: "Debo salir del campo enmarcado de la casilla checkbox de verificación", c: "Debo estar dentro del campo enmarcado de la casilla checkbox de verificación", d: "a y b son ciertas" },
+    correctOrig: "a",
+    norma: "Controles de formulario en Microsoft Word: la configuración y propiedades de los controles de verificación (casillas/checkbox) se gestionan desde la pestaña Programador."
+  },
+  {
+    id: "2017_80", exam: "2017", tema: "Supuesto Práctico 1 · Word",
+    textAdap: "Para reflejar las modificaciones, cada miembro del equipo debe:",
+    optsAdap: { A: "Desde la pestaña Revisar, utilizar la opción Nuevo Comentario", B: "Desde la pestaña Revisar, compruebo las opciones de seguimiento y control de cambios", C: "a y b son ciertas" },
+    correctAdap: "C",
+    textOrig: "Para reflejar las modificaciones, cada miembro del equipo debe:",
+    optsOrig: { a: "Desde la pestaña Revisar, utilizar la opción Nuevo Comentario", b: "Desde la pestaña Revisar, compruebo las opciones de seguimiento y control de cambios", c: "Desde la pestaña Insertar, utilizo Elementos Rápidos", d: "a y b son ciertas" },
+    correctOrig: "d",
+    norma: "Revisión colaborativa en Microsoft Word (pestaña Revisar): activar 'Control de cambios' registra inserciones, eliminaciones y cambios de formato, y 'Nuevo comentario' permite añadir anotaciones."
+  },
+  {
+    id: "2017_81", exam: "2017", tema: "Supuesto Práctico 1 · Identidad Corporativa Sacyl",
+    textAdap: "Para diseñar un informe con los logotipos corporativos:",
+    optsAdap: { A: "Consulto el Manual de Estilo del SACYL", B: "Activo el encabezado y pie de página", C: "Todas son ciertas" },
+    correctAdap: "C",
+    textOrig: "Para diseñar un informe con los logotipos corporativos:",
+    optsOrig: { a: "Consulto el Manual de Estilo del SACYL", b: "Activo el encabezado y pie de página", c: "Activo el encabezado y pie de página e inserto los lagos corporativos", d: "Todas son ciertas" },
+    correctOrig: "d",
+    norma: "Identidad corporativa institucional (Manual de Estilo del SACYL y edición de documentos): para incorporar correctamente los logotipos corporativos en un informe hay que atender al Manual de Estilo y situarlos en el encabezado o pie de página."
+  },
+  {
+    id: "2017_82", exam: "2017", tema: "Supuesto Práctico 2 · Navegación Web",
+    textAdap: "Para facilitar el trabajo, en mi explorador de internet:",
+    optsAdap: { A: "Puedo agregar a favoritos las url más visitadas.", B: "Configuro las páginas que se abrirán al inicio de cada sesión.", C: "a y b son ciertas." },
+    correctAdap: "C",
+    textOrig: "Para facilitar el trabajo, en mi explorador de internet:",
+    optsOrig: { a: "Puedo agregar a favoritos las url más visitadas.", b: "Configuro las páginas que se abrirán al inicio de cada sesión.", c: "a y b son ciertas.", d: "Ninguna es cierta." },
+    correctOrig: "c",
+    norma: "Navegación web: guardar direcciones frecuentes en Favoritos/Marcadores y configurar páginas de inicio personalizadas agiliza el acceso a las herramientas de trabajo habituales."
+  },
+  {
+    id: "2017_83", exam: "2017", tema: "Supuesto Práctico 2 · Navegación Web",
+    textAdap: "Para dejar una url en mi barra de herramientas de internet debo:",
+    optsAdap: { A: "Pinchar sobre la url con el botón derecho del ratón y llevarla a la barra de herramientas del navegador.", B: "Pinchar sobre la url con el botón izquierdo del ratón y llevarla a la barra de herramientas del navegador.", C: "Dejarla en la configuración de internet." },
+    correctAdap: "B",
+    textOrig: "Para dejar una url en mi barra de herramientas de internet debo:",
+    optsOrig: { a: "Pinchar sobre la url con el botón derecho del ratón y llevarla a la barra de herramientas del navegador.", b: "Pinchar sobre la url con el botón izquierdo del ratón y llevarla a la barra de herramientas del navegador.", c: "Dejarla en la configuración de internet.", d: "Añadirla a marcadores." },
+    correctOrig: "b",
+    norma: "Navegadores web: para colocar un acceso directo de una dirección web arrastrándolo directamente, se pulsa y arrastra con el botón izquierdo del ratón hacia la barra de favoritos/herramientas."
+  },
+  {
+    id: "2017_84", exam: "2017", tema: "Supuesto Práctico 2 · Correspondencia Word + Excel",
+    textAdap: "Para generar un único archivo con las 225 cartas:",
+    optsAdap: { A: "Compruebo que tengo todos los datos de los proveedores en un archivo de Word, almacenados con todos los datos necesarios para la dirección de envío.", B: "Compruebo que tengo todos los datos de los proveedores en un archivo de Excel, almacenados con todos los datos necesarios para la dirección del envío.", C: "Redacto la carta, la almaceno en Word. Compruebo que los datos de dirección se encuentran en un Excel con una columna para cada campo. Abro la herramienta Correspondencia de Word y realizo los pasos para combinar ambos archivos." },
+    correctAdap: "C",
+    textOrig: "Para generar un único archivo con las 225 cartas:",
+    optsOrig: { a: "Compruebo que tengo todos los datos de los proveedores en un archivo de Word, almacenados con todos los datos necesarios para la dirección de envío.", b: "Compruebo que tengo todos los datos de los proveedores en un archivo de Excel, almacenados con todos los datos necesarios para la dirección del envío.", c: "Compruebo que tengo todos los datos de los proveedores en un archivo de Excel y que cada campo de la dirección está ubicado en una columna.", d: "Redacto la carta, la almaceno en Word. Compruebo que los datos de dirección se encuentran en un Excel con una columna para cada campo. Abro la herramienta Correspondencia de Word y realizo los pasos para combinar ambos archivos." },
+    correctOrig: "d",
+    norma: "Combinar correspondencia (Word + Excel): se redacta la plantilla base en Word, se prepara la base de datos en Excel con cada campo (nombre, dirección, localidad, CP) en una columna y se utiliza la pestaña Correspondencia de Word para combinar en un documento único."
+  },
+  {
+    id: "2017_85", exam: "2017", tema: "Supuesto Práctico 2 · Outlook",
+    textAdap: "Añado un nuevo contacto en Outlook mediante:",
+    optsAdap: { A: "Correo y contactos/Nuevo/Guardar", B: "Crear/Contactos/Nuevo/Guardar", C: "Contactos/Nuevo/Guardar" },
+    correctAdap: "C",
+    textOrig: "Añado un nuevo contacto en Outlook mediante:",
+    optsOrig: { a: "Correo y contactos/Nuevo/Guardar", b: "Crear/Contactos/Nuevo/Guardar", c: "Contactos/Nuevo/Guardar", d: "Herramientas/Contactos/Crear/Guardar" },
+    correctOrig: "c",
+    norma: "Proceso en Outlook: se accede a la sección Contactos/Personas, se crea un nuevo contacto (Nuevo contacto) y se guardan los datos."
+  },
+  {
+    id: "2017_86", exam: "2017", tema: "Supuesto Práctico 2 · Outlook",
+    textAdap: "Para crear un grupo de distribución en outlook, debo:",
+    optsAdap: { A: "Configurarlo desde la opción Grupos.", B: "Seleccionar los mail que quiero que participen.", C: "Todas son ciertas." },
+    correctAdap: "C",
+    textOrig: "Para crear un grupo de distribución en outlook, debo:",
+    optsOrig: { a: "Configurarlo desde la opción Grupos.", b: "Seleccionar los mail que quiero que participen.", c: "Crearlo desde la opción grupos.", d: "Todas son ciertas." },
+    correctOrig: "d",
+    norma: "Grupos/listas de distribución en Outlook: requiere crear/configurar el grupo desde la opción correspondiente y seleccionar o añadir las direcciones de correo/miembros que formarán parte de él."
+  },
+  {
+    id: "2017_87", exam: "2017", tema: "Supuesto Práctico 2 · Outlook",
+    textAdap: "En un grupo de outlook puedo:",
+    optsAdap: { A: "Adjuntar archivos en los mensajes para que los reciban todos los miembros del grupo.", B: "Subir archivos para que los vean todos los miembros del grupo.", C: "a y b son ciertas." },
+    correctAdap: "C",
+    textOrig: "En un grupo de outlook puedo:",
+    optsOrig: { a: "Adjuntar archivos en los mensajes para que los reciban todos los miembros del grupo.", b: "Subir archivos para que los vean todos los miembros del grupo.", c: "Ninguna es cierta.", d: "a y b son ciertas." },
+    correctOrig: "d",
+    norma: "Trabajo en grupo en Outlook: permite tanto enviar mensajes con archivos adjuntos a los integrantes del grupo como compartir/subir archivos en el espacio del grupo para consulta de sus miembros."
+  },
+  {
+    id: "2017_88", exam: "2017", tema: "Supuesto Práctico 2 · Calendario Outlook",
+    textAdap: "Utilizando Outlook:",
+    optsAdap: { A: "Incluyo en el calendario acciones correspondientes a los miembros de un grupo.", B: "Invito a otros miembros a los eventos que incluyo en el calendario.", C: "a y b son ciertas." },
+    correctAdap: "C",
+    textOrig: "Utilizando Outlook:",
+    optsOrig: { a: "Incluyo en el calendario acciones correspondientes a los miembros de un grupo.", b: "Invito a otros miembros a los eventos que incluyo en el calendario.", c: "Ninguna es cierta.", d: "a y b son ciertas." },
+    correctOrig: "d",
+    norma: "Calendario de Outlook: permite registrar eventos/actividades de agenda e invitar a otros usuarios o miembros del grupo a las reuniones/eventos programados."
+  },
+  {
+    id: "2017_89", exam: "2017", tema: "Supuesto Práctico 2 · Calendario Outlook",
+    textAdap: "Tengo en cuenta que en el calendario de Outlook no puedo:",
+    optsAdap: { A: "Establecer avisos que se repitan periódicamente.", B: "Establecer avisos a una hora concreta.", C: "Ninguna es cierta." },
+    correctAdap: "C",
+    textOrig: "Tengo en cuenta que en el calendario de Outlook no puedo:",
+    optsOrig: { a: "Establecer avisos que se repitan periódicamente.", b: "Establecer avisos a una hora concreta.", c: "Establecer avisos que salten en mi correo electrónico.", d: "Ninguna es cierta." },
+    correctOrig: "d",
+    norma: "Recordatorios y recurrencia en el calendario de Outlook: el calendario sí permite configurar avisos/recordatorios a horas concretas, eventos periódicos/recurrentes y notificaciones de aviso, por lo que no es cierto que no se puedan establecer."
+  },
+  {
+    id: "2017_90", exam: "2017", tema: "Supuesto Práctico 2 · Outlook",
+    textAdap: "Para visualizar la vista de los contactos de Outlook tengo en cuenta que:",
+    optsAdap: { A: "Está fijada por Outlook.", B: "La anclo en la vista que yo desee.", C: "Depende de la configuración que tenga el contacto." },
+    correctAdap: "B",
+    textOrig: "Para visualizar la vista de los contactos de Outlook tengo en cuenta que:",
+    optsOrig: { a: "Está fijada por Outlook.", b: "La anclo en la vista que yo desee.", c: "Depende de la configuración que tenga el contacto.", d: "by c son ciertas." },
+    correctOrig: "b",
+    norma: "Vistas en Outlook: el usuario puede elegir y cambiar la forma de visualizar sus contactos (tarjeta, lista, teléfono, etc.) según su preferencia."
+  },
+  {
+    id: "2017_91", exam: "2017", tema: "Reserva · Presupuestos de Castilla y León",
+    textAdap: "Respecto a los Presupuestos de la Comunidad de Castilla y León, señale la respuesta falsa:",
+    optsAdap: { A: "La Junta presentará a las Cortes el proyecto de Ley de Presupuestos Generales de la Comunidad antes del 15 de octubre de cada año para su tramitación.", B: "El proyecto de Ley de presupuestos gozará de preferencia en la tramitación con respecto a los demás trabajos de las Cortes.", C: "El procedimiento para la elaboración del anteproyecto de Presupuestos de la Comunidad para cada ejercicio se establecerá por Decreto de la Junta de Castilla y León." },
+    correctAdap: "C",
+    textOrig: "Respecto a los Presupuestos de la Comunidad de Castilla y León, señale la respuesta falsa:",
+    optsOrig: { a: "La Junta presentará a las Cortes el proyecto de Ley de Presupuestos Generales de la Comunidad antes del 15 de octubre de cada año para su tramitación.", b: "El proyecto de Ley de presupuestos gozará de preferencia en la tramitación con respecto a los demás trabajos de las Cortes.", c: "El debate de totalidad del proyecto de Ley de Presupuestos tendrá lugar en el Pleno de las Cortes.", d: "El procedimiento para la elaboración del anteproyecto de Presupuestos de la Comunidad para cada ejercicio se establecerá por Decreto de la Junta de Castilla y León." },
+    correctOrig: "d",
+    norma: "Estatuto de Autonomía de Castilla y León (art. 38), Ley 2/2006 de Hacienda y del Sector Público de Castilla y León y clave oficial del examen: en la plantilla oficial de corrección de este examen la respuesta marcada es la d."
+  },
+  {
+    id: "2017_92", exam: "2017", tema: "Reserva · Archivos",
+    textAdap: "¿Cuál de las siguientes tareas no es función archivística?",
+    optsAdap: { A: "Ordenación", B: "Indización", C: "Todas lo son" },
+    correctAdap: "C",
+    textOrig: "¿Cuál de las siguientes tareas no es función archivística?",
+    optsOrig: { a: "Ordenación", b: "Indización", c: "Valoración", d: "Todas lo son" },
+    correctOrig: "d",
+    norma: "Funciones archivísticas: la ordenación (disposición física/intelectual de las series según un criterio), la indización (asignación de términos/descriptores para recuperación) y la valoración (determinación de plazos de conservación y eliminación o conservación permanente) son todas funciones archivísticas."
+  },
+  {
+    id: "2017_93", exam: "2017", tema: "Reserva · Historia Clínica y Archivo",
+    textAdap: "¿Cuál es el periodo que se establece generalmente como criterio de división entre el archivo de activo y pasivo?",
+    optsAdap: { A: "Diez años o tras fallecimiento del paciente", B: "Siete años o tras fallecimiento del paciente", C: "Cinco años o tras fallecimiento del paciente" },
+    correctAdap: "C",
+    textOrig: "¿Cuál es el periodo que se establece generalmente como criterio de división entre el archivo de activo y pasivo?",
+    optsOrig: { a: "Diez años o tras fallecimiento del paciente", b: "Siete años o tras fallecimiento del paciente", c: "Cinco años o tras fallecimiento del paciente", d: "Tres años o tras fallecimiento del paciente" },
+    correctOrig: "c",
+    norma: "Gestión de archivo de historias clínicas y clave oficial del examen (Orden SAN/549/2016, 11/02/2017): en la clave oficial de este examen la respuesta marcada es la c (sin perjuicio de los plazos legales de conservación de la documentación clínica previstos en el art. 17 de la Ley 41/2002)."
+  },
+  {
+    id: "2017_94", exam: "2017", tema: "Reserva · Ofimática (Access)",
+    textAdap: "La extensión de una base de datos Access, es:",
+    optsAdap: { A: "ACC", B: "MDB", C: "BDD" },
+    correctAdap: "B",
+    textOrig: "La extensión de una base de datos Access, es:",
+    optsOrig: { a: "ACC", b: "MDB", c: "BDD", d: "ACM" },
+    correctOrig: "b",
+    norma: "Formatos de archivo de Microsoft Access: la extensión clásica de base de datos Access es .mdb (a partir de Access 2007 se introdujo .accdb)."
+  },
+  {
+    id: "2017_95", exam: "2017", tema: "Reserva · Recurso de Reposición",
+    textAdap: "De acuerdo al artículo 124 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, el plazo para la interposición del recurso de reposición, si el acto fuera expreso es de:",
+    optsAdap: { A: "Quince días", B: "Seis meses", C: "Un mes" },
+    correctAdap: "C",
+    textOrig: "De acuerdo al artículo 124 de la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas, el plazo para la interposición del recurso de reposición, si el acto fuera expreso es de:",
+    optsOrig: { a: "Quince días", b: "Seis meses", c: "Dos meses.", d: "Un mes" },
+    correctOrig: "d",
+    norma: "Ley 39/2015, art. 124.1 (Plazos del recurso potestativo de reposición): el plazo para la interposición del recurso de reposición será de un mes, si el acto fuera expreso (si no lo fuera, el solicitante y otros posibles interesados podrán interponer recurso de reposición en cualquier momento a partir del día siguiente a aquel en que, de acuerdo con su normativa específica, se produzca el acto presunto)."
+  },
+  {
+    id: "2017_96", exam: "2017", tema: "Reserva · Informática Básica",
+    textAdap: "En un PC, qué tipo de memoria es la memoria ROM?",
+    optsAdap: { A: "Memoria volátil.", B: "Memoria no volátil.", C: "Dispositivo de almacenamiento." },
+    correctAdap: "B",
+    textOrig: "En un PC, qué tipo de memoria es la memoria ROM?",
+    optsOrig: { a: "Memoria volátil.", b: "Memoria no volátil.", c: "Dispositivo de almacenamiento.", d: "Memoria central." },
+    correctOrig: "b",
+    norma: "Arquitectura de ordenadores / memoria ROM (Read-Only Memory): es una memoria de solo lectura y no volátil, lo que significa que conserva su contenido (como el firmware/BIOS/UEFI de arranque) aun cuando el equipo se apaga o se desconecta de la corriente."
+  },
+  {
+    id: "2017_97", exam: "2017", tema: "Reserva · Prevención de Riesgos Laborales (Sacyl)",
+    textAdap: "En el caso de que no exista puesto de trabajo de la misma categoría profesional compatible con el estado de salud del trabajador. Señale la afirmación correcta respecto al traslado a un puesto de inferior categoría:",
+    optsAdap: { A: "La Dirección General de Profesionales solicitará el consentimiento del trabajador para proceder a un traslado a un puesto de trabajo compatible de inferior categoría, concediéndole un plazo de diez días naturales para que se pronuncie sobre el mismo.", B: "La Dirección General de Profesionales solicitará el consentimiento del trabajador para proceder a un traslado a un puesto de trabajo compatible de inferior categoría, concediéndole un plazo de diez días hábiles para que se pronuncie sobre el mismo.", C: "La Dirección Gerencia del centro solicitará el consentimiento del trabajador para proceder a un traslado a un puesto de trabajo compatible de inferior categoría, concediéndole un plazo de diez días hábiles para que se pronuncie sobre el mismo." },
+    correctAdap: "C",
+    textOrig: "En el caso de que no exista puesto de trabajo de la misma categoría profesional compatible con el estado de salud del trabajador. Señale la afirmación correcta respecto al traslado a un puesto de inferior categoría:",
+    optsOrig: { a: "La Dirección General de Profesionales solicitará el consentimiento del trabajador para proceder a un traslado a un puesto de trabajo compatible de inferior categoría, concediéndole un plazo de diez días naturales para que se pronuncie sobre el mismo.", b: "La Dirección General de Profesionales solicitará el consentimiento del trabajador para proceder a un traslado a un puesto de trabajo compatible de inferior categoría, concediéndole un plazo de diez días hábiles para que se pronuncie sobre el mismo.", c: "La Dirección Gerencia del centro solicitará el consentimiento del trabajador para proceder a un traslado a un puesto de trabajo compatible de inferior categoría, concediéndole un plazo de diez días hábiles para que se pronuncie sobre el mismo.", d: "La Dirección Gerencia del centro solicitará el consentimiento del trabajador para proceder a un traslado a un puesto de trabajo compatible de inferior categoría, concediéndole un plazo de diez días naturales para que se pronuncie sobre el mismo." },
+    correctOrig: "b",
+    norma: "Orden SAN/1037/2014 y clave oficial del examen: en la plantilla oficial de corrección de este examen la respuesta marcada es la b."
+  },
+  {
+    id: "2017_98", exam: "2017", tema: "Reserva Supuesto 1 · Excel",
+    textAdap: "Para dar formato de fecha con día, mes y año, utilizo el atajo:",
+    optsAdap: { A: "Control-Mayus-#", B: "Control-Mayus-$", C: "Control-Mayus-&" },
+    correctAdap: "A",
+    textOrig: "Para dar formato de fecha con día, mes y año, utilizo el atajo:",
+    optsOrig: { a: "Control-Mayus-#", b: "Control-Mayus-$", c: "Control-Mayus-&", d: "Control-Mayus-i" },
+    correctOrig: "a",
+    norma: "Atajos de formato en Microsoft Excel: Ctrl+Mayús+# (Ctrl+Shift+3 en algunos teclados) aplica el formato de fecha con día, mes y año (dd-mmm-aa)."
+  },
+  {
+    id: "2017_99", exam: "2017", tema: "Reserva Supuesto 1 · Excel",
+    textAdap: "Para ver varias áreas distintas de la hoja al mismo tiempo:",
+    optsAdap: { A: "Selecciono Ver>Zoom>Zoom", B: "selecciono Vista>Ventana>Dividir", C: "Selecciono Vista>Zoom>Acercar la selección" },
+    correctAdap: "B",
+    textOrig: "Para ver varias áreas distintas de la hoja al mismo tiempo:",
+    optsOrig: { a: "Selecciono Ver>Zoom>Zoom", b: "selecciono Vista>Ventana>Dividir", c: "Selecciono Vista>Zoom>Acercar la selección", d: "Ninguna es correcta" },
+    correctOrig: "b",
+    norma: "Proceso en Microsoft Excel (pestaña Vista > grupo Ventana > Dividir): divide la ventana de la hoja de cálculo en paneles independientes para desplazarse y ver distintas zonas de la misma hoja simultáneamente."
+  },
+  {
+    id: "2017_100", exam: "2017", tema: "Reserva Supuesto 2 · Tablas de Excel",
+    textAdap: "Utilizo una tabla de Excel en lugar de un rango de datos porque:",
+    optsAdap: { A: "Excel puede eliminar filas duplicadas automáticamente", B: "Puedo incluir columnas calculadas", C: "a y b son ciertas" },
+    correctAdap: "B",
+    textOrig: "Utilizo una tabla de Excel en lugar de un rango de datos porque:",
+    optsOrig: { a: "Excel puede eliminar filas duplicadas automáticamente", b: "Puedo incluir columnas calculadas", c: "a y b son ciertas", d: "Ninguna es cierta" },
+    correctOrig: "b",
+    norma: "Tablas en Microsoft Excel (Insertar > Tabla): al introducir una fórmula en una celda de una columna de tabla, Excel la propaga automáticamente a toda la columna creando una columna calculada y manteniendo el formato y referencias estructuradas."
+  }
+]);
