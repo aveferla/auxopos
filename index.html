@@ -152,6 +152,19 @@
         </div>
       </div>
 
+      <!-- 2022_feb -->
+      <div class="mode-card">
+        <div>
+          <span class="mode-tag tag-conv">Convocatoria Feb 2022</span>
+          <h3>Examen Oficial Febrero 2022</h3>
+          <p id="count-2022_feb">Convocatoria Sacyl (febrero 2022). Elige formato adaptado a 3 opciones o formato original en naranja.</p>
+        </div>
+        <div class="btn-group-dual">
+          <button class="btn-primary" onclick="startExam('2022_feb', 'adapted')">Adaptado (A/B/C)</button>
+          <button class="btn-primary btn-orig" onclick="startExam('2022_feb', 'original')">Original 🟠</button>
+        </div>
+      </div>
+
       <!-- 2019 -->
       <div class="mode-card">
         <div>
@@ -301,6 +314,7 @@
 
     const examInfo = {
       "2023": "Orden SAN/1812/2022. Elige formato adaptado a 3 opciones o formato original en naranja.",
+      "2022_feb": "Convocatoria Sacyl (febrero 2022). Elige formato adaptado a 3 opciones o formato original en naranja.",
       "2019": "Orden SAN/1168/2018. Elige formato adaptado a 3 opciones o formato original en naranja."
     };
 
@@ -441,8 +455,8 @@
 
       let figuraHtml = "";
       const textoBusqueda = `${q.textAdap || ""} ${q.textOrig || ""}`.toUpperCase();
-      for (let i = 1; i <= 9; i++) {
-        if (textoBusqueda.includes(`FIGURA ${i}`)) {
+      for (let i = 1; i <= 19; i++) {
+        if (textoBusqueda.includes(`FIGURA ${i}`) || textoBusqueda.includes(`FIG. ${i}`)) {
           figuraHtml += `
             <div class="figura-box">
               <img src="img/figura_${i}.jpg" alt="Figura ${i}" onerror="this.parentElement.style.display='none';" />
@@ -649,7 +663,10 @@
 
 <!-- EXÁMENES CARGADOS -->
 <script src="examenes/examen_2023.js"></script>
+<script src="examenes/examen_2022_feb.js"></script>
 <script src="examenes/examen_2019.js"></script>
+</body>
+</html>
 
 </body>
 </html>
