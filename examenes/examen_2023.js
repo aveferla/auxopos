@@ -206,7 +206,7 @@ window.registerExamQuestions("2023", [
     correctAdap: "C",
     textOrig: "Conforme indica el art. 19 de la Ley 31/1995, de Prevención de Riesgos Laborales, la formación en materia preventiva:",
     optsOrig: { a: "Deberá garantizarse por el empresario en el momento de la contratación y cuando se produzcan cambios en las funciones que desempeñe solamente en contratos indefinidos.", b: "Deberá estar centrada en cuestiones generales de la organización, adaptarse a la evolución de los riesgos y a la aparición de otros nuevos y repetirse periódicamente, si fuera necesario.", c: "Deberá impartirse, siempre que sea posible, fuera de la jornada de trabajo.", d: "Ninguna es correcta." },
-    correctOrig: "C",
+    correctOrig: "d",
     norma: "Ley 31/1995, art. 19.1 y clave del examen: d."
   },
   {
@@ -606,7 +606,7 @@ window.registerExamQuestions("2023", [
     correctAdap: "B",
     textOrig: "Los interesados en un procedimiento administrativo podrán comparecer y presentar alegaciones en el trámite de audiencia en un plazo:",
     optsOrig: { a: "No inferior a diez días ni superior a quince.", b: "No inferior a diez días ni superior a veinte.", c: "No inferior a ocho días ni superior a quince.", d: "No inferior a ocho días ni superior a veinte." },
-    correctOrig: "b",
+    correctOrig: "a",
     norma: "Clave del examen 2023: b."
   },
   {
@@ -916,7 +916,7 @@ window.registerExamQuestions("2023", [
     correctAdap: "B",
     textOrig: "Se han importado los datos de la FIGURA 1 a Access 2013. La información que se recoge en cada uno de los elementos de una “Fila” de una tabla en una base de datos de Access 2013 se llama:",
     optsOrig: { a: "Clave principal o primaria.", b: "Registro.", c: "Campo.", d: "Base de datos." },
-    correctOrig: "b",
+    correctOrig: "c",
     norma: "Método / Access 2013: cada fila de una tabla es un registro."
   },
   {
