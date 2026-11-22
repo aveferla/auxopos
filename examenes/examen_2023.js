@@ -945,7 +945,7 @@ window.registerExamQuestions("2023", [
     optsAdap: { A: "Insertar / Encabezado y Pie de página / Número de página.", B: "Diseño de página / Configurar página / Número de página.", C: "Vista / Número de página." },
     correctAdap: "B",
     textOrig: "Se quiere insertar un número de página en el pie del documento Word de la FIGURA 4. ¿Desde qué opción se realiza?:",
-    optsOrig: { a: "Insertar / Encabezado y Pie de página / Número de página.", b: "Diseño de página / Configurar página / Número de página.", c: "Vista / Número de página.", d: "Inicio / Número de página." },
+    optsOrig: { a: "Diseño de página / Encabezado y pie de página / Número de página.", b: "Insertar / Encabezado y Pie de página / Número de página.", c: "Diseño de página / Configurar página / Número de página.", d: "Ninguna es correcta." },
     correctOrig: "b",
     norma: "Clave del examen 2023: b."
   },
