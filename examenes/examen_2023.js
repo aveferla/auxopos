@@ -321,21 +321,21 @@ window.registerExamQuestions("2023", [
   },
   {
     id: "2023_33", exam: "2023", tema: "Tema 21 · Contratación",
-    textAdap: "Según el art. 118 de la LCSP, se consideran contratos menores:",
+    textAdap: "El art. 118 de la Ley 9/2017, de Contratos del Sector Público, dice que se consideran contratos menores:",
     optsAdap: { A: "Suministros de valor estimado inferior a 25.000 euros.", B: "Suministros con presupuesto base inferior a 25.000 euros.", C: "Obras de valor estimado inferior a 40.000 euros." },
     correctAdap: "C",
     textOrig: "El art. 118 de la Ley 9/2017, de Contratos del Sector Público, dice que se consideran contratos menores: Cuando se trate de contratos de suministro, los contratos de valor estimado inferior a...",
-    optsOrig: { a: "Cuando se trate de contratos de suministro, los contratos de valor estimado inferior a 25.000 euros.", b: "Cuando se trate de contratos de suministro, los contratos con un presupuesto base de licitación inferior a 25.000 euros.", c: "Cuando se trate de contratos de obras, los contratos de valor estimado inferior a 40.000 euros.", d: "Cuando s" },
+    optsOrig: { a: "Cuando se trate de contratos de suministro, los contratos de valor estimado inferior a 25.000 euros.", b: "Cuando se trate de contratos de suministro, los contratos con un presupuesto base de licitación inferior a 25.000 euros.", c: "Cuando se trate de contratos de obras, los contratos de valor estimado inferior a 40.000 euros.", d: "Cuando se trate de contrato de obras, los contratos con un presupuesto base de licitación inferior a 40.000 euros." },
     correctOrig: "c",
     norma: "Ley 9/2017 (LCSP), art. 118.1 y clave del examen: c."
   },
   {
     id: "2023_34", exam: "2023", tema: "Tema 22 · Documentación Clínica",
-    textAdap: "Según el art. 17 de la Ley 41/2002, los centros sanitarios tienen obligación de conservar la documentación clínica:",
-    optsAdap: { A: "Cuatro años como mínimo desde el alta.", B: "Cinco años como mínimo desde el alta.", C: "Cinco años como mínimo desde el alta y sin destruir datos relacionados con el nacimiento." },
+    textAdap: "34.	Según el art. 17 de la Ley 41/2002, de 14 de noviembre, básica reguladora de la autonomía del paciente y de derechos y obligaciones en materia de información y documentación clínica, los centros sanitarios tienen la obligación de conservar la documentación clínica para la debida asistencia al paciente:",
+    optsAdap: { A: "Cuatro años como mínimo desde el alta de cada proceso asistencial.", B: "Cinco años como mínimo desde la fecha del alta de cada proceso asistencial.", C: "Cinco años como mínimo desde el alta y sin destruir datos relacionados con el nacimiento." },
     correctAdap: "C",
     textOrig: "Según el art. 17 de la Ley 41/2002... los centros sanitarios tienen la obligación de conservar la documentación clínica para la debida asistencia al paciente:",
-    optsOrig: { a: "Cuatro años, como mínimo, contados desde la fecha del alta de cada proceso asistencial.", b: "Cinco años, como mínimo, contados desde la fecha del alta de cada proceso asistencial.", c: "Los datos de la historia clínica relacionados con el nacimiento no se destruirán.", d: "Las respuestas b) y c) son correctas." },
+    optsOrig: { a: "Cuatro años, como mínimo, contados desde la fecha del alta de cada proceso asistencial.", b: "Cinco años, como mínimo, contados desde la fecha del alta de cada proceso asistencial.", c: "c)	Los datos de la historia clínica relacionados con el nacimiento del paciente, incluidos los resultados de las pruebas biométricas, médicas o analíticas que en su caso resulten necesarias para determinar el vínculo de filiación con la madre, no se destruirán.", d: "Las respuestas b) y c) son correctas." },
     correctOrig: "d",
     norma: "Ley 41/2002, art. 17 y clave del examen: d."
   },
@@ -381,10 +381,10 @@ window.registerExamQuestions("2023", [
   },
   {
     id: "2023_39", exam: "2023", tema: "Tema 1 · Ordenación del Sistema de Salud de Castilla y León",
-    textAdap: "El art. 20 de la Ley 8/2010 indica que la salud pública comprenderá las actuaciones encaminadas a la promoción de la salud en el ámbito de:",
+    textAdap: "39.	El art. 20 de la Ley 8/2010, de Ordenación del Sistema de Salud de Castilla y León, indica: “la	comprenderá las actuaciones encaminadas a la promoción de la salud, educación sanitaria, la prevención de la enfermedad, la recuperación de la salud y la rehabilitación, la investigación y la docencia”:",
     optsAdap: { A: "Atención primaria.", B: "Atención especializada.", C: "Atención de urgencia." },
     correctAdap: "B",
-    textOrig: "El art. 20 de la Ley 8/2012, de Ordenación del Sistema de Salud de Castilla y León, indica que la salud pública comprenderá las actuaciones encaminadas a la promoción de la salud...",
+    textOrig: "39.	El art. 20 de la Ley 8/2010, de Ordenación del Sistema de Salud de Castilla y León, indica: “la	comprenderá las actuaciones encaminadas a la promoción de la salud, educación sanitaria, la prevención de la enfermedad, la recuperación de la salud y la rehabilitación, la investigación y la docencia”:",
     optsOrig: { a: "Atención primaria.", b: "Atención especializada.", c: "Salud pública.", d: "Atención de urgencia." },
     correctOrig: "b",
     norma: "Clave del examen 2023: b."
@@ -541,11 +541,11 @@ window.registerExamQuestions("2023", [
   },
   {
     id: "2023_55", exam: "2023", tema: "Tema 15 · Responsabilidad Patrimonial",
-    textAdap: "Según el art. 32 de la Ley 40/2015, los particulares tendrán derecho a ser indemnizados por las Administraciones Públicas:",
+    textAdap: "55.	Según el art. 32 de la Ley 40/2015, de Régimen Jurídico del Sector Público, los particulares tendrán derecho a ser indemnizados por las Administraciones Públicas correspondientes:",
     optsAdap: { A: "Solo por funcionamiento anormal.", B: "De toda lesión consecuencia del funcionamiento normal o anormal de los servicios públicos, salvo fuerza mayor o deber jurídico de soportar.", C: "Incluyendo casos de fuerza mayor." },
     correctAdap: "B",
-    textOrig: "Según el art. 32 de la Ley 40/2015, de Régimen Jurídico del Sector Público, los particulares tendrán derecho a ser indemnizados...",
-    optsOrig: { a: "De toda lesión... consecuencia del funcionamiento anormal...", b: "De toda lesión... consecuencia del funcionamiento normal o anormal... salvo fuerza mayor...", c: "De toda lesión... incluso en los casos de fuerza mayor...", d: "De toda lesión... consecuencia del funcionamiento normal..." },
+    textOrig: "55.	Según el art. 32 de la Ley 40/2015, de Régimen Jurídico del Sector Público, los particulares tendrán derecho a ser indemnizados por las Administraciones Públicas correspondientes:",
+    optsOrig: { a: "De toda lesión que sufran en cualquiera de sus bienes y derechos, siempre que la lesión sea consecuencia del funcionamiento anormal de los servicios públicos, salvo en los casos de fuerza mayor o de daños que el particular tenga el deber jurídico de soportar de acuerdo con una disposición de carácter general.", b: "De toda lesión que sufran en cualquiera de sus bienes y derechos, siempre que la lesión sea consecuencia del funcionamiento normal o anormal de los servicios públicos, salvo en los casos de fuerza mayor o de daños que el particular tenga el deber jurídico de soportar de acuerdo con la Ley.", c: "De toda lesión que sufran en cualquiera de sus bienes y derechos, siempre que la lesión sea consecuencia del funcionamiento normal o anormal de los servicios públicos, incluso en los casos de fuerza mayor o de daños que el particular tenga el deber jurídico de soportar de acuerdo con la Ley.", d: "d)	De toda lesión que sufran en cualquiera de sus bienes y derechos, siempre que la lesión sea consecuencia del funcionamiento normal de los servicios públicos, incluso en los casos de fuerza mayor o de daños que el particular tenga el deber jurídico de soportar de acuerdo con la Ley." },
     correctOrig: "b",
     norma: "Ley 40/2015, art. 32.1: funcionamiento normal o anormal, salvo fuerza mayor o deber jurídico de soportar."
   },
@@ -561,11 +561,11 @@ window.registerExamQuestions("2023", [
   },
   {
     id: "2023_57", exam: "2023", tema: "Tema 1 · Zonas Básicas de Salud",
-    textAdap: "Conforme al art. 15 de la Ley 8/2010 de Salud de Castilla y León, las Zonas Básicas de Salud:",
+    textAdap: "Conforme establece el art. 15 de la Ley 8/2010, de Ordenación del Sistema de Salud de Castilla y León, las Zonas Básicas de Salud:",
     optsAdap: { A: "Constituyen el marco fundamental para prestaciones y programas asistenciales.", B: "Son exclusivamente para atención especializada.", C: "Se establecen atendiendo a criterios geográficos, demográficos, socioeconómicos, laborales y de accesibilidad." },
     correctAdap: "C",
     textOrig: "Conforme establece el art. 15 de la Ley 8/2010, de Ordenación del Sistema de Salud de Castilla y León, las Zonas Básicas de Salud:",
-    optsOrig: { a: "Constituyen el marco fundamental para el desarrollo de las prestaciones, los programas asistenciales...", b: "Es el marco territorial de la Atención Especializada...", c: "Se establecerán atendiendo a criterios geográficos...", d: "Todas son correctas." },
+    optsOrig: { a: "Constituyen el marco fundamental para el desarrollo de las prestaciones, los programas asistenciales, los programas de promoción y protección de la salud y los de prevención de la enfermedad.", b: "Es el marco territorial y poblacional donde se desarrollan las actividades sanitarias de la Atención Especializada, sin perjuicio de que éstas se puedan desarrollar fuera de la misma cuando existieran servicios o recursos comunes para varias Zonas Básicas de Salud.", c: "Se establecerán atendiendo a criterios geográficos, socioeconómicos, demográficos, laborales, epidemiológicos, culturales, climatológicos, de vías de comunicación, de recursos sanitarios, así como a otros criterios relacionados con la optimización en la ordenación de los recursos y de optimización de la respuesta a las necesidades sanitarias de los ciudadanos.", d: "Todas son correctas." },
     correctOrig: "c",
     norma: "Ley 8/2010 (CyL), art. 15 y clave del examen: c."
   },
@@ -911,7 +911,7 @@ window.registerExamQuestions("2023", [
   },
   {
     id: "2023_92", exam: "2023", tema: "Supuesto Práctico · Access 2013",
-    textAdap: "Se han importado los datos de la FIGURA 1 a Access 2013. La información de cada 'Fila' de una tabla se llama:",
+    textAdap: "92.	Se han importado los datos de la FIGURA 1 a Access 2013. La información que se recoge en cada uno de los elementos de una “Fila” de una tabla en una base de datos de Access 2013 se llama:",
     optsAdap: { A: "Clave principal o primaria.", B: "Registro.", C: "Campo." },
     correctAdap: "B",
     textOrig: "Se han importado los datos de la FIGURA 1 a Access 2013. La información que se recoge en cada uno de los elementos de una “Fila” de una tabla en una base de datos de Access 2013 se llama:",
@@ -921,12 +921,12 @@ window.registerExamQuestions("2023", [
   },
   {
     id: "2023_93", exam: "2023", tema: "Supuesto Práctico · Word 2013",
-    textAdap: "En Word 2013, la opción 'La escritura reemplaza el texto seleccionado' significa que:",
-    optsAdap: { A: "Reemplaza carácter a carácter sin borrar.", B: "Elimina el texto seleccionado cuando se comienza a escribir.", C: "Inserta delante si se desactiva." },
-    correctAdap: "B",
-    textOrig: "En Word 2013, ¿Cuál es la acción resultante al seleccionar la opción 'La escritura reemplaza el texto seleccionado’:",
-    optsOrig: { a: "Reemplaza el texto existente mientras escribe, carácter a carácter.", b: "Elimina el texto seleccionado cuando se comienza a escribir...", c: "Elimina el texto seleccionado... si se desactiva inserta delante.", d: "Ninguna es correcta." },
-    correctOrig: "b",
+    textAdap: "93.	En Word 2013, ¿Cuál es la acción resultante al seleccionar la opción 'La escritura reemplaza el texto seleccionado’ del menú Archivo/Opciones/Avanzadas y Opciones de Edición?:",
+    optsAdap: { A: "Reemplaza el texto existente mientras escribe, carácter a carácter, independientemente de la selección.", B: "Elimina el texto seleccionado cuando se comienza a escribir. Si se desactiva esta casilla de verificación, Word presenta un cuadro de diálogo cada vez que se intente escribir sobre un texto seleccionado, para preguntar si se desea sobrescribir o no.", C: "Elimina el texto seleccionado cuando se comienza a escribir. Si se desactiva esta casilla de verificación, Word insertará el texto que escriba delante del texto seleccionado, pero sin eliminarlo." },
+    correctAdap: "C",
+    textOrig: "93.	En Word 2013, ¿Cuál es la acción resultante al seleccionar la opción 'La escritura reemplaza el texto seleccionado’ del menú Archivo/Opciones/Avanzadas y Opciones de Edición?:",
+    optsOrig: { a: "Reemplaza el texto existente mientras escribe, carácter a carácter, independientemente de la selección.", b: "Elimina el texto seleccionado cuando se comienza a escribir. Si se desactiva esta casilla de verificación, Word presenta un cuadro de diálogo cada vez que se intente escribir sobre un texto seleccionado, para preguntar si se desea sobrescribir o no.", c: "Elimina el texto seleccionado cuando se comienza a escribir. Si se desactiva esta casilla de verificación, Word insertará el texto que escriba delante del texto seleccionado, pero sin eliminarlo.", d: "Ninguna de las anteriores es correcta." },
+    correctOrig: "c",
     norma: "Método / Word 2013 y clave del examen: b."
   },
   {
@@ -941,8 +941,8 @@ window.registerExamQuestions("2023", [
   },
   {
     id: "2023_95", exam: "2023", tema: "Supuesto Práctico · Word 2013",
-    textAdap: "Se quiere insertar un número de página en el pie del documento Word de la FIGURA 4. ¿Desde qué opción se realiza?:",
-    optsAdap: { A: "Insertar / Encabezado y Pie de página / Número de página.", B: "Diseño de página / Configurar página / Número de página.", C: "Vista / Número de página." },
+    textAdap: "Se quiere insertar un número de página en el pie de página del documento Word 2013 de la FIGURA 4 ¿desde qué opción se realizaría?:",
+    optsAdap: { A: "Insertar / Encabezado y Pie de página / Número de página.", B: "Insertar / Encabezado y Pie de página / Número de página.", C: "Vista / Número de página." },
     correctAdap: "B",
     textOrig: "Se quiere insertar un número de página en el pie del documento Word de la FIGURA 4. ¿Desde qué opción se realiza?:",
     optsOrig: { a: "Diseño de página / Encabezado y pie de página / Número de página.", b: "Insertar / Encabezado y Pie de página / Número de página.", c: "Diseño de página / Configurar página / Número de página.", d: "Ninguna es correcta." },
@@ -951,7 +951,7 @@ window.registerExamQuestions("2023", [
   },
   {
     id: "2023_96", exam: "2023", tema: "Supuesto Práctico · Certificado Digital",
-    textAdap: "Para acceder a una sede electrónica acreditando la identidad de forma segura desde el navegador, se utiliza:",
+    textAdap: "Se tiene que acceder a la sede electrónica de un organismo, acreditando su identidad. ¿Cuál de estos elementos, accesible desde el navegador, tiene como propósito verificar la identidad del usuario?:",
     optsAdap: { A: "Identidad Digital.", B: "Certificado digital.", C: "Clave Privada." },
     correctAdap: "B",
     textOrig: "Se tiene que acceder a la sede electrónica de un organismo, acreditando su identidad. ¿Cuál de estos elementos, accesible desde el navegador, tiene como propósito verificar la identidad del usuario?:",
