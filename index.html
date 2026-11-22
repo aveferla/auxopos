@@ -264,7 +264,7 @@
         <div>
           <span class="mode-tag tag-conv">Convocatoria 2017 · Supuesto</span>
           <h3>Examen Oficial SAN/563/2016 (26/03/2017)</h3>
-          <p id="count-2017_SAN563">Orden SAN/563/2016 (incluye supuesto práctico y Figura 27). Elige formato adaptado o original.</p>
+          <p id="count-2017_SAN563">Orden SAN/563/2016 (incluye supuesto práctico y figuras en img/). Elige formato adaptado o original.</p>
         </div>
         <div>
           <div class="btn-group-dual">
@@ -383,17 +383,10 @@
   </div>
 </div>
 
-<!-- SCRIPTS DE EXÁMENES (CARPETA examenes/) -->
-<script src="examenes/2017_SAN563.js" onerror="console.warn('No se pudo cargar examenes/2017_SAN563.js')"></script>
-<script src="examenes/examen_2017.js" onerror="console.warn('No se pudo cargar examenes/examen_2017.js')"></script>
-<script src="examenes/examen_2019.js" onerror="console.warn('No se pudo cargar examenes/examen_2019.js')"></script>
-<script src="examenes/examen_2022_feb.js" onerror="console.warn('No se pudo cargar examenes/examen_2022_feb.js')"></script>
-<script src="examenes/examen_2023.js" onerror="console.warn('No se pudo cargar examenes/examen_2023.js')"></script>
-
+<!-- NÚCLEO PREVIO A LOS EXÁMENES -->
 <script>
-  const PAGE_SIZE = 10;
-
   window.QUESTION_BANK = window.QUESTION_BANK || [];
+  window.__currentImgFallbacks = [];
 
   window.registerExamQuestions = function(examKey, questionsArray) {
     if (!Array.isArray(questionsArray) || questionsArray.length === 0) return;
@@ -411,8 +404,32 @@
         existingIds.add(id);
       }
     });
-    updateDashboardUI();
+    if (typeof window.updateDashboardUI === "function") {
+      window.updateDashboardUI();
+    }
   };
+
+  window.handleModalImgError = function(imgEl) {
+    if (Array.isArray(window.__currentImgFallbacks) && window.__currentImgFallbacks.length > 0) {
+      const nextSrc = window.__currentImgFallbacks.shift();
+      if (nextSrc && imgEl.getAttribute("src") !== nextSrc) {
+        imgEl.src = nextSrc;
+        return;
+      }
+    }
+    imgEl.alt = "No se ha encontrado la imagen en la carpeta img/. Comprueba el nombre del archivo dentro de img/.";
+  };
+</script>
+
+<!-- SCRIPTS DE EXÁMENES (CARPETA examenes/) -->
+<script src="examenes/2017_SAN563.js" onerror="console.warn('No se pudo cargar examenes/2017_SAN563.js')"></script>
+<script src="examenes/examen_2017.js" onerror="console.warn('No se pudo cargar examenes/examen_2017.js')"></script>
+<script src="examenes/examen_2019.js" onerror="console.warn('No se pudo cargar examenes/examen_2019.js')"></script>
+<script src="examenes/examen_2022_feb.js" onerror="console.warn('No se pudo cargar examenes/examen_2022_feb.js')"></script>
+<script src="examenes/examen_2023.js" onerror="console.warn('No se pudo cargar examenes/examen_2023.js')"></script>
+
+<script>
+  const PAGE_SIZE = 10;
 
   let appState = loadState();
   let currentQuestions = [];
@@ -423,7 +440,6 @@
   let secondsElapsed = 0;
   let isGraded = false;
   let returnFocusQuestionId = null;
-  let currentImgFallbacks = [];
 
   let printState = {
     questions: [],
@@ -479,6 +495,7 @@
       }
     });
   }
+  window.updateDashboardUI = updateDashboardUI;
 
   function startTimer() {
     stopTimer();
@@ -644,7 +661,7 @@
     const modal = document.getElementById("fig-modal");
     const img = document.getElementById("fig-modal-img");
     const title = document.getElementById("fig-modal-title");
-    currentImgFallbacks = fallbacksCsv ? fallbacksCsv.split("|").filter(Boolean) : [];
+    window.__currentImgFallbacks = fallbacksCsv ? fallbacksCsv.split("|").filter(Boolean) : [];
     img.classList.remove("zoomed");
     img.src = src;
     img.alt = label || "Figura";
@@ -652,21 +669,10 @@
     modal.classList.add("open");
   }
 
-  function handleModalImgError(imgEl) {
-    if (currentImgFallbacks.length > 0) {
-      const nextSrc = currentImgFallbacks.shift();
-      if (nextSrc && imgEl.getAttribute("src") !== nextSrc) {
-        imgEl.src = nextSrc;
-        return;
-      }
-    }
-    imgEl.alt = "No se ha encontrado la imagen en la carpeta img/. Comprueba el nombre del archivo dentro de img/.";
-  }
-
   function closeFigureModal() {
     const modal = document.getElementById("fig-modal");
     const img = document.getElementById("fig-modal-img");
-    currentImgFallbacks = [];
+    window.__currentImgFallbacks = [];
     img.classList.remove("zoomed");
     modal.classList.remove("open");
     if (returnFocusQuestionId) {
@@ -1040,3 +1046,6 @@
 </script>
 </body>
 </html>
+```[cite: 3, 4]
+
+*(Nota: en tu consola aparecía la ruta `auxopos/`, así que recuerda subir este `index.html` a la carpeta `auxopos/` de tu repositorio, manteniendo dentro `examenes/` con los 5 archivos `.js` y `img/` con las figuras).*[cite: 4]
