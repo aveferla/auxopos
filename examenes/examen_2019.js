@@ -16,7 +16,7 @@ window.registerExamQuestions("2019", [
       d: "Las unidades administrativas a las que se les atribuyan funciones que tengan efectos jurídicos frente a terceros, o cuya actuación tenga carácter preceptivo."
     },
     correctOrig: "d",
-    norma: "Ley 40/2015, art. 5.1 (antes art. 5.2 de la Ley 30/1992)."
+    norma: "Ley 40/2015, art. 5.1: tendrán la consideración de órganos administrativos las unidades administrativas a las que se les atribuyan funciones que tengan efectos jurídicos frente a terceros, o cuya actuación tenga carácter preceptivo."
   },
   {
     id: "2019_02", exam: "2019", tema: "Tema 7 · Estatuto Marco (Ley 55/2003)",
@@ -35,7 +35,7 @@ window.registerExamQuestions("2019", [
       d: "Únicamente los requisitos exigidos para participar en los procesos selectivos para la promoción interna son: ostentar la titulación requerida y tener nombramiento como personal estatutario fijo durante, al menos, dos años en la categoría de procedencia."
     },
     correctOrig: "a",
-    norma: "Ley 55/2003, art. 34."
+    norma: "Ley 55/2003, art. 34.2: los procedimientos para la promoción interna podrán realizarse a través de convocatorias específicas si así lo aconsejan razones de planificación o de eficacia en la gestión."
   },
   {
     id: "2019_03", exam: "2019", tema: "Tema 1 · Gerencia Regional de Salud de CyL",
@@ -54,7 +54,7 @@ window.registerExamQuestions("2019", [
       d: "Ninguna es correcta."
     },
     correctOrig: "c",
-    norma: "Ley 8/2010 y Decreto 42/2016 (CyL), art. 3."
+    norma: "Ley 8/2010 (ordenación sanitaria de CyL) y Decreto 42/2016, art. 3: regulan el régimen jurídico y patrimonial de la Gerencia Regional de Salud."
   },
   {
     id: "2019_04", exam: "2019", tema: "Tema 5 · Prevención de Riesgos Laborales",
@@ -67,13 +67,13 @@ window.registerExamQuestions("2019", [
     correctAdap: "A",
     textOrig: "De acuerdo al artículo 4, 8!! de La Ley de Prevención de Riesgos Laborales, se entenderá por \"equipo de protección individual\":",
     optsOrig: {
-      a: "Cualquier equipo destinado a ser llevado por el trabajador para que le proteja de uno o varios riesgos que puedan amenazar su seguridad en el trabajo, así como cualquier complemento o accesorio destinado a tal fin.",
+      a: "Cualquier equipo destinado a ser llevado por el trabajador para que le proteja de uno o varios riesgos que puedan amenazar su seguridad o su salud en el trabajo, así como cualquier complemento o accesorio destinado a tal fin.",
       b: "Cualquier equipo destinado a ser llevado o sujetado por el trabajador para que le proteja de uno o varios riesgos que puedan amenazar su seguridad en el trabajo, así como cualquier complemento o accesorio destinado a tal fin.",
       c: "Cualquier equipo destinado a ser llevado o sujetado por el trabajador para que le proteja de uno o varios riesgos que puedan amenazar su salud en el trabajo, así como cualquier complemento o accesorio destinado a tal fin.",
       d: "Cualquier equipo destinado a ser llevado o sujetado por el trabajador para que le proteja de uno o varios riesgos que puedan amenazar su seguridad o su salud en el trabajo, así como cualquier complemento o accesorio destinado a tal fin."
     },
     correctOrig: "d",
-    norma: "Ley 31/1995, art. 4.8."
+    norma: "Ley 31/1995, art. 4.8: equipo destinado a ser llevado o sujetado por el trabajador para que le proteja de uno o varios riesgos que puedan amenazar su seguridad o su salud en el trabajo, y complementos o accesorios destinados a tal fin."
   },
   {
     id: "2019_05", exam: "2019", tema: "Tema 1 · Ordenación Sanitaria de Castilla y León",
@@ -92,7 +92,7 @@ window.registerExamQuestions("2019", [
       d: "Ley 8/2010, de 30 de agosto de Ordenación del Sistema de Salud de Castilla y León."
     },
     correctOrig: "d",
-    norma: "Ley 8/2010 (CyL)."
+    norma: "Ley 8/2010, de 30 de agosto, de Ordenación del Sistema de Salud de Castilla y León: reconoce la condición de autoridad pública y la protección correspondiente a los profesionales sanitarios en el ejercicio de sus funciones."
   },
   {
     id: "2019_06", exam: "2019", tema: "Tema 1 · Organización Hospitalaria",
@@ -111,7 +111,7 @@ window.registerExamQuestions("2019", [
       d: "Informática y Orden Interno."
     },
     correctOrig: "c",
-    norma: "RD 521/1987, art. 9.1."
+    norma: "RD 521/1987, art. 9.1: bajo la dependencia directa del Director Gerente se encuentran las áreas de Atención al Paciente y Servicios Centrales."
   },
   {
     id: "2019_07", exam: "2019", tema: "Tema 19 · Seguridad Social",
@@ -130,7 +130,7 @@ window.registerExamQuestions("2019", [
       d: "El 60 % de la base reguladora desde el cuarto día de la baja en el trabajo hasta el vigésimo, y el 75 % a partir del vigésimo primero."
     },
     correctOrig: "d",
-    norma: "RDL 8/2015 (LGSS), art. 173."
+    norma: "RDL 8/2015 (LGSS), art. 173.1: en accidente no laboral (o enfermedad común), el subsidio es el 60 % de la base reguladora desde el día 4 al 20 inclusive y el 75 % desde el día 21 en adelante."
   },
   {
     id: "2019_08", exam: "2019", tema: "Tema 7 · TREBEP",
@@ -149,7 +149,7 @@ window.registerExamQuestions("2019", [
       d: "Es posible su nombramiento cuando se trate de realizar funciones expresamente calificadas como de confianza o asesoramiento especial."
     },
     correctOrig: "b",
-    norma: "RDL 5/2015 (TREBEP), art. 10."
+    norma: "RDL 5/2015 (TREBEP), art. 10.5: al personal funcionario interino le será aplicable, en cuanto sea adecuado a la naturaleza de su condición, el régimen general de los funcionarios de carrera."
   },
   {
     id: "2019_09", exam: "2019", tema: "Tema 1 · Defensor del Usuario",
@@ -168,7 +168,7 @@ window.registerExamQuestions("2019", [
       d: "Ninguna es correcta."
     },
     correctOrig: "d",
-    norma: "Ley 8/2010 (CyL)."
+    norma: "Ley 8/2010 (CyL): el Defensor del Usuario actúa con independencia y sí puede requerir información y colaboración y formular propuestas, recomendaciones y sugerencias."
   },
   {
     id: "2019_10", exam: "2019", tema: "Tema 1 · Estructura Consejería de Sanidad",
@@ -187,7 +187,7 @@ window.registerExamQuestions("2019", [
       d: "La difusión de la política sanitaria desarrollada por la Consejería y el estímulo a la participación y colaboración de la sociedad en aquélla."
     },
     correctOrig: "d",
-    norma: "Decreto de estructura orgánica de la Consejería de Sanidad (CyL)."
+    norma: "Decreto de estructura orgánica de la Consejería de Sanidad (CyL): las funciones de difusión general de la política sanitaria y estímulo de la participación ciudadana corresponden a los órganos de dirección/secretaría general, no específicamente a Salud Pública."
   },
   {
     id: "2019_11", exam: "2019", tema: "Tema 7 · Estatuto Marco",
@@ -206,13 +206,13 @@ window.registerExamQuestions("2019", [
       d: "Todas son falsas."
     },
     correctOrig: "d",
-    norma: "Ley 55/2003, art. 2."
+    norma: "Ley 55/2003, art. 2: se aplica al personal estatutario de los servicios de salud de las CC. AA. y de la Administración General del Estado, y también rigen en lo adecuado las disposiciones y principios generales de función pública."
   },
   {
     id: "2019_12", exam: "2019", tema: "Tema 1 · Organización Hospitalaria",
     textAdap: "De acuerdo con el art. 17 del RD 521/1987, ¿con qué frecuencia se reunirá la Comisión de Dirección del hospital?",
     optsAdap: {
-      A: "Semanalmente (según el criterio fijado en la pregunta/norma de referencia).",
+      A: "Semanalmente.",
       B: "Cada 30 días.",
       C: "Cada seis meses."
     },
@@ -225,7 +225,7 @@ window.registerExamQuestions("2019", [
       d: "Cada 15 días."
     },
     correctOrig: "a",
-    norma: "RD 521/1987, art. 17."
+    norma: "RD 521/1987, art. 17: regula la Comisión de Dirección del hospital (en la plantilla de 2019 consta como respuesta correcta 'a', semanalmente)."
   },
   {
     id: "2019_13", exam: "2019", tema: "Tema 7 · Estatuto Marco",
@@ -244,7 +244,7 @@ window.registerExamQuestions("2019", [
       d: "La suspensión firme se impondrá en virtud de sentencia dictada en causa criminal o en virtud de sanción disciplinaria."
     },
     correctOrig: "d",
-    norma: "Ley 55/2003, art. 68."
+    norma: "Ley 55/2003, art. 68.1: la suspensión de funciones se impondrá en virtud de sentencia dictada en causa criminal o en virtud de sanción disciplinaria."
   },
   {
     id: "2019_14", exam: "2019", tema: "Tema 5 · Prevención de Riesgos Laborales",
@@ -263,7 +263,7 @@ window.registerExamQuestions("2019", [
       d: "Todos son principios de la acción preventiva."
     },
     correctOrig: "a",
-    norma: "Ley 31/1995, art. 15."
+    norma: "Ley 31/1995, art. 15.1.b): el empresario aplicará las medidas que integran el deber general de prevención con arreglo a principios entre los que figura evaluar los riesgos que no se puedan evitar (no los que se puedan evitar)."
   },
   {
     id: "2019_15", exam: "2019", tema: "Tema 7 · Personal Estatutario de Sacyl",
@@ -282,13 +282,13 @@ window.registerExamQuestions("2019", [
       d: "15 días hábiles."
     },
     correctOrig: "a",
-    norma: "ORDEN SAN/1037/2014 (CyL) y Ley 39/2015."
+    norma: "Orden SAN/1037/2014 (CyL): recibido el informe de valoración del puesto de trabajo del Servicio de Prevención, se da traslado al interesado para alegaciones en el plazo de 10 días hábiles."
   },
   {
     id: "2019_16", exam: "2019", tema: "Tema 26 · Ofimática (Word)",
     textAdap: "En relación con los atajos de teclado en Word (conforme a la clave oficial del examen):",
     optsAdap: {
-      A: "La opción marcada en la plantilla oficial (CTRL+O).",
+      A: "CTRL+O.",
       B: "CTRL+C.",
       C: "CTRL+H."
     },
@@ -301,7 +301,7 @@ window.registerExamQuestions("2019", [
       d: "Ninguna es correcta"
     },
     correctOrig: "a",
-    norma: "Atajos de teclado de Microsoft Word (en Word, Ctrl+Q quita formato de párrafo; clave oficial del examen: a)."
+    norma: "Microsoft Word: en Word el atajo estándar para quitar el formato de párrafo (incluidos espaciados) es Ctrl+Q (Ctrl+O abre archivo; en la clave oficial del examen consta la 'a')."
   },
   {
     id: "2019_17", exam: "2019", tema: "Tema 21 · Presupuestos",
@@ -320,7 +320,7 @@ window.registerExamQuestions("2019", [
       d: "A nivel de programa o subprograma, cuando este exista."
     },
     correctOrig: "a",
-    norma: "Ley 2/2006 de Hacienda y del Sector Público de CyL / LGP."
+    norma: "Ley 2/2006, de la Hacienda y del Sector Público de CyL: los créditos para gastos tienen carácter vinculante a nivel de concepto o subconcepto (conforme a la clave oficial y normativa presupuestaria)."
   },
   {
     id: "2019_18", exam: "2019", tema: "Tema 1 · Gerencia Regional de Salud de CyL",
@@ -339,13 +339,13 @@ window.registerExamQuestions("2019", [
       d: "Por el Presidente de la Junta de Castilla y León a propuesta del Consejero de Sanidad y Consejero de Hacienda conjuntamente."
     },
     correctOrig: "a",
-    norma: "Ley 8/2010 y Decreto 42/2016 (CyL)."
+    norma: "Ley 8/2010 y Decreto 42/2016 (CyL): el Director Gerente de la Gerencia Regional de Salud es nombrado por la Junta de Castilla y León a propuesta del Consejero de Sanidad."
   },
   {
     id: "2019_19", exam: "2019", tema: "Tema 3 · Junta de Castilla y León",
     textAdap: "La Junta de Castilla y León se compone:",
     optsAdap: {
-      A: "Del Presidente, del Vicepresidente o Vicepresidentes, en su caso, y de los Consejeros (máximo fijado estatutariamente).",
+      A: "Del Presidente, del Vicepresidente o Vicepresidentes, en su caso, y de los Consejeros.",
       B: "Únicamente del Presidente y dos Consejeros.",
       C: "De los Procuradores de las Cortes."
     },
@@ -358,7 +358,7 @@ window.registerExamQuestions("2019", [
       d: "Del Presidente, del Vicepresidente o Vicepresidentes, en su caso, y de un máximo de diez Consejeros."
     },
     correctOrig: "d",
-    norma: "Estatuto de Autonomía de Castilla y León y Ley 3/2001."
+    norma: "Estatuto de Autonomía de Castilla y León y Ley 3/2001: la Junta de Castilla y León se compone del Presidente, del Vicepresidente o Vicepresidentes, en su caso, y de los Consejeros (hasta el máximo legal/estatutario fijado)."
   },
   {
     id: "2019_20", exam: "2019", tema: "Tema 1 · Gerencia Regional de Salud de CyL",
@@ -377,13 +377,13 @@ window.registerExamQuestions("2019", [
       d: "La Comisión Permanente del Consejo Castellano Leonés de Salud."
     },
     correctOrig: "d",
-    norma: "Decreto 42/2016 (CyL)."
+    norma: "Decreto 42/2016 (CyL): la Comisión Permanente del Consejo Castellano y Leonés de Salud es un órgano de participación, no de dirección y gestión."
   },
   {
     id: "2019_21", exam: "2019", tema: "Tema 1 · Gerencia Regional de Salud de CyL",
     textAdap: "En la Gerencia Regional de Salud de Castilla y León, la Dirección General de Infraestructuras y Tecnologías de la Información tiene entre sus competencias:",
     optsAdap: {
-      A: "La coordinación, gestión, desarrollo y mantenimiento de los proyectos informáticos sanitarios (o diseño y explotación de sistemas de información según estructura).",
+      A: "La coordinación, gestión, desarrollo y mantenimiento de los proyectos informáticos sanitarios.",
       B: "La tramitación de pensiones de jubilación.",
       C: "La inspección farmacéutica de oficinas de farmacia."
     },
@@ -396,14 +396,14 @@ window.registerExamQuestions("2019", [
       d: "La coordinación, gestión, desarrollo y mantenimiento de los proyectos informáticos sanitarios."
     },
     correctOrig: "d",
-    norma: "Estructura orgánica de la GRS de Castilla y León."
+    norma: "Decreto de estructura orgánica de la GRS de Castilla y León: le corresponde la coordinación, gestión, desarrollo y mantenimiento de los proyectos informáticos sanitarios."
   },
   {
     id: "2019_22", exam: "2019", tema: "Tema 15 · Registros Administrativos",
-    textAdap: "¿En qué norma se recoge que los registros electrónicos de las Administraciones deben ser plenamente interoperables para garantizar compatibilidad, interconexión y transmisión telemática?",
+    textAdap: "¿En qué norma se recoge que los registros electrónicos de las Administraciones deben ser plenamente interoperables?",
     optsAdap: {
-      A: "En el art. 16 de la Ley 39/2015, del Procedimiento Administrativo Común de las Administraciones Públicas.",
-      B: "En la Ley 41/2002 de autonomía del paciente.",
+      A: "En el art. 16 de la Ley 39/2015, de 1 de octubre.",
+      B: "En la Ley 41/2002, de 14 de noviembre.",
       C: "En el Estatuto de los Trabajadores."
     },
     correctAdap: "A",
@@ -415,7 +415,7 @@ window.registerExamQuestions("2019", [
       d: "En el artículo 45 de la Ley 39/2015, de 1 de octubre."
     },
     correctOrig: "b",
-    norma: "Ley 39/2015, art. 16."
+    norma: "Ley 39/2015, art. 16.6: los registros electrónicos de todas y cada una de las Administraciones deberán ser plenamente interoperables para garantizar compatibilidad informática, interconexión y transmisión telemática."
   },
   {
     id: "2019_23", exam: "2019", tema: "Tema 3 · Administración de Castilla y León",
@@ -434,7 +434,7 @@ window.registerExamQuestions("2019", [
       d: "Todas las respuestas son incorrectas."
     },
     correctOrig: "c",
-    norma: "Ley 3/2001 del Gobierno y de la Administración de CyL."
+    norma: "Ley 3/2001 del Gobierno y de la Administración de CyL: corresponde al Presidente de la Junta crear, modificar y suprimir Consejerías mediante Decreto."
   },
   {
     id: "2019_24", exam: "2019", tema: "Tema 1 · Sistema de Salud de Castilla y León",
@@ -453,13 +453,13 @@ window.registerExamQuestions("2019", [
       d: "Hospitales, Equipos de Atención Primaria y Equipos de Salud Pública."
     },
     correctOrig: "b",
-    norma: "Ley 8/2010 (CyL)."
+    norma: "Ley 8/2010 (CyL): el Sistema Público de Salud se organiza territorialmente en Áreas de Salud, Demarcaciones Sanitarias y Zonas Básicas de Salud."
   },
   {
     id: "2019_25", exam: "2019", tema: "Tema 5 · Prevención de Riesgos Laborales",
     textAdap: "Según la escala del art. 35.2 de la Ley 31/1995, en una empresa o centro de 800 trabajadores corresponden:",
     optsAdap: {
-      A: "4 Delegados de Prevención (de 501 a 1.000 trabajadores).",
+      A: "4 Delegados de Prevención.",
       B: "2 Delegados de Prevención.",
       C: "1 Delegado de Prevención."
     },
@@ -472,13 +472,13 @@ window.registerExamQuestions("2019", [
       d: "5 Delegados de Prevención."
     },
     correctOrig: "c",
-    norma: "Ley 31/1995, art. 35.2."
+    norma: "Ley 31/1995, art. 35.2: de 501 a 1.000 trabajadores corresponden 4 Delegados de Prevención."
   },
   {
     id: "2019_26", exam: "2019", tema: "Tema 1 · Atención Especializada",
     textAdap: "La atención especializada comprenderá las actuaciones encaminadas a:",
     optsAdap: {
-      A: "La investigación y la docencia (junto con la asistencia diagnóstica, terapéutica y rehabilitadora).",
+      A: "La investigación y la docencia.",
       B: "Exclusivamente la vacunación infantil en colegios.",
       C: "La emisión de certificados de empadronamiento."
     },
@@ -491,13 +491,13 @@ window.registerExamQuestions("2019", [
       d: "Todas son correctas."
     },
     correctOrig: "c",
-    norma: "Ley 8/2010 (CyL) y Ley 14/1986."
+    norma: "Ley 8/2010 (CyL) y Ley 14/1986: la atención especializada comprende la asistencia diagnóstica, terapéutica y rehabilitadora, así como la investigación y la docencia."
   },
   {
     id: "2019_27", exam: "2019", tema: "Tema 5 · Prevención de Riesgos Laborales",
     textAdap: "Las competencias de la Gerencia Regional de Salud en materia de prevención de riesgos laborales recaen en:",
     optsAdap: {
-      A: "La Dirección General competente en materia de personal / profesionales.",
+      A: "Dirección General de Profesionales.",
       B: "La Intervención General.",
       C: "El Servicio de Farmacia."
     },
@@ -510,13 +510,13 @@ window.registerExamQuestions("2019", [
       d: "Dirección General de Planificación."
     },
     correctOrig: "b",
-    norma: "Decreto 42/2016 y normativa de estructura de GRS."
+    norma: "Decreto 42/2016 y estructura orgánica de GRS: las políticas y competencias de personal y prevención de riesgos laborales de los profesionales corresponden a la Dirección General de Profesionales."
   },
   {
     id: "2019_28", exam: "2019", tema: "Tema 1 · Atención Primaria",
     textAdap: "Según el art. 19 de la Ley 8/2010 de Castilla y León, el Equipo de Atención Primaria desarrollará su actividad en:",
     optsAdap: {
-      A: "La Zona Básica de Salud.",
+      A: "Zona Básica de Salud.",
       B: "Fuera de la Comunidad Autónoma.",
       C: "Exclusivamente en los hospitales."
     },
@@ -529,11 +529,11 @@ window.registerExamQuestions("2019", [
       d: "Área de Salud."
     },
     correctOrig: "a",
-    norma: "Ley 8/2010 (CyL), art. 19."
+    norma: "Ley 8/2010 (CyL), art. 19: el Equipo de Atención Primaria es el conjunto de profesionales sanitarios y no sanitarios que desarrolla su actividad en la Zona Básica de Salud."
   },
   {
     id: "2019_29", exam: "2019", tema: "Tema 15 · Competencia Administrativa",
-    textAdap: "En relación con la competencia administrativa (Ley 40/2015):",
+    textAdap: "En relación con la competencia administrativa:",
     optsAdap: {
       A: "La titularidad y el ejercicio de las competencias atribuidas a los órganos administrativos podrán ser desconcentradas en otros jerárquicamente dependientes en los términos previstos.",
       B: "La delegación de firma altera la titularidad de la competencia.",
@@ -548,7 +548,7 @@ window.registerExamQuestions("2019", [
       d: "La titularidad de las competencias atribuidas a los órganos administrativos podrán ser desconcentradas en otros jerárquicamente no dependientes de aquellos en los términos y con los requisitos que prevean sus propias normas de atribución de competencias."
     },
     correctOrig: "c",
-    norma: "Ley 40/2015, arts. 8 y 9."
+    norma: "Ley 40/2015, art. 8: la competencia es irrenunciable y se ejerce por los órganos que la tienen atribuida, pudiendo desconcentrarse en órganos jerárquicamente dependientes."
   },
   {
     id: "2019_30", exam: "2019", tema: "Tema 5 · Comité de Seguridad y Salud",
@@ -567,11 +567,11 @@ window.registerExamQuestions("2019", [
       d: "Ninguna es correcta."
     },
     correctOrig: "a",
-    norma: "Ley 31/1995, art. 38.2."
+    norma: "Ley 31/1995, art. 38.2: órgano paritario y colegiado formado por los Delegados de Prevención y por el empresario y/o sus representantes en número igual al de los Delegados de Prevención."
   },
   {
     id: "2019_31", exam: "2019", tema: "Tema 15 · Órganos Colegiados",
-    textAdap: "Le corresponde al Secretario del órgano colegiado, según la normativa de régimen jurídico del sector público:",
+    textAdap: "Le corresponde al Secretario del órgano colegiado:",
     optsAdap: {
       A: "Expedir certificaciones, efectuar la convocatoria por orden del Presidente y redactar y autorizar las actas de las sesiones.",
       B: "Presidir y dirimir empates con voto de calidad.",
@@ -586,11 +586,11 @@ window.registerExamQuestions("2019", [
       d: "Todas las respuestas anteriores son ciertas."
     },
     correctOrig: "d",
-    norma: "Ley 40/2015, art. 19.4."
+    norma: "Ley 40/2015, art. 19.4: corresponde al Secretario expedir certificaciones, efectuar convocatorias y citaciones por orden del Presidente, y preparar el despacho, redactar y autorizar las actas."
   },
   {
     id: "2019_32", exam: "2019", tema: "Tema 19 · Seguridad Social",
-    textAdap: "¿Cuál de los siguientes colectivos no se considera incluido en un Régimen Especial sino en el Régimen General (sistema especial)?",
+    textAdap: "¿Cuál de los siguientes colectivos no se considera incluido en un Régimen Especial?",
     optsAdap: {
       A: "Los empleados de hogar.",
       B: "Los trabajadores autónomos.",
@@ -605,7 +605,7 @@ window.registerExamQuestions("2019", [
       d: "Los trabajadores del mar."
     },
     correctOrig: "a",
-    norma: "RDL 8/2015 (LGSS), art. 136."
+    norma: "RDL 8/2015 (LGSS), art. 136: los empleados de hogar se encuadran en el Régimen General (a través de un sistema especial), no en un Régimen Especial."
   },
   {
     id: "2019_33", exam: "2019", tema: "Tema 22 · Documentación Clínica",
@@ -624,13 +624,13 @@ window.registerExamQuestions("2019", [
       d: "Capítulo V."
     },
     correctOrig: "d",
-    norma: "Ley 41/2002, Capítulo V."
+    norma: "Ley 41/2002, Capítulo V (arts. 14 a 19): regula el contenido, usos, conservación y acceso a la historia clínica."
   },
   {
     id: "2019_34", exam: "2019", tema: "Tema 1 · Gerencia Regional de Salud de CyL",
     textAdap: "¿Cuál de las siguientes no es una función del Presidente de la Gerencia Regional de Salud?",
     optsAdap: {
-      A: "Aprobar los planes y programas de actuación y necesidades de sus centros y servicios, incluyendo la previsión de inversiones y su ejecución (propio de gestión/dirección).",
+      A: "Aprobar los planes y programas de actuación y necesidades de sus centros y servicios, incluyendo la previsión de inversiones y su ejecución.",
       B: "Representar institucionalmente a la Gerencia Regional de Salud.",
       C: "Presidir el Consejo de Administración."
     },
@@ -643,13 +643,13 @@ window.registerExamQuestions("2019", [
       d: "Aprobar los distintos planes y programas de actuación y necesidades de sus centros y servicios, incluyendo la previsión de las inversiones precisas y la ejecución de los citados planes y programas."
     },
     correctOrig: "d",
-    norma: "Ley 8/2010 y Decreto 42/2016 (CyL)."
+    norma: "Ley 8/2010 y Decreto 42/2016 (CyL): la aprobación de los planes y programas de actuación y necesidades de centros y servicios con su previsión de inversiones y ejecución no corresponde como función propia del Presidente en esos términos."
   },
   {
     id: "2019_35", exam: "2019", tema: "Tema 1 · Organización Hospitalaria",
     textAdap: "En los Hospitales Universitarios, la Comisión de Dirección:",
     optsAdap: {
-      A: "Está presidida por el Director Gerente e integrada por los Directores Médico, de Enfermería y de Gestión y Servicios Generales y Subdirectores, con representación universitaria con voz pero sin voto.",
+      A: "Está presidida por el Director Gerente e integrada por los Directores Médico, de Enfermería y de Gestión y Servicios Generales y Subdirectores, con un representante universitario con voz pero sin voto.",
       B: "Está integrada únicamente por jefes de servicio quirúrgico.",
       C: "No existe en hospitales universitarios."
     },
@@ -662,13 +662,13 @@ window.registerExamQuestions("2019", [
       d: "Presidida por el Director Gerente, e integrada por los Directores Médico, de Enfermería y de Gestión y Servicios Generales, y el Subdirector Gerente y Subdirectores de División, si los hubiere. Además formará parte de la Comisión de Dirección, como miembro de pleno derecho, con voz y voto, un representante nombrado por la Junta de Gobierno de la Universidad."
     },
     correctOrig: "c",
-    norma: "RD 521/1987 y normativa de hospitales universitarios."
+    norma: "RD 521/1987, art. 17 y normativa de conciertos sanitarios: en hospitales universitarios la Comisión de Dirección está presidida por el Director Gerente e incluye un representante de la Universidad con voz pero sin voto."
   },
   {
     id: "2019_36", exam: "2019", tema: "Tema 3 · Estatuto de Autonomía de Castilla y León",
     textAdap: "Son instituciones básicas de la Comunidad de Castilla y León:",
     optsAdap: {
-      A: "El Presidente de la Junta de Castilla y León (junto con las Cortes y la Junta).",
+      A: "El Presidente de la Junta de Castilla y León.",
       B: "Exclusivamente los Ayuntamientos.",
       C: "Las Delegaciones del Gobierno."
     },
@@ -681,7 +681,7 @@ window.registerExamQuestions("2019", [
       d: "El Presidente de la Junta de Castilla y León."
     },
     correctOrig: "d",
-    norma: "Estatuto de Autonomía de Castilla y León."
+    norma: "Estatuto de Autonomía de Castilla y León, art. 20: son instituciones básicas de la Comunidad las Cortes, el Presidente de la Junta y la Junta de Castilla y León."
   },
   {
     id: "2019_37", exam: "2019", tema: "Tema 21 · Presupuestos",
@@ -700,11 +700,11 @@ window.registerExamQuestions("2019", [
       d: "A las Cortes Generales."
     },
     correctOrig: "c",
-    norma: "Estatuto de Autonomía de Castilla y León y Ley 2/2006."
+    norma: "Estatuto de Autonomía de Castilla y León y Ley 2/2006: corresponde a las Cortes de Castilla y León el examen, enmienda y aprobación de los Presupuestos Generales de la Comunidad."
   },
   {
     id: "2019_38", exam: "2019", tema: "Tema 15 · Delegación de Competencias",
-    textAdap: "Respecto a la delegación de competencias (Ley 40/2015):",
+    textAdap: "Respecto a la delegación de competencias:",
     optsAdap: {
       A: "Salvo autorización expresa de una Ley, no podrán delegarse las competencias que se ejerzan por delegación.",
       B: "Basta una orden verbal del subalterno.",
@@ -719,13 +719,13 @@ window.registerExamQuestions("2019", [
       d: "Ninguna es correcta."
     },
     correctOrig: "b",
-    norma: "Ley 40/2015, art. 9.4."
+    norma: "Ley 40/2015, art. 9.4: salvo autorización expresa de una Ley, no podrán delegarse las competencias que se ejerzan por delegación."
   },
   {
     id: "2019_39", exam: "2019", tema: "Tema 5 · Prevención de Riesgos Laborales",
     textAdap: "En relación con el procedimiento de protección de las trabajadoras durante el embarazo y la lactancia, es responsabilidad del Servicio de Prevención del Área de Salud:",
     optsAdap: {
-      A: "Realizar la evaluación individualizada en cada caso según las pautas y criterios del procedimiento.",
+      A: "Realizar la evaluación individualizada en cada caso, siguiendo las pautas y criterios indicados en dicho procedimiento.",
       B: "Sustituir las bajas médicas por vacaciones obligatorias.",
       C: "Emitir sentencias laborales."
     },
@@ -738,7 +738,7 @@ window.registerExamQuestions("2019", [
       d: "a y b son correctas."
     },
     correctOrig: "a",
-    norma: "Ley 31/1995, art. 26 y procedimientos PRL Sacyl."
+    norma: "Ley 31/1995, art. 26 y procedimientos PRL Sacyl: corresponde al Servicio de Prevención realizar la evaluación individualizada del puesto y de las condiciones de riesgo durante el embarazo o la lactancia."
   },
   {
     id: "2019_40", exam: "2019", tema: "Tema 3 · Estatuto de Autonomía de Castilla y León",
@@ -757,13 +757,13 @@ window.registerExamQuestions("2019", [
       d: "a y c son correctas."
     },
     correctOrig: "a",
-    norma: "Estatuto de Autonomía de Castilla y León, art. 36."
+    norma: "Estatuto de Autonomía de Castilla y León, art. 36: exige mayoría absoluta de las Cortes para aprobar la moción de censura y, si se aprueba, la Junta cesará (proposición por al menos el 15 % de los procuradores)."
   },
   {
     id: "2019_41", exam: "2019", tema: "Tema 7 · TREBEP",
     textAdap: "Conforme al Real Decreto Legislativo 5/2015 (TREBEP):",
     optsAdap: {
-      A: "Los cuerpos y escalas se clasifican según la titulación exigida en los grupos A, B y C (dividiéndose en subgrupos donde corresponda).",
+      A: "Los cuerpos y escalas se clasifican, de acuerdo con la titulación exigida para el acceso a los mismos, en los grupos A, B y C.",
       B: "El plazo de ejecución de la OEP es de seis meses prorrogables sin límite.",
       C: "Los cuerpos y escalas se crean por decreto de un ayuntamiento."
     },
@@ -776,7 +776,7 @@ window.registerExamQuestions("2019", [
       d: "Los cuerpos y escalas se clasifican, de acuerdo con la titulación exigida para el acceso a los mismos, en los grupos A, B y C, dividiéndose cada uno de ellos en dos subgrupos."
     },
     correctOrig: "d",
-    norma: "RDL 5/2015 (TREBEP), art. 76."
+    norma: "RDL 5/2015 (TREBEP), art. 76: los cuerpos y escalas se clasifican en los grupos A (subgrupos A1 y A2), B y C (subgrupos C1 y C2), no dividiéndose en dos subgrupos cada uno de ellos."
   },
   {
     id: "2019_42", exam: "2019", tema: "Tema 19 · Seguridad Social",
@@ -795,11 +795,11 @@ window.registerExamQuestions("2019", [
       d: "Entidad Gestora de la Seguridad Social."
     },
     correctOrig: "c",
-    norma: "RDL 8/2015 (LGSS), art. 66."
+    norma: "RDL 8/2015 (LGSS), art. 66: la Tesorería General de la Seguridad Social es un servicio común dotado de personalidad jurídica propia en el que se unifican los recursos financieros y la gestión recaudatoria."
   },
   {
     id: "2019_43", exam: "2019", tema: "Tema 26 · Informática Básica",
-    textAdap: "Para representar un carácter (como una letra o un número), el ordenador utiliza una secuencia de:",
+    textAdap: "Para representar un único carácter, como puede ser una letra o un número, el ordenador utiliza una secuencia de:",
     optsAdap: {
       A: "8 bits.",
       B: "9 bits.",
@@ -814,11 +814,11 @@ window.registerExamQuestions("2019", [
       d: "Ninguna es correcta"
     },
     correctOrig: "b",
-    norma: "Informática básica (1 byte = 8 bits)."
+    norma: "Método / Informática básica: 1 byte equivale a 8 bits y es la unidad habitual para codificar y representar un carácter (como en ASCII extendido)."
   },
   {
     id: "2019_44", exam: "2019", tema: "Tema 5 · Prevención de Riesgos Laborales",
-    textAdap: "En los procedimientos de prevención de riesgos laborales / resolución de conflictos laborales, no procede la mediación en:",
+    textAdap: "En los procedimientos de prevención de riesgos laborales / resolución de conflictos laborales, no procederá la mediación en:",
     optsAdap: {
       A: "Cuestiones de procedimiento administrativo.",
       B: "Toda comunicación escrita.",
@@ -833,11 +833,11 @@ window.registerExamQuestions("2019", [
       d: "Todas son correctas."
     },
     correctOrig: "c",
-    norma: "Procedimientos de PRL y normativa administrativa."
+    norma: "Procedimientos de PRL y Ley 39/2015: no cabe mediación sobre cuestiones regladas o de procedimiento administrativo, que deben resolverse conforme a la normativa aplicable."
   },
   {
     id: "2019_45", exam: "2019", tema: "Tema 15 · Abstención y Recusación",
-    textAdap: "Es motivo de abstención (Ley 40/2015):",
+    textAdap: "Es motivo de abstención:",
     optsAdap: {
       A: "Tener relación de servicio con persona natural o jurídica interesada directamente en el asunto, o haberle prestado en los dos últimos años servicios profesionales de cualquier tipo y en cualquier circunstancia o lugar.",
       B: "Haber leído una noticia en prensa.",
@@ -852,7 +852,7 @@ window.registerExamQuestions("2019", [
       d: "Haber intervenido como perito o como testigo en los cuatro últimos años, en el procedimiento de que se trate."
     },
     correctOrig: "b",
-    norma: "Ley 40/2015, art. 23.2.d."
+    norma: "Ley 40/2015, art. 23.2.d): es motivo de abstención tener relación de servicio con persona natural o jurídica interesada directamente en el asunto, o haberle prestado en los dos últimos años servicios profesionales de cualquier tipo."
   },
   {
     id: "2019_46", exam: "2019", tema: "Tema 22 · Autonomía del Paciente",
@@ -871,11 +871,11 @@ window.registerExamQuestions("2019", [
       d: "No, la historia clínica es propiedad de la institución sanitaria."
     },
     correctOrig: "b",
-    norma: "Ley 41/2002, art. 18."
+    norma: "Ley 41/2002, art. 18.2: el derecho de acceso del paciente a la documentación de la historia clínica puede ejercerse también por representación, siempre que quede debidamente acreditada."
   },
   {
     id: "2019_47", exam: "2019", tema: "Tema 26 · Informática Básica",
-    textAdap: "La tecla Shift en el teclado:",
+    textAdap: "La tecla Shift:",
     optsAdap: {
       A: "Es una tecla modificadora del teclado.",
       B: "Es un dispositivo de almacenamiento.",
@@ -890,13 +890,13 @@ window.registerExamQuestions("2019", [
       d: "Ninguna es cierta."
     },
     correctOrig: "a",
-    norma: "Periféricos y teclado (teclas modificadoras)."
+    norma: "Método / Informática básica: Shift (Mayús) es una tecla modificadora que, pulsada junto con otra tecla o acción, altera su comportamiento normal (mayúsculas, símbolos superiores, selección de rangos)."
   },
   {
     id: "2019_48", exam: "2019", tema: "Tema 1 · Gerencia Regional de Salud de CyL",
-    textAdap: "¿Quién ejerce la representación y defensa en juicio de la Gerencia de Salud de Área?",
+    textAdap: "¿Quién ejercerá la representación y defensa en juicio de la Gerencia de Salud del Área?",
     optsAdap: {
-      A: "La Asesoría Jurídica de la Delegación Territorial de la Junta (o de la Gerencia Regional de Salud según normativa de defensa en juicio).",
+      A: "La Asesoría Jurídica de la Delegación Territorial de la Junta.",
       B: "La Policía Local.",
       C: "El Registro Civil."
     },
@@ -909,11 +909,11 @@ window.registerExamQuestions("2019", [
       d: "La Asesoría Jurídica de la Gerencia Regional de Salud de Castilla y León."
     },
     correctOrig: "b",
-    norma: "Normativa de representación y defensa en juicio de la Administración de CyL."
+    norma: "Ley 6/2003, de Asistencia Jurídica a la Comunidad de Castilla y León: la representación y defensa en juicio de los órganos periféricos/de área corresponde a los letrados de la Asesoría Jurídica adscritos a la Delegación Territorial correspondiente."
   },
   {
     id: "2019_49", exam: "2019", tema: "Tema 1 · Prestaciones Sanitarias",
-    textAdap: "¿Cuál de las siguientes está incluida entre las prestaciones sanitarias del Sistema Público de Salud de Castilla y León?",
+    textAdap: "¿Cuál de las siguientes está incluida entre las prestaciones sanitarias que el Sistema Público de Salud de Castilla y León garantiza a los ciudadanos?",
     optsAdap: {
       A: "Prestaciones de salud pública, prestación farmacéutica y prestación de productos dietéticos.",
       B: "Solo asistencia dental estética privada.",
@@ -928,11 +928,11 @@ window.registerExamQuestions("2019", [
       d: "Todas son correctas."
     },
     correctOrig: "d",
-    norma: "Ley 8/2010 (CyL) y cartera de servicios del SNS."
+    norma: "Ley 8/2010 (CyL) y RD 1030/2006: el catálogo de prestaciones del Sistema Nacional de Salud y de Castilla y León incluye salud pública, atención primaria, atención especializada, prestación farmacéutica, ortoprotésica, de productos dietéticos y de transporte sanitario."
   },
   {
     id: "2019_50", exam: "2019", tema: "Tema 1 · Atención Primaria",
-    textAdap: "En el Sistema Público de Salud de Castilla y León, el nivel básico inicial de atención corresponde a:",
+    textAdap: "En el Sistema Público de Salud de Castilla y León el nivel básico inicial de atención corresponde a:",
     optsAdap: {
       A: "La atención primaria.",
       B: "La cirugía mayor ambulatoria hospitalaria.",
@@ -947,7 +947,7 @@ window.registerExamQuestions("2019", [
       d: "La atención de urgencia."
     },
     correctOrig: "c",
-    norma: "Ley 8/2010 (CyL)."
+    norma: "Ley 8/2010 (CyL), art. 17: la atención primaria es el nivel básico e inicial de atención integral de salud, continuada y longitudinal, que presta asistencia sanitaria de primer contacto."
   },
   {
     id: "2019_51", exam: "2019", tema: "Tema 1 · Centros de Salud",
@@ -966,13 +966,13 @@ window.registerExamQuestions("2019", [
       d: "Siempre."
     },
     correctOrig: "a",
-    norma: "Ley 8/2010 (CyL)."
+    norma: "Ley 8/2010 (CyL), art. 18: cada Zona Básica de Salud cuenta con un Centro de Salud como estructura física y funcional, pudiendo ubicarse fuera de su ámbito territorial únicamente con carácter excepcional."
   },
   {
     id: "2019_52", exam: "2019", tema: "Tema 3 · Cortes de Castilla y León",
-    textAdap: "Los miembros de las Cortes de Castilla y León (Procuradores):",
+    textAdap: "Los miembros de las Cortes de Castilla y León denominados tradicionalmente Procuradores:",
     optsAdap: {
-      A: "Gozan de inviolabilidad por los votos emitidos y las opiniones manifestadas en el ejercicio de sus funciones.",
+      A: "Gozarán de inviolabilidad por los votos emitidos y las opiniones manifestadas en el ejercicio de sus funciones.",
       B: "Son designados por el Alcalde.",
       C: "Tienen mandato vitalicio."
     },
@@ -985,11 +985,11 @@ window.registerExamQuestions("2019", [
       d: "El mandato de los Procuradores termina a los cuatro años de su nombramiento o el día de la constitución de la Cámara."
     },
     correctOrig: "a",
-    norma: "Estatuto de Autonomía de Castilla y León."
+    norma: "Estatuto de Autonomía de Castilla y León, art. 22: los Procuradores gozarán de inviolabilidad, aun después de haber cesado en su mandato, por las opiniones manifestadas y los votos emitidos en el ejercicio de sus funciones."
   },
   {
     id: "2019_53", exam: "2019", tema: "Tema 19 · Seguridad Social",
-    textAdap: "Las solicitudes de baja y variaciones de datos de los trabajadores en la Seguridad Social deben presentarse en el plazo de:",
+    textAdap: "Las solicitudes de baja y variaciones de datos de los trabajadores deberán presentarse dentro del plazo de:",
     optsAdap: {
       A: "Los 3 días naturales siguientes al del cese en el trabajo o a aquél en que la variación se produzca.",
       B: "30 días hábiles.",
@@ -1004,7 +1004,7 @@ window.registerExamQuestions("2019", [
       d: "Los 3 días hábiles siguientes al del cese en el trabajo o a aquél en que la variación se produzca."
     },
     correctOrig: "b",
-    norma: "Reglamento General de afiliación, altas, bajas y variaciones de datos (RD 84/1996)."
+    norma: "RD 84/1996, art. 32.3.2º: las solicitudes de baja y las comunicaciones de variaciones de datos de los trabajadores deben presentarse dentro de los 3 días naturales siguientes al del cese o variación."
   },
   {
     id: "2019_54", exam: "2019", tema: "Tema 22 · Documentación Clínica",
@@ -1023,7 +1023,7 @@ window.registerExamQuestions("2019", [
       d: "Diez años contados desde la fecha de alta de cada proceso asistencial."
     },
     correctOrig: "a",
-    norma: "Ley 41/2002, art. 17.1."
+    norma: "Ley 41/2002, art. 17.1: los centros sanitarios conservarán la documentación clínica durante el tiempo adecuado a cada caso y, como mínimo, cinco años contados desde la fecha del alta de cada proceso asistencial."
   },
   {
     id: "2019_55", exam: "2019", tema: "Tema 3 · Estatuto de Autonomía de Castilla y León",
@@ -1042,13 +1042,13 @@ window.registerExamQuestions("2019", [
       d: "Todas son correctas."
     },
     correctOrig: "d",
-    norma: "Estatuto de Autonomía de Castilla y León, art. 13."
+    norma: "Estatuto de Autonomía de Castilla y León, art. 13: reconoce como derechos sociales, entre otros, el derecho a la salud, a la educación y al acceso a los servicios sociales."
   },
   {
     id: "2019_56", exam: "2019", tema: "Tema 19 · Seguridad Social",
-    textAdap: "En relación con el alta en el Régimen General de la Seguridad Social (conforme a las opciones planteadas):",
+    textAdap: "En relación con el alta en el Régimen General de la Seguridad Social:",
     optsAdap: {
-      A: "Ninguna de las afirmaciones anteriores es del todo correcta en los términos formulados.",
+      A: "Todas las respuestas anteriores son incorrectas en los términos formulados.",
       B: "Se comunica siempre cinco años después.",
       C: "No existe número de Seguridad Social."
     },
@@ -1061,11 +1061,11 @@ window.registerExamQuestions("2019", [
       d: "todas las respuestas son incorrectas."
     },
     correctOrig: "d",
-    norma: "RDL 8/2015 (LGSS) y RD 84/1996."
+    norma: "RDL 8/2015 (LGSS) y RD 84/1996: la afiliación es única y vitalicia, la obligación de solicitar el alta recae principalmente en el empresario y las altas previas al inicio de la prestación de servicios se solicitan antes de que esta comience (por eso la clave de 2019 marca 'd')."
   },
   {
     id: "2019_57", exam: "2019", tema: "Tema 21 · Contratación del Sector Público",
-    textAdap: "En la delimitación de los tipos contractuales de la Ley 9/2017 de Contratos del Sector Público, no existe:",
+    textAdap: "En la delimitación de los tipos contractuales de la Ley 9/2017 de Contratos del Sector Público, no se encuentra:",
     optsAdap: {
       A: "El contrato de concesión de suministros.",
       B: "El contrato de concesión de obras.",
@@ -1080,15 +1080,15 @@ window.registerExamQuestions("2019", [
       d: "El contrato de servicios."
     },
     correctOrig: "b",
-    norma: "Ley 9/2017 (LCSP), arts. 13 a 17."
+    norma: "Ley 9/2017 (LCSP), arts. 13 a 17: los tipos contractuales regulados son obras, concesión de obras, concesión de servicios, suministro y servicios; no existe el contrato de concesión de suministros."
   },
   {
     id: "2019_58", exam: "2019", tema: "Tema 15 · Reclamaciones y Sugerencias",
-    textAdap: "Presentada una reclamación en un centro hospitalario de Castilla y León, el usuario tiene derecho a recibir contestación en el plazo máximo de:",
+    textAdap: "Presentada una reclamación en un centro hospitalario de Castilla y León, el usuario tiene derecho a recibir contestación en:",
     optsAdap: {
-      A: "30 días naturales (conforme a la clave oficial del examen).",
-      B: "24 horas.",
-      C: "1 año."
+      A: "Un plazo no superior a 30 días naturales.",
+      B: "Un plazo no superior a 15 días naturales.",
+      C: "Un plazo no superior a 15 días hábiles."
     },
     correctAdap: "A",
     textOrig: "Una vez presentada una reclamación en un centro hospitalario de la Comunidad de Castilla y León, el usuario tiene derecho a recibir contestación en:",
@@ -1099,15 +1099,15 @@ window.registerExamQuestions("2019", [
       d: "Un plazo no superior a 15 días hábiles."
     },
     correctOrig: "a",
-    norma: "Normativa de reclamaciones y sugerencias de Castilla y León."
+    norma: "Decreto 40/2004 (CyL): regulador de los procedimientos de reclamación y sugerencia en el ámbito sanitario, establece la contestación al usuario en un plazo no superior a 30 días naturales."
   },
   {
     id: "2019_59", exam: "2019", tema: "Tema 3 · Presidente de la Junta de Castilla y León",
-    textAdap: "Sobre las atribuciones del Presidente de la Junta de Castilla y León:",
+    textAdap: "¿Cuál de estas atribuciones del Presidente de la Junta de Castilla y León no es correcta?",
     optsAdap: {
-      A: "Plantear ante la Junta la cuestión de confianza (corresponde a las Cortes / términos estatutarios).",
-      B: "Mantener relaciones con otras Administraciones.",
-      C: "Convocar elecciones a las Cortes."
+      A: "Plantear ante la Junta de Castilla y León la cuestión de confianza.",
+      B: "Mantener las debidas relaciones con las demás Administraciones e Instituciones públicas.",
+      C: "Convocar elecciones a las Cortes de Castilla y León."
     },
     correctAdap: "A",
     textOrig: "¿Cuál de estas atribuciones básicas del Presidente de la Junta de Castilla y León, no es correcta?",
@@ -1118,7 +1118,7 @@ window.registerExamQuestions("2019", [
       d: "Acordar la disolución de las Cortes de Castilla y León en los términos legalmente previstos."
     },
     correctOrig: "a",
-    norma: "Estatuto de Autonomía de Castilla y León y Ley 3/2001."
+    norma: "Estatuto de Autonomía de Castilla y León y Ley 3/2001: la cuestión de confianza la plantea el Presidente de la Junta ante las Cortes de Castilla y León (previa deliberación de la Junta), no ante la propia Junta."
   },
   {
     id: "2019_60", exam: "2019", tema: "Tema 1 · Áreas de Salud",
@@ -1137,7 +1137,7 @@ window.registerExamQuestions("2019", [
       d: "Todas son correctas."
     },
     correctOrig: "b",
-    norma: "Ley 14/1986, art. 56 y Ley 8/2010 (CyL)."
+    norma: "Ley 14/1986, art. 56.4: cada Área de Salud dispondrá, al menos, de un hospital general."
   },
   {
     id: "2019_61", exam: "2019", tema: "Tema 19 · Seguridad Social",
@@ -1156,14 +1156,14 @@ window.registerExamQuestions("2019", [
       d: "Las cuantías fijadas para cada año por la correspondiente Ley de Presupuestos Generales del Estado."
     },
     correctOrig: "b",
-    norma: "RDL 8/2015 (LGSS), art. 19.2."
+    norma: "RDL 8/2015 (LGSS), art. 19.2: las bases de cotización tendrán como tope mínimo las cuantías del salario mínimo interprofesional vigente en cada momento, incrementadas en un sexto, salvo disposición expresa en contrario."
   },
   {
     id: "2019_62", exam: "2019", tema: "Tema 26 · Ofimática (Macros)",
-    textAdap: "«Grabar una macro» consiste en:",
+    textAdap: "Podemos definir «Grabar una macro» como:",
     optsAdap: {
       A: "Grabar todos los pasos que vamos haciendo para después poder repetirlos a través de una acción automática.",
-      B: "Borrar el disco duro.",
+      B: "La interacción del software de un Smartphone y Excel a través de Windows.",
       C: "Cambiar el color de la carcasa del PC."
     },
     correctAdap: "A",
@@ -1175,7 +1175,7 @@ window.registerExamQuestions("2019", [
       d: "Todas con ciertas."
     },
     correctOrig: "a",
-    norma: "Ofimática (automatización de tareas mediante macros)."
+    norma: "Método / Ofimática: grabar una macro consiste en registrar una secuencia de acciones o comandos para reproducirla después automáticamente y ahorrar tareas repetitivas."
   },
   {
     id: "2019_63", exam: "2019", tema: "Tema 7 · Función Pública",
@@ -1194,7 +1194,7 @@ window.registerExamQuestions("2019", [
       d: "Ninguna es correcta."
     },
     correctOrig: "c",
-    norma: "Normativa de función pública (expectativa de destino: máximo 1 año)."
+    norma: "Ley 30/1984, art. 29.5: la situación de expectativa de destino tiene una duración máxima de 1 año, transcurrido el cual se pasa a excedencia forzosa."
   },
   {
     id: "2019_64", exam: "2019", tema: "Tema 5 · Comité de Seguridad y Salud",
@@ -1213,7 +1213,7 @@ window.registerExamQuestions("2019", [
       d: "60"
     },
     correctOrig: "c",
-    norma: "Ley 31/1995, art. 38.1."
+    norma: "Ley 31/1995, art. 38.1: se constituirá un Comité de Seguridad y Salud en todas las empresas o centros de trabajo que cuenten con 50 o más trabajadores."
   },
   {
     id: "2019_65", exam: "2019", tema: "Tema 19 · Seguridad Social",
@@ -1232,7 +1232,7 @@ window.registerExamQuestions("2019", [
       d: "Si el causante tiene cumplidos treinta y un años de edad, la tercera parte del tiempo transcurrido entre la fecha en que cumplió los veinte años y la del hecho causante de la pensión, con un mínimo, en todo caso, de cinco años."
     },
     correctOrig: "a",
-    norma: "RDL 8/2015 (LGSS), art. 195.3."
+    norma: "RDL 8/2015 (LGSS), art. 195.3: si el sujeto causante tiene menos de 31 años de edad, el período mínimo de cotización exigido en enfermedad común es la tercera parte del tiempo transcurrido entre la fecha en que cumplió los 16 años y la del hecho causante."
   },
   {
     id: "2019_66", exam: "2019", tema: "Reserva · Tema 26 · Informática Básica",
@@ -1251,13 +1251,13 @@ window.registerExamQuestions("2019", [
       d: "A y C son correctas."
     },
     correctOrig: "d",
-    norma: "Informática básica (sistema binario / base 2)."
+    norma: "Método / Informática básica: el bit y su agrupación en bytes (8 bits) pertenecen al sistema binario o de base 2 (dígitos 0 y 1)."
   },
   {
     id: "2019_67", exam: "2019", tema: "Reserva · Tema 26 · Excel",
-    textAdap: "En una celda con datos en el formato de fecha dd/mm/aaaa, para separar en columnas individualizadas (o según la clave oficial):",
+    textAdap: "En una celda con datos en el formato de fecha dd/mm/aaaa, los separo en columnas individualizadas utilizando:",
     optsAdap: {
-      A: "La opción/función prevista en la clave oficial del examen (c).",
+      A: "La función EXTRAE.",
       B: "La función DIASEM.",
       C: "La función DIAS.LAB."
     },
@@ -1270,13 +1270,13 @@ window.registerExamQuestions("2019", [
       d: "Ninguna es correcta."
     },
     correctOrig: "c",
-    norma: "Excel (funciones de texto / herramientas de texto en columnas)."
+    norma: "Método / Excel: EXTRAE(texto; posición_inicial; núm_caracteres) permite extraer segmentos de texto/fecha (día, mes o año) en columnas separadas."
   },
   {
     id: "2019_68", exam: "2019", tema: "Reserva · Tema 15 · Reclamaciones y Sugerencias",
     textAdap: "Las reclamaciones y sugerencias en el ámbito sanitario se encuentran reguladas en:",
     optsAdap: {
-      A: "La Ley 8/2003, de 8 de abril, sobre derechos y deberes de las personas en relación con la salud (y normativa de desarrollo).",
+      A: "La Ley 8/2003, de 8 de abril, sobre derechos y deberes de las personas en relación con la salud.",
       B: "Únicamente en el Código Civil.",
       C: "No están reguladas."
     },
@@ -1289,7 +1289,7 @@ window.registerExamQuestions("2019", [
       d: "a y b no son ciertas."
     },
     correctOrig: "a",
-    norma: "Ley 8/2003 (CyL) y normativa de reclamaciones y sugerencias."
+    norma: "Ley 8/2003 (CyL) y Decreto 40/2004 (CyL): la Ley 8/2003 reconoce los derechos de información y reclamación/sugerencia en relación con la salud (desarrollada en el Decreto 40/2004; en la clave de 2019 consta 'a')."
   },
   {
     id: "2019_69", exam: "2019", tema: "Reserva · Tema 1 · Gerencia Regional de Salud de CyL",
@@ -1308,11 +1308,11 @@ window.registerExamQuestions("2019", [
       d: "El Director Gerente."
     },
     correctOrig: "b",
-    norma: "Ley 8/2010 y Decreto 42/2016 (CyL)."
+    norma: "Ley 8/2010 y Decreto 42/2016 (CyL): la Comisión Permanente del Consejo Castellano y Leonés de Salud es órgano de participación, frente a órganos de dirección y gestión como el Director Gerente."
   },
   {
     id: "2019_70", exam: "2019", tema: "Reserva · Tema 21 · Hacienda CyL",
-    textAdap: "A tenor literal del art. 111 de la Ley 2/2006, el número de ejercicios posteriores a que pueden aplicarse gastos plurianuales no será superior a:",
+    textAdap: "A tenor literal del art. 111 de la Ley 2/2006, el número de ejercicios posteriores a que pueden aplicarse gastos no será superior a:",
     optsAdap: {
       A: "Cuatro.",
       B: "Tres.",
@@ -1327,13 +1327,13 @@ window.registerExamQuestions("2019", [
       d: "Seis."
     },
     correctOrig: "b",
-    norma: "Ley 2/2006, de la Hacienda y del Sector Público de CyL, art. 111."
+    norma: "Ley 2/2006, de la Hacienda y del Sector Público de CyL, art. 111: el número de ejercicios posteriores a que pueden aplicarse los gastos plurianuales no será superior a cuatro."
   },
   {
     id: "2019_71", exam: "2019", tema: "Reserva · Tema 1 · Organización Hospitalaria",
     textAdap: "La Comisión de Dirección de un hospital:",
     optsAdap: {
-      A: "Realiza análisis y propuestas sobre el presupuesto anual del hospital y la política de personal (según la clave oficial c).",
+      A: "Realiza análisis y propuestas sobre el presupuesto anual del hospital y la política de personal.",
       B: "Está integrada únicamente por el Director Gerente y tres Directores sin Subdirectores.",
       C: "No analiza el presupuesto."
     },
@@ -1346,7 +1346,7 @@ window.registerExamQuestions("2019", [
       d: "Ninguna es correcta."
     },
     correctOrig: "c",
-    norma: "RD 521/1987, art. 17."
+    norma: "RD 521/1987, art. 17: corresponde a la Comisión de Dirección realizar análisis y propuestas sobre el presupuesto anual del hospital, la política de personal y la organización asistencial y de gestión."
   },
   {
     id: "2019_72", exam: "2019", tema: "Reserva · Tema 21 · Presupuestos",
@@ -1365,7 +1365,7 @@ window.registerExamQuestions("2019", [
       d: "La Consejería de Hacienda."
     },
     correctOrig: "d",
-    norma: "Ley 2/2006, de la Hacienda y del Sector Público de CyL."
+    norma: "Ley 2/2006, de la Hacienda y del Sector Público de CyL, art. 107: corresponde a la Consejería de Hacienda determinar la estructura de los Presupuestos Generales de la Comunidad de Castilla y León."
   },
   {
     id: "2019_73", exam: "2019", tema: "Supuesto Práctico · Excel",
@@ -1384,7 +1384,7 @@ window.registerExamQuestions("2019", [
       d: "CONCATENAR(A2I ·\" \"·I 82I·\"I·\"·I \" \"·I C2)"
     },
     correctOrig: "c",
-    norma: "Excel, función CONCATENAR."
+    norma: "Método / Excel: CONCATENAR (o UNIRCADENAS / &) une varias cadenas de texto y separadores (como espacios o punto y coma) en una sola celda."
   },
   {
     id: "2019_74", exam: "2019", tema: "Supuesto Práctico · Excel",
@@ -1403,7 +1403,7 @@ window.registerExamQuestions("2019", [
       d: "Ninguna es cierta"
     },
     correctOrig: "b",
-    norma: "Excel, función NOMPROPIO."
+    norma: "Método / Excel: NOMPROPIO(texto) convierte la primera letra de cada palabra en mayúscula y el resto en minúscula."
   },
   {
     id: "2019_75", exam: "2019", tema: "Supuesto Práctico · Excel",
@@ -1422,7 +1422,7 @@ window.registerExamQuestions("2019", [
       d: "=CONTAR(G2:Hll;CONTA81LIDAD)"
     },
     correctOrig: "a",
-    norma: "Excel, función CONTAR.SI."
+    norma: "Método / Excel: CONTAR.SI(rango; criterio) cuenta las celdas dentro de un rango que cumplen una condición concreta."
   },
   {
     id: "2019_76", exam: "2019", tema: "Supuesto Práctico · Excel",
@@ -1441,7 +1441,7 @@ window.registerExamQuestions("2019", [
       d: "=CONTAR.SI.CONJUNTO(F:F;F6;G2;H:H;\">30\")"
     },
     correctOrig: "c",
-    norma: "Excel, función CONTAR.SI.CONJUNTO."
+    norma: "Método / Excel: CONTAR.SI.CONJUNTO(rango_criterios1; criterio1; rango_criterios2; criterio2; ...) exige rangos del mismo tamaño y evalúa múltiples condiciones simultáneas."
   },
   {
     id: "2019_77", exam: "2019", tema: "Supuesto Práctico · Excel",
@@ -1460,7 +1460,7 @@ window.registerExamQuestions("2019", [
       d: "=EXTRAE(\"CONTABILIDAD\";l;\"CONT\";4)"
     },
     correctOrig: "b",
-    norma: "Excel, función EXTRAE."
+    norma: "Método / Excel: EXTRAE(texto; posición_inicial; núm_caracteres) empieza en el carácter 1 y extrae 4 caracteres ('CONT')."
   },
   {
     id: "2019_78", exam: "2019", tema: "Supuesto Práctico · Excel",
@@ -1479,7 +1479,7 @@ window.registerExamQuestions("2019", [
       d: "Datos/Validación de datos/Lista/=Centro/Aceptar"
     },
     correctOrig: "a",
-    norma: "Excel, nombres definidos y validación de datos (Lista)."
+    norma: "Método / Excel: primero se define el nombre del rango (Fórmulas > Asignar nombre > Definir nombre) y luego se aplica Validación de datos > Lista referenciando el nombre con '='."
   },
   {
     id: "2019_79", exam: "2019", tema: "Supuesto Práctico · Excel",
@@ -1498,7 +1498,7 @@ window.registerExamQuestions("2019", [
       d: "Ninguna es cierta"
     },
     correctOrig: "a",
-    norma: "Excel, atajo Ctrl + T (crear tabla)."
+    norma: "Método / Excel: Ctrl + T (o Ctrl + L en versiones en español) convierte un rango de datos en una Tabla de Excel con filtros y formato estructurado."
   },
   {
     id: "2019_80", exam: "2019", tema: "Supuesto Práctico · Excel",
@@ -1517,13 +1517,13 @@ window.registerExamQuestions("2019", [
       d: "Funciones de búsqueda y referencia"
     },
     correctOrig: "b",
-    norma: "Excel, tablas dinámicas."
+    norma: "Método / Excel: las tablas dinámicas permiten agrupar, filtrar y resumir grandes volúmenes de datos de forma interactiva sin necesidad de escribir fórmulas."
   },
   {
     id: "2019_81", exam: "2019", tema: "Supuesto Práctico · Word",
-    textAdap: "Para realizar certificados individuales mediante combinación de correspondencia (según la clave oficial c):",
+    textAdap: "Para realizar certificados individuales mediante combinación de correspondencia:",
     optsAdap: {
-      A: "La opción indicada en la clave oficial (c).",
+      A: "Tres.",
       B: "Uno.",
       C: "Ninguno."
     },
@@ -1536,7 +1536,7 @@ window.registerExamQuestions("2019", [
       d: "Ninguno"
     },
     correctOrig: "c",
-    norma: "Word, combinación de correspondencia."
+    norma: "Método / Word: en la combinación de correspondencia intervienen el documento principal (plantilla del certificado), la lista/origen de destinatarios (datos en Excel/tabla) y el documento combinado resultante."
   },
   {
     id: "2019_82", exam: "2019", tema: "Supuesto Práctico · Word",
@@ -1555,11 +1555,11 @@ window.registerExamQuestions("2019", [
       d: "Diseño/Temas/Encabezado"
     },
     correctOrig: "b",
-    norma: "Word, encabezado y pie de página."
+    norma: "Método / Word: hacer doble clic en la zona superior (margen de encabezado) o inferior (pie) de la página abre directamente la edición del encabezado y pie de página."
   },
   {
     id: "2019_83", exam: "2019", tema: "Supuesto Práctico · Word",
-    textAdap: "Para corregir el formato de fecha en un campo combinado de Word y mostrar dd/MM/yyyy, se aplica el modificador de formato:",
+    textAdap: "Para corregir el formato de fecha en un campo combinado de Word y mostrar dd/mm/yyyy, se aplica:",
     optsAdap: {
       A: "Alt+F9 + {MERGEFIELD FECHA INICIO \\@ \"dd/MM/yyyy\"}.",
       B: "Alt+F9 + {MERGEFIELD FECHA INICIO \\# \"dd/MM/yyyy\"}.",
@@ -1574,15 +1574,15 @@ window.registerExamQuestions("2019", [
       d: "Alt+F9+{MERGEFIELD FECHA INICIO\\$ \"dd/MM/yyyy\"}"
     },
     correctOrig: "b",
-    norma: "Word, modificador de fecha \\@ en campos MERGEFIELD."
+    norma: "Método / Word: Alt+F9 alterna la vista de códigos de campo y el modificador \\@ aplica formato de fecha y hora (mientras \\# es formato numérico)."
   },
   {
     id: "2019_84", exam: "2019", tema: "Supuesto Práctico · Excel",
-    textAdap: "Para aplicar colores alternos automáticamente por columnas en la tabla de la FIGURA 7, se utiliza:",
+    textAdap: "Para visualizar mejor las columnas de la FIGURA 7 dando colores alternos automáticamente, se aplica:",
     optsAdap: {
-      A: "Inicio/Dar formato como tabla / Diseño / Desactivar Filas con bandas / Activar Columnas con bandas.",
+      A: "Inicio/Dar formato como tabla/ Diseño/Desactivar Filas con bandas/ Activar Columnas con bandas.",
       B: "Formato/Formato de celdas/Relleno.",
-      C: "Diseño de página/Configurar página/Relleno."
+      C: "Diseño de página/Configurar Pagina/Relleno."
     },
     correctAdap: "A",
     textOrig: "Para visualizar mejor las columnas de la FIGURA 7, en Excel, usted decide dar colores alternos en las mismas de manera automática, para ello, aplica:",
@@ -1593,15 +1593,15 @@ window.registerExamQuestions("2019", [
       d: "Todas son ciertas"
     },
     correctOrig: "a",
-    norma: "Excel, estilo de tabla y columnas con bandas."
+    norma: "Método / Excel: en una tabla con formato, la pestaña Diseño de tabla permite alternar Filas con bandas y Columnas con bandas para sombrear columnas alternas."
   },
   {
     id: "2019_85", exam: "2019", tema: "Supuesto Práctico · Excel",
-    textAdap: "Para asignar calificaciones por tramos según la puntuación de la FIGURA 9 (conforme a la clave oficial c):",
+    textAdap: "Para asignar la calificación individual de cada trabajador se utiliza la fórmula:",
     optsAdap: {
-      A: "Fórmula condicional anidada con SI (según clave oficial c).",
-      B: "Solo =SUMA().",
-      C: "No requiere funciones."
+      A: "=SI(Q2>130;\"A\";SI(Q2>100;\"B\";SI(Q2>70;\"C\";SI(Q2>50;\"D\";\"F\"))))",
+      B: "=SI.ND(Q2>130;\"A\";SI(Q2>100;\"B\";SI(Q2>70;\"C\";SI(Q2>50;\"D\";\"F\"))))",
+      C: "=SI.SYD(Q2>130;\"A\";SI(Q2>100;\"B\";SI(Q2>70;\"C\";SI(Q2>50;\"D\";\"F\"))))"
     },
     correctAdap: "A",
     textOrig: "Asigno la calificación individual de cada trabajador, mediante la fórmula:",
@@ -1612,11 +1612,11 @@ window.registerExamQuestions("2019", [
       d: "=SI.SYD(Q2>130;\"A\";SI(Q2>100;\"B\";SI(Q2>70;\"C\";SI(Q2>50;\"D\";\"F\"))))"
     },
     correctOrig: "c",
-    norma: "Excel, funciones SI anidadas."
+    norma: "Método / Excel: la función lógica SI(prueba_lógica; valor_si_verdadero; valor_si_falso) se anida para evaluar tramos sucesivos de puntuación."
   },
   {
     id: "2019_86", exam: "2019", tema: "Supuesto Práctico · Excel",
-    textAdap: "Para filtrar/cambiar fácilmente los datos visibles en una tabla dinámica del informe anual se utiliza:",
+    textAdap: "Para cambiar fácilmente los datos incluidos en la tabla dinámica del informe anual se utiliza:",
     optsAdap: {
       A: "Segmentación de datos.",
       B: "Validación de datos.",
@@ -1631,11 +1631,11 @@ window.registerExamQuestions("2019", [
       d: "Segmentación de datos"
     },
     correctOrig: "d",
-    norma: "Excel, segmentación de datos en tablas dinámicas."
+    norma: "Método / Excel: la segmentación de datos añade botones visuales interactivos para filtrar y cambiar rápidamente los datos mostrados en una tabla dinámica."
   },
   {
     id: "2019_87", exam: "2019", tema: "Supuesto Práctico · Excel",
-    textAdap: "En la tabla de Excel (FIGURA 7), para ver la evolución de datos en el espacio de una celda se emplean:",
+    textAdap: "Al introducir datos en la tabla de Excel de la FIGURA 7, puede verse su evolución a través de:",
     optsAdap: {
       A: "Minigráficos.",
       B: "Conexiones existentes.",
@@ -1650,11 +1650,11 @@ window.registerExamQuestions("2019", [
       d: "Ninguna es cierta"
     },
     correctOrig: "b",
-    norma: "Excel, minigráficos."
+    norma: "Método / Excel: los minigráficos son pequeños gráficos integrados dentro de una celda que muestran visualmente la tendencia o evolución de una serie de datos."
   },
   {
     id: "2019_88", exam: "2019", tema: "Supuesto Práctico · Excel",
-    textAdap: "Al crear un minigráfico en Excel, los tipos disponibles son:",
+    textAdap: "Al crear un minigráfico, los tipos disponibles son:",
     optsAdap: {
       A: "Línea, Columna o Ganancia o Pérdida.",
       B: "Línea, Columna o Circular.",
@@ -1669,15 +1669,15 @@ window.registerExamQuestions("2019", [
       d: "Línea, Columna o Cuadro Combinado"
     },
     correctOrig: "a",
-    norma: "Excel, tipos de minigráficos."
+    norma: "Método / Excel: Excel ofrece exactamente tres tipos de minigráficos: Línea, Columna y Ganancia o pérdida."
   },
   {
     id: "2019_89", exam: "2019", tema: "Supuesto Práctico · Excel",
-    textAdap: "Para enviar el archivo desde Excel por correo electrónico se utiliza:",
+    textAdap: "Para enviar los archivos desde Excel por correo electrónico se utiliza:",
     optsAdap: {
-      A: "Archivo / Compartir / correo electrónico / enviar datos como adjuntos.",
-      B: "Seleccionar tabla / compartir / correo electrónico.",
-      C: "Inicio / compartir / correo electrónico."
+      A: "Archivo/Compartir/correo electrónico/enviar datos como adjuntos.",
+      B: "Seleccionar tabla/compartir/correo electrónico.",
+      C: "Inicio/Compartir/correo electrónico."
     },
     correctAdap: "A",
     textOrig: "Para enviar los archivos desde Excel sin macros:",
@@ -1688,11 +1688,11 @@ window.registerExamQuestions("2019", [
       d: "Ninguna es correcta"
     },
     correctOrig: "b",
-    norma: "Excel, enviar como adjunto desde Archivo > Compartir."
+    norma: "Método / Excel: el envío por correo electrónico del libro se inicia desde la pestaña Archivo > Compartir > Correo electrónico."
   },
   {
     id: "2019_90", exam: "2019", tema: "Supuesto Práctico · Excel",
-    textAdap: "Para ocultar parcialmente el DNI y mostrar \"* * - *-702F\" (4 caracteres de la derecha) se utiliza:",
+    textAdap: "Para ocultar parcialmente los datos privados de DNI y mostrar \"* * - *-702F\" se utiliza la fórmula:",
     optsAdap: {
       A: "=CONCATENAR(\"* * - *-\";DERECHA(R2;4))",
       B: "=CONCATENAR(\"* * - *-\";IZQUIERDA(R2;4))",
@@ -1707,13 +1707,13 @@ window.registerExamQuestions("2019", [
       d: "=CONCATENAR(\"* * - *-\";DERECHA(R2;4))"
     },
     correctOrig: "d",
-    norma: "Excel, CONCATENAR y DERECHA."
+    norma: "Método / Excel: DERECHA(R2;4) extrae los 4 últimos caracteres ('702F') y CONCATENAR los une con la máscara inicial '* * - *-'."
   },
   {
     id: "2019_91", exam: "2019", tema: "Supuesto Práctico · Excel",
-    textAdap: "Para actualizar los datos de una tabla dinámica (según la clave oficial c):",
+    textAdap: "Para actualizar los datos de la tabla dinámica se utiliza:",
     optsAdap: {
-      A: "La opción indicada en la clave oficial (c).",
+      A: "a y b son ciertas.",
       B: "Ctrl + Alt + F5.",
       C: "Alt + F5."
     },
@@ -1726,15 +1726,15 @@ window.registerExamQuestions("2019", [
       d: "Ninguna es cierta"
     },
     correctOrig: "c",
-    norma: "Excel, actualización de tablas dinámicas (Alt+F5 / Ctrl+Alt+F5)."
+    norma: "Método / Excel: Alt + F5 actualiza la tabla dinámica activa y Ctrl + Alt + F5 actualiza todas las tablas dinámicas y conexiones del libro."
   },
   {
     id: "2019_92", exam: "2019", tema: "Supuesto Práctico · Excel",
-    textAdap: "Para añadir o editar un comentario/nota a una celda en Excel se utiliza:",
+    textAdap: "Para añadir un comentario a una celda utilizo:",
     optsAdap: {
-      A: "Mayús + F2.",
-      B: "Mayús + F4.",
-      C: "Mayús + F6."
+      A: "Mayúscula+F2.",
+      B: "Mayúscula+F4.",
+      C: "Mayúscula+F6."
     },
     correctAdap: "A",
     textOrig: "Para añadir un comentario a una celda utilizo:",
@@ -1745,15 +1745,15 @@ window.registerExamQuestions("2019", [
       d: "Mayúscula+F2"
     },
     correctOrig: "d",
-    norma: "Excel, atajo Mayús+F2."
+    norma: "Método / Excel: el atajo Mayús + F2 (Shift + F2) inserta o edita el comentario/nota en la celda seleccionada."
   },
   {
     id: "2019_93", exam: "2019", tema: "Supuesto Práctico · Excel",
-    textAdap: "Para aplicar formato porcentaje con 2 decimales en Excel se accede mediante:",
+    textAdap: "Para elaborar el informe anual en forma de % y aplicar formato porcentaje con dos decimales:",
     optsAdap: {
-      A: "Inicio / Formato / Formato de celdas / Porcentaje / posiciones decimales / 2.",
+      A: "Inicio/Formato/Formato de celdas/Porcentaje/posiciones decimales/2.",
       B: "Ctrl + Mayús + %.",
-      C: "Diseño / Formato / Formato de celdas."
+      C: "Diseño/Formato/Formato de celdas."
     },
     correctAdap: "A",
     textOrig: "Para elaborar el informe anual de formación proporciona los datos de cada curso en forma de%, y aplica el formato porcentaje con dos decimales:",
@@ -1764,11 +1764,11 @@ window.registerExamQuestions("2019", [
       d: "Diseño/Formato/Formato de celdas/Porcentaje/posiciones decimales/2"
     },
     correctOrig: "a",
-    norma: "Excel, formato de celda Porcentaje."
+    norma: "Método / Excel: en Inicio > Formato > Formato de celdas > pestaña Número > Porcentaje se configuran las posiciones decimales exactas (2 decimales)."
   },
   {
     id: "2019_94", exam: "2019", tema: "Supuesto Práctico · Word",
-    textAdap: "En Word, para centrar el párrafo seleccionado mediante atajo de teclado se utiliza:",
+    textAdap: "Para justificar el texto centrado en el documento del certificado en Word, utilizo el método abreviado:",
     optsAdap: {
       A: "Ctrl + T.",
       B: "Ctrl + D.",
@@ -1783,15 +1783,15 @@ window.registerExamQuestions("2019", [
       d: "Ctrl + T"
     },
     correctOrig: "d",
-    norma: "Word, alineación centrada con Ctrl + T."
+    norma: "Método / Word: en Word en español, Ctrl + T centra el párrafo seleccionado (Ctrl + Q alinea a la izquierda y Ctrl + J justifica)."
   },
   {
     id: "2019_95", exam: "2019", tema: "Supuesto Práctico · Excel",
-    textAdap: "Para incluir logotipos en el encabezado de impresión de una hoja de Excel se accede mediante:",
+    textAdap: "Al presentar las tablas de Excel, genero un informe donde figuran los logotipos corporativos mediante:",
     optsAdap: {
-      A: "Diseño de página / Imprimir Títulos / Encabezado y Pie de página / Personalizar encabezado / Insertar Imagen.",
-      B: "Insertar Imagen directo sobre la celda sin encabezado.",
-      C: "Diseño de página / Orientación / Márgenes sin encabezado."
+      A: "Diseño de página/Imprimir Títulos/Encabezado y Pie de página/Personalizar encabezado/Sección izquierda/Insertar Imagen/Formato de imagen/Aceptar.",
+      B: "Insertar Imagen/Formato de imagen/Aceptar.",
+      C: "Diseño de página/Orientación/Márgenes sin encabezado."
     },
     correctAdap: "A",
     textOrig: "Cuando presento las tablas de Excel, genero un informe donde figuran los logotipos corporativos mediante:",
@@ -1802,15 +1802,15 @@ window.registerExamQuestions("2019", [
       d: "Diseño de página/Orientación/Márgenes/Encabezadoy Pie de página/Insertar Imagen/Formato de imagen/Aceptar"
     },
     correctOrig: "a",
-    norma: "Excel, imagen en encabezado personalizado de impresión."
+    norma: "Método / Excel: para incluir un logotipo en el encabezado impreso de la hoja se abre Configurar página/Imprimir títulos > Encabezado y pie de página > Personalizar encabezado e Insertar imagen."
   },
   {
     id: "2019_96", exam: "2019", tema: "Supuesto Práctico · Excel",
-    textAdap: "En Excel, el orden de impresión de las páginas de la hoja se configura en:",
+    textAdap: "En Excel, puedo seleccionar el orden de impresión de las hojas mediante:",
     optsAdap: {
-      A: "Imprimir títulos / Hoja / Orden de las páginas.",
-      B: "Márgenes / Hoja / Orden de las páginas.",
-      C: "Configurar página / Establecer área de impresión."
+      A: "Imprimir títulos/Hoja/Orden de las páginas.",
+      B: "Márgenes/Hoja/Orden de las páginas.",
+      C: "Configurar página/Área de impresión."
     },
     correctAdap: "A",
     textOrig: "En Excel, puedo seleccionar el orden de impresión de las hojas mediante:",
@@ -1821,15 +1821,15 @@ window.registerExamQuestions("2019", [
       d: "Imprimir títulos/Página/Ajustar"
     },
     correctOrig: "b",
-    norma: "Excel, configurar página > Hoja > Orden de las páginas."
+    norma: "Método / Excel: en Configurar página / Imprimir títulos, dentro de la pestaña Hoja, se elige 'Orden de las páginas' (Hacia abajo y luego a la derecha, o A continuación y luego hacia abajo)."
   },
   {
     id: "2019_97", exam: "2019", tema: "Supuesto Práctico · Word",
-    textAdap: "Para añadir una marca de agua de imagen en Word se utiliza:",
+    textAdap: "Al realizar el informe anual en Word, añado una imagen de marca de agua a todo el documento mediante:",
     optsAdap: {
-      A: "Diseño / Marca de agua / Marcas de agua personalizadas / Marca de agua de imagen (o Diseño de página / Marca de agua según versión).",
-      B: "Solo Revisión / Control de cambios.",
-      C: "Vista / Esquema."
+      A: "Diseño/Marca de agua/Marcas de agua personalizadas/Marca de agua de imagen/Seleccionar imagen/Escala/Aplicar.",
+      B: "Revisión/Control de cambios.",
+      C: "Vista/Esquema."
     },
     correctAdap: "A",
     textOrig: "Cuando realizo el informe anual en Word, añado una imagen de marca de agua a todo el documento mediante:",
@@ -1840,15 +1840,15 @@ window.registerExamQuestions("2019", [
       d: "Ninguna es cierta."
     },
     correctOrig: "b",
-    norma: "Word, marca de agua de imagen."
+    norma: "Método / Word: en la pestaña Diseño > Marca de agua > Marcas de agua personalizadas se selecciona 'Marca de agua de imagen', se elige el archivo y se ajusta la escala."
   },
   {
     id: "2019_98", exam: "2019", tema: "Supuesto Práctico · Outlook",
-    textAdap: "En Outlook, para crear un nuevo contacto (conforme a la clave oficial c):",
+    textAdap: "Para crear un nuevo contacto en Outlook:",
     optsAdap: {
-      A: "La opción indicada en la clave oficial (c).",
-      B: "Tareas / Contactos / Nuevo / Guardar.",
-      C: "Herramientas / Contactos / Crear / Guardar."
+      A: "Contactos/Nuevo/Crear.",
+      B: "Tareas/Contactos/Nuevo/Guardar.",
+      C: "Herramientas/Contactos/Crear/Guardar."
     },
     correctAdap: "A",
     textOrig: "Tiene que enviar los certificados a través de Outlook 2010 y debe crear un nuevo contacto:",
@@ -1859,11 +1859,11 @@ window.registerExamQuestions("2019", [
       d: "Herramientas/Contactos/Crear/Guardar"
     },
     correctOrig: "c",
-    norma: "Outlook, creación de contactos."
+    norma: "Método / Outlook: desde la vista de Contactos (Personas) se crea un nuevo contacto y se guarda/crea su ficha."
   },
   {
     id: "2019_99", exam: "2019", tema: "Supuesto Práctico · Access",
-    textAdap: "Al importar datos (como los de la FIGURA 9) a Microsoft Access, estos se almacenan en:",
+    textAdap: "Si importamos datos a Microsoft Access, estos se almacenan en:",
     optsAdap: {
       A: "Tablas.",
       B: "Formularios.",
@@ -1878,15 +1878,15 @@ window.registerExamQuestions("2019", [
       d: "Informes."
     },
     correctOrig: "c",
-    norma: "Access, almacenamiento de datos en tablas."
+    norma: "Método / Access: en una base de datos relacional como Access, los datos se almacenan en tablas (filas y columnas), mientras que consultas, formularios e informes trabajan sobre ellas."
   },
   {
     id: "2019_100", exam: "2019", tema: "Supuesto Práctico · Windows",
-    textAdap: "Para renombrar un archivo seleccionado en el Explorador de archivos de Windows se pulsa:",
+    textAdap: "Para renombrar un archivo seleccionado en el Explorador de archivos de Windows:",
     optsAdap: {
-      A: "La tecla F2, escribir el nuevo nombre y pulsar Enter.",
-      B: "La tecla F1.",
-      C: "La tecla F3."
+      A: "Pulsar F2, a continuación escribir el nuevo nombre y pulsar Enter.",
+      B: "Pulsar F1.",
+      C: "Pulsar F3."
     },
     correctAdap: "A",
     textOrig: "Para renombrar el archivo donde hemos guardado los certificados, usando el Explorador de archivos de Windows, debo seleccionarlo y después:",
@@ -1897,6 +1897,6 @@ window.registerExamQuestions("2019", [
       d: "Pulsar F4, a continuación escribir el nuevo nombre y pulsar Enter."
     },
     correctOrig: "b",
-    norma: "Windows, renombrar elemento con F2."
+    norma: "Método / Windows: en el Explorador de archivos, seleccionar un archivo o carpeta y pulsar F2 activa la edición del nombre; al terminar se confirma con Enter."
   }
 ]);
