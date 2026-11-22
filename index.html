@@ -75,7 +75,7 @@
     .q-orig-warning { background: #ffedd5; color: #c2410c; font-weight: 700; padding: 2px 8px; border-radius: 5px; border: 1px dashed #fdba74; }
     .q-text { font-size: 1.02rem; font-weight: 600; margin-bottom: 14px; color: #0f172a; white-space: pre-line; }
 
-    /* BOTÓN OCULTO DE FIGURA / MODAL */
+    /* BOTÓN VISOR DE FIGURA / MODAL */
     .figura-trigger-wrap { margin-bottom: 12px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
     .btn-figura { background: var(--primary-light); color: var(--primary); border: 1px solid #93c5fd; padding: 7px 13px; border-radius: 8px; font-weight: 700; font-size: 0.85rem; cursor: pointer; }
     .btn-figura:hover { background: #dbeafe; }
@@ -369,7 +369,7 @@
   </section>
 </main>
 
-<!-- MODAL VISOR DE FIGURA (OCULTO HASTA PULSAR) -->
+<!-- MODAL VISOR DE FIGURA -->
 <div class="fig-modal-backdrop" id="fig-modal" onclick="handleBackdropClick(event)">
   <div class="fig-modal-bar">
     <strong id="fig-modal-title" style="font-size:0.98rem; color:#0f172a;">Figura del supuesto práctico</strong>
@@ -379,16 +379,16 @@
     </div>
   </div>
   <div class="fig-modal-body">
-    <img id="fig-modal-img" src="" alt="Figura del supuesto práctico" onclick="toggleZoomFig()" />
+    <img id="fig-modal-img" src="" alt="Figura del supuesto práctico" onclick="toggleZoomFig()" onerror="handleModalImgError(this)" />
   </div>
 </div>
 
-<!-- SCRIPTS DE EXÁMENES (si alguno no existe en tu carpeta, se ignora sin romper la página) -->
-<script src="examenes/examen_2023.js" onerror="void(0)"></script>
-<script src="examenes/examen_2022_feb.js" onerror="void(0)"></script>
-<script src="examenes/examen_2019.js" onerror="void(0)"></script>
-<script src="examenes/examen_2017.js" onerror="void(0)"></script>
-<script src="examenes/2017_SAN563.js" onerror="void(0)"></script>
+<!-- SCRIPTS DE EXÁMENES (CARPETA examenes/) -->
+<script src="examenes/2017_SAN563.js" onerror="console.warn('No se pudo cargar examenes/2017_SAN563.js')"></script>
+<script src="examenes/examen_2017.js" onerror="console.warn('No se pudo cargar examenes/examen_2017.js')"></script>
+<script src="examenes/examen_2019.js" onerror="console.warn('No se pudo cargar examenes/examen_2019.js')"></script>
+<script src="examenes/examen_2022_feb.js" onerror="console.warn('No se pudo cargar examenes/examen_2022_feb.js')"></script>
+<script src="examenes/examen_2023.js" onerror="console.warn('No se pudo cargar examenes/examen_2023.js')"></script>
 
 <script>
   const PAGE_SIZE = 10;
@@ -418,11 +418,12 @@
   let currentQuestions = [];
   let currentModeType = "adapted";
   let currentPage = 0;
-  let answeredMap = {}; // { [questionId]: { selectedKey, isCorrect, recorded } }
+  let answeredMap = {};
   let timerInterval = null;
   let secondsElapsed = 0;
   let isGraded = false;
   let returnFocusQuestionId = null;
+  let currentImgFallbacks = [];
 
   let printState = {
     questions: [],
@@ -467,7 +468,7 @@
       "2022_feb": "Convocatoria Sacyl (febrero 2022). Elige formato adaptado a 3 opciones o formato original en naranja.",
       "2019": "Orden SAN/1168/2018. Elige formato adaptado a 3 opciones o formato original en naranja.",
       "2017": "Orden SAN/549/2016 (11/02/2017). Elige formato adaptado a 3 opciones o formato original en naranja.",
-      "2017_SAN563": "Orden SAN/563/2016 (26/03/2017 · incluye supuesto práctico y Figura 27)."
+      "2017_SAN563": "Orden SAN/563/2016 (26/03/2017 · incluye supuesto práctico y figuras en img/)."
     };
 
     Object.keys(examInfo).forEach(key => {
@@ -552,7 +553,7 @@
     }
 
     if (!currentQuestions || currentQuestions.length === 0) {
-      alert(`No se han encontrado preguntas cargadas para "${examKey}". Revisa que su archivo .js esté guardado en la carpeta examenes/ y tenga preguntas registradas.`);
+      alert(`No se han encontrado preguntas cargadas para "${examKey}". Revisa que su archivo .js esté en la carpeta examenes/ y tenga preguntas registradas.`);
       return;
     }
 
@@ -601,24 +602,49 @@
     ) || rawCorrect;
   }
 
+  function normalizeImgPath(path) {
+    if (!path) return "";
+    const clean = String(path).replace(/^\/+/, "");
+    return clean.startsWith("img/") ? clean : `img/${clean}`;
+  }
+
   function getFigureSpecForQuestion(q) {
-    if (q && q.image) {
-      return { src: q.image, label: "Ver Figura 27" };
+    if (!q) return null;
+    if (q.image) {
+      const primary = normalizeImgPath(q.image);
+      const base = primary.replace(/\.[^.]+$/, "");
+      return {
+        src: primary,
+        fallbacks: [`${base}.jpg`, `${base}.jpeg`, `${base}.png`, `${base}.webp`],
+        label: q.imageLabel || "Ver Figura"
+      };
     }
     const textoBusqueda = `${q.textAdap || ""} ${q.textOrig || ""}`.toUpperCase();
     const match = textoBusqueda.match(/\bFIG(?:URA)?\.?\s*(\d+)\b/);
     if (match && match[1]) {
       const num = match[1];
-      return { src: `img/figura_${num}.jpg`, label: `Ver Figura ${num}` };
+      return {
+        src: `img/figura_${num}.jpg`,
+        fallbacks: [
+          `img/figura_${num}.jpg`,
+          `img/figura_${num}.png`,
+          `img/fig_${num}.jpg`,
+          `img/fig_${num}.png`,
+          `img/Figura_${num}.jpg`,
+          `img/Figura_${num}.png`
+        ],
+        label: `Ver Figura ${num}`
+      };
     }
     return null;
   }
 
-  function openFigureModal(src, label, questionId) {
+  function openFigureModal(src, label, questionId, fallbacksCsv) {
     returnFocusQuestionId = questionId || null;
     const modal = document.getElementById("fig-modal");
     const img = document.getElementById("fig-modal-img");
     const title = document.getElementById("fig-modal-title");
+    currentImgFallbacks = fallbacksCsv ? fallbacksCsv.split("|").filter(Boolean) : [];
     img.classList.remove("zoomed");
     img.src = src;
     img.alt = label || "Figura";
@@ -626,9 +652,21 @@
     modal.classList.add("open");
   }
 
+  function handleModalImgError(imgEl) {
+    if (currentImgFallbacks.length > 0) {
+      const nextSrc = currentImgFallbacks.shift();
+      if (nextSrc && imgEl.getAttribute("src") !== nextSrc) {
+        imgEl.src = nextSrc;
+        return;
+      }
+    }
+    imgEl.alt = "No se ha encontrado la imagen en la carpeta img/. Comprueba el nombre del archivo dentro de img/.";
+  }
+
   function closeFigureModal() {
     const modal = document.getElementById("fig-modal");
     const img = document.getElementById("fig-modal-img");
+    currentImgFallbacks = [];
     img.classList.remove("zoomed");
     modal.classList.remove("open");
     if (returnFocusQuestionId) {
@@ -690,9 +728,10 @@
         : `<span class="q-updated">Adaptada a normativa 2026</span>`;
 
       const figSpec = getFigureSpecForQuestion(q);
+      const fallbacksStr = figSpec && Array.isArray(figSpec.fallbacks) ? figSpec.fallbacks.join("|") : "";
       const figuraBtnHtml = figSpec
         ? `<div class="figura-trigger-wrap">
-             <button type="button" class="btn-figura" onclick="openFigureModal('${figSpec.src}', '${figSpec.label}', '${q.id}')">🖼️ ${figSpec.label}</button>
+             <button type="button" class="btn-figura" onclick="openFigureModal('${figSpec.src}', '${figSpec.label}', '${q.id}', '${fallbacksStr}')">🖼️ ${figSpec.label}</button>
            </div>`
         : "";
 
@@ -1001,4 +1040,3 @@
 </script>
 </body>
 </html>
-
