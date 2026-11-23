@@ -44,6 +44,7 @@
     .mode-tag { display: inline-block; font-size: 0.74rem; font-weight: 700; text-transform: uppercase; padding: 3px 8px; border-radius: 6px; margin-bottom: 10px; width: fit-content; }
     .tag-conv { background: #e0f2fe; color: #0369a1; }
     .tag-fail { background: #fee2e2; color: #991b1b; }
+    .tag-rand { background: #ede9fe; color: #5b21b6; }
     .mode-card h3 { font-size: 1.08rem; margin-bottom: 8px; color: #0f172a; }
     .mode-card p { font-size: 0.88rem; color: var(--muted); margin-bottom: 14px; }
 
@@ -165,8 +166,25 @@
       <strong>Modalidades de estudio:</strong> Se muestran de <strong>10 en 10 preguntas por pantalla</strong> y cada pregunta se corrige al instante indicándote si has acertado o fallado y su fundamento jurídico. También puedes generar vistas listas para <strong>imprimir exámenes y plantillas de respuestas</strong>.
     </div>
 
-    <!-- REPASO INTELIGENTE -->
-    <div style="margin-bottom: 20px;">
+    <!-- REPASO INTELIGENTE Y EXAMEN ALEATORIO DE 60 PREGUNTAS -->
+    <div class="grid-modes" style="margin-bottom: 20px;">
+      <div class="mode-card" style="border-left: 5px solid #5b21b6;">
+        <div>
+          <span class="mode-tag tag-rand">Banco Aleatorio · 60 Preguntas</span>
+          <h3>Examen Aleatorio (60 preguntas)</h3>
+          <p id="random-60-desc">Selecciona 60 preguntas aleatorias evitando repetir las ya mostradas hasta completar todo el banco. Sin ver: <strong>0</strong> / Total: <strong>0</strong>.</p>
+        </div>
+        <div>
+          <div class="btn-group-dual">
+            <button class="btn-primary" id="btn-start-random-adapted" onclick="startRandom60Exam('adapted')">Aleatorio 60 (A/B/C)</button>
+            <button class="btn-primary btn-orig" id="btn-start-random-orig" onclick="startRandom60Exam('original')">Aleatorio 60 🟠</button>
+          </div>
+          <div class="card-print-actions">
+            <button class="btn-secondary" id="btn-reset-seen" onclick="resetSeenQuestions()">🔄 Reiniciar historial de vistas</button>
+          </div>
+        </div>
+      </div>
+
       <div class="mode-card" style="border-left: 5px solid #dc2626;">
         <div>
           <span class="mode-tag tag-fail">Repaso Inteligente</span>
@@ -430,6 +448,7 @@
 
 <script>
   const PAGE_SIZE = 10;
+  const RANDOM_EXAM_SIZE = 60;
 
   let appState = loadState();
   let currentQuestions = [];
@@ -451,9 +470,16 @@
   function loadState() {
     try {
       const raw = localStorage.getItem("enfopos_modular_state_v2");
-      if (raw) return JSON.parse(raw);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        return {
+          failedIds: Array.isArray(parsed.failedIds) ? parsed.failedIds : [],
+          temaStats: parsed.temaStats && typeof parsed.temaStats === "object" ? parsed.temaStats : {},
+          seenIds: Array.isArray(parsed.seenIds) ? parsed.seenIds : []
+        };
+      }
     } catch (e) {}
-    return { failedIds: [], temaStats: {} };
+    return { failedIds: [], temaStats: {}, seenIds: [] };
   }
 
   function saveState() {
@@ -479,6 +505,23 @@
       descFailed.innerHTML = `Repasa exclusivamente las preguntas que has fallado hasta dominarlas. Pendientes: <strong>${failedCount}</strong>.`;
     }
 
+    const totalBank = Array.isArray(window.QUESTION_BANK) ? window.QUESTION_BANK.length : 0;
+    const validBankIds = new Set((window.QUESTION_BANK || []).map(q => q.id));
+    const seenSet = new Set((appState.seenIds || []).filter(id => validBankIds.has(id)));
+    const unseenCount = Math.max(0, totalBank - seenSet.size);
+
+    const descRandom = document.getElementById("random-60-desc");
+    if (descRandom) {
+      descRandom.innerHTML = `Selecciona hasta <strong>${RANDOM_EXAM_SIZE} preguntas aleatorias</strong> evitando repetir las ya mostradas hasta completar todo el banco. Sin ver: <strong>${unseenCount}</strong> / Total: <strong>${totalBank}</strong>.`;
+    }
+    const btnRandAd = document.getElementById("btn-start-random-adapted");
+    const btnRandOr = document.getElementById("btn-start-random-orig");
+    if (btnRandAd) btnRandAd.disabled = totalBank === 0;
+    if (btnRandOr) btnRandOr.disabled = totalBank === 0;
+
+    const btnResetSeen = document.getElementById("btn-reset-seen");
+    if (btnResetSeen) btnResetSeen.disabled = seenSet.size === 0;
+
     const examInfo = {
       "2023": "Orden SAN/1812/2022. Elige formato adaptado a 3 opciones o formato original en naranja.",
       "2022_feb": "Convocatoria Sacyl (febrero 2022). Elige formato adaptado a 3 opciones o formato original en naranja.",
@@ -496,6 +539,76 @@
     });
   }
   window.updateDashboardUI = updateDashboardUI;
+
+  function resetSeenQuestions() {
+    if (!confirm("¿Quieres reiniciar el historial de preguntas ya mostradas en el examen aleatorio para volver a empezar desde cero?")) return;
+    appState.seenIds = [];
+    saveState();
+  }
+
+  function pickRandom60WithoutImmediateRepeat(count = RANDOM_EXAM_SIZE) {
+    const bank = Array.isArray(window.QUESTION_BANK) ? window.QUESTION_BANK.filter(Boolean) : [];
+    if (bank.length === 0) return { selected: [], cycleReset: false };
+
+    let seenSet = new Set(appState.seenIds || []);
+    let unseenPool = shuffle(bank.filter(q => !seenSet.has(q.id)));
+    let cycleReset = false;
+
+    if (unseenPool.length === 0) {
+      seenSet = new Set();
+      unseenPool = shuffle(bank);
+      cycleReset = true;
+    }
+
+    let selected = unseenPool.slice(0, count);
+
+    if (selected.length < count && bank.length > selected.length) {
+      const selectedIds = new Set(selected.map(q => q.id));
+      const alreadySeenPool = shuffle(bank.filter(q => !selectedIds.has(q.id)));
+      const needed = Math.min(count - selected.length, alreadySeenPool.length);
+      selected = selected.concat(alreadySeenPool.slice(0, needed));
+      cycleReset = true;
+      seenSet = new Set(selected.map(q => q.id));
+    } else {
+      selected.forEach(q => seenSet.add(q.id));
+      if (seenSet.size >= bank.length) {
+        seenSet = new Set();
+        cycleReset = true;
+      }
+    }
+
+    appState.seenIds = Array.from(seenSet);
+    saveState();
+    return { selected, cycleReset };
+  }
+
+  function startRandom60Exam(mode) {
+    currentModeType = mode === "original" ? "original" : "adapted";
+    currentPage = 0;
+    answeredMap = {};
+    isGraded = false;
+
+    document.getElementById("score-panel").classList.remove("visible");
+    document.getElementById("btn-submit-exam").style.display = "inline-block";
+    document.getElementById("btn-back-home").style.display = "none";
+
+    const { selected, cycleReset } = pickRandom60WithoutImmediateRepeat(RANDOM_EXAM_SIZE);
+    if (!selected || selected.length === 0) {
+      alert("No hay preguntas cargadas en el banco para generar el examen aleatorio.");
+      return;
+    }
+
+    currentQuestions = selected;
+    const modeLabel = currentModeType === "original" ? "⚠️ Formato Original (Fondo Naranja)" : "Formato Adaptado (3 Opciones)";
+    const cycleNote = cycleReset ? " · Ciclo completado (reiniciado automáticamente)" : "";
+    document.getElementById("quiz-title").textContent = `Examen Aleatorio (${currentQuestions.length} preg.) · ${modeLabel}`;
+    document.getElementById("quiz-subtitle").textContent = `Sin repetir anteriores · Bloques de ${PAGE_SIZE}${cycleNote}`;
+
+    buildPageSelector();
+    renderPage(0);
+    switchView("quiz");
+    startTimer();
+  }
 
   function startTimer() {
     stopTimer();
@@ -1037,7 +1150,7 @@
 
   function resetHistory() {
     if (!confirm("¿Seguro que quieres borrar todo tu historial de aciertos, fallos y estadísticas?")) return;
-    appState = { failedIds: [], temaStats: {} };
+    appState = { failedIds: [], temaStats: {}, seenIds: [] };
     saveState();
     renderStatsTable();
   }
