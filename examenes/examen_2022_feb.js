@@ -343,10 +343,10 @@ window.registerExamQuestions("2022_feb", [
     id: "2022_feb_35", exam: "2022_feb", tema: "Tema 15 · Archivo Electrónico de Documentos (Ley 40/2015)",
     textAdap: "Según la Ley 40/2015, de Régimen Jurídico del Sector Público, qué documentos se almacenarán en el Archivo electrónico de documentos:",
     optsAdap: { A: "Los documentos que no contengan actos administrativos y no afecten a derechos de los particulares", B: "Todos los documentos utilizados en las actuaciones administrativas", C: "Ninguna es cierta" },
-    correctAdap: "C",
+    correctAdap: "B",
     textOrig: "Según la Ley 40/2015, de Régimen Jurídico del Sector Público, qué documentos se almacenarán en el Archivo electrónico de documentos:",
     optsOrig: { a: "Los documentos que no contengan actos administrativos y no afecten a derechos de los particulares", b: "Todos los documentos utilizados en las actuaciones administrativas", c: "a y b son ciertas", d: "Ninguna es cierta" },
-    correctOrig: "d",
+    correctOrig: "b",
     norma: "Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, art. 46.4 (Archivo electrónico de documentos): se almacenarán en los sistemas electrónicos que corresponda todos los documentos utilizados en las actuaciones administrativas, debiendo mantenerse en el formato original en que se recibieron o produjeron, salvo los que deban conservarse en otros archivos o con reglas específicas (y en la plantilla oficial de este examen figura marcada la opción d)."
   },
   {
